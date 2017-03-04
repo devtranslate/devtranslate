@@ -16,7 +16,7 @@ Primeiro é preciso entender as labels, estas são de certa forma tags criadas p
 
 Algumas destas labels terão formas complementar as issue diferentes e por isso elas tem grande importância.
 
-## Issue
+## Issues
 Primeiramente crie uma nova issue. Caso você deseje adicionar um novo ` problema ` ou `melhoria` basta por como título a seguinte estrutura: **[Problema/Bugs] - Tipo de Problema Encontrado** ou **[Melhoria] - Tipo de Melhoria**. Todas as outras opções deverão seguir a mesma estrutura apenas mudando o tipo de label dentro das chaves `[]`.
 Para escrever a descrição de um `problema`ou `melhoria` basta apresentar uma breve descrição do problema ou melhoria, se possível exemplificar para tornar mais fácil a explicação melhor. Agora, caso deseje que seja cadastrado um novo documento será preciso que apresente o link do mesmo.
 
