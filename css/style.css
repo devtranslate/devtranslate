@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+.logo {
+	color: #363636;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: 'Just Another Hand', cursive;	
+	margin-top: 7px;
+}
+
+.icon-logo {
+    height: 25px;
+    margin: 11px 10px 0px 0px;
+}
+
+.btn-space {
+    width: 105px;
+    margin: 3px 3px 3px 5px;
+}
+
+.btn-expand {
+	width: 300px;
+}
