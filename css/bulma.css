@@ -3932,7 +3932,7 @@ a.box:active {
           transform-origin: left bottom;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 999px) {
   .nav-toggle {
     display: none;
   }
@@ -4034,7 +4034,7 @@ a.nav-item.is-tab.is-active {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 999px) {
   .nav-menu {
     background-color: white;
     box-shadow: 0 4px 7px rgba(10, 10, 10, 0.1);
@@ -4050,12 +4050,6 @@ a.nav-item.is-tab.is-active {
   }
   .nav-menu.is-active {
     display: block;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 999px) {
-  .nav-menu {
-    padding-right: 1.5rem;
   }
 }
 
