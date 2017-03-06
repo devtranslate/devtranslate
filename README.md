@@ -1,24 +1,39 @@
 # Versão Alfa
-Atualmente estamos em versão alfa, e com isso o site estará rodando com configurações muito básicas e simples. O intuito por agora é apenas verificar o interesse do público e assim decidir o que será preciso pra versões futuras, por exemplo, poderá ser necessário pagar para ter uma base de dados maior e que tenha uma maior transferência. Com isso por um tempo indeterminado ainda, estaremos verificando todas essas opções, quais serão as mais viáveis e que não prejudiquem nenhuma das partes. Enquanto isso gostariamos de ter sua contribuição e ajuda.
+
+Atualmente, o repositório está em versão `alfa`, e, portanto, o _site_ funciona com configurações básicas. Por agora, o principal objetivo é verificar o interesse do público, decidindo, assim, o que será preciso pra versões futuras, como, por exemplo, o investimento em uma base de dados maior ou aumento na quantidade de dados transferidos. Com isso, ainda por tempo indeterminado, analisam-se todas essas opções, as quais serão escolhidas por viabilidade, não prejudicando nenhuma das partes. Enquanto isto, contribuições e ajudas são apreciadas.
 
 # Guia de Contribuição
-Bom, caso queira cooperar com o projeto será necessário, primeiro ir na seção de issues do repositório no qual é representado por uma `!`. Lá você irá precisar seguir algumas instruções que serão apresentadas aqui para se ter uma melhor organização do repositório e do projeto em si.
 
-## Labels
-Primeiro é preciso entender as labels, estas são de certa forma tags criadas para facilitar na identificação de uma nova issue. Atualmente temos 7 (sete) principais:
-- **artigo** -> esta labels referece a requisição de inclusão de um novo artigo no banco.
-- **correção** -> esta referece a apresentar um erro, seja ortográfico ou visual da aplicação.
-- **documentação** - > esta se referece a requisição de uma nova documentação no banco.
-- **livros** - > referece a requisição de um novo livro no banco.
-- **melhoria** -> apresentar uma ideia nova de melhoria pra o projeto.
-- **problema/bugs** -> caso encontre algum problema informe-me nos imediatamente por meio dessa label.
-- **projetos** - > referece a um novo projeto que esteja em andamento de tradução.
+Para cooperar com o projeto, a seção _issues_ de repositório está disponível. Existe a necessidade de seguir algumas instruções, apresentadas neste local, buscando melhorar a orgranização do mesmo e do projeto, conforme abaixo.
 
-Algumas destas labels são formas de complementar as issues e por isso elas tem grande importância.
+## Etiquetas (Labels)
 
-## Issues
-Primeiramente crie uma nova issue. Caso você deseje adicionar um novo ` problema ` ou `melhoria` basta por como título a seguinte estrutura: **[Problema/Bugs] - Tipo de Problema Encontrado** ou **[Melhoria] - Tipo de Melhoria**. Todas as outras opções deverão seguir a mesma estrutura apenas mudando o tipo de label dentro das chaves `[]`.
-Para escrever a descrição de um `problema`ou `melhoria` basta apresentar uma breve descrição do problema ou melhoria, se possível exemplificar para tornar mais fácil a explicação. Agora, caso deseje que seja cadastrado um novo documento será preciso que apresente o link do mesmo e novamente seguir a estrutura acima.
+As _labels_ (etiquetas, em tradução livre) são, de certa forma, referências criadas para facilitar a identificação de uma nova _issue_, conforme sua responsabilidade. Atualmente, existem 7 (sete) principais:
+
+- **artigo**: referencia a requisição de inclusão de um novo artigo no banco;
+- **correção**: informa a apresentação de erros, sejam ortográficos ou visuais da aplicação;
+- **documentação**: referencia a requisição de uma nova documentação no banco;
+- **livros**: adiciona a requisição de um novo livro no banco;
+- **melhoria**: apresenta uma ideia nova de melhoria pra o projeto;
+- **problema/bugs**: caso encontre algum problema, informe imediatamente por meio desta _label_;
+- **projetos**: referencia um novo projeto que esteja em andamento de tradução.
+
+Algumas destas _labels_ representam formas de complementar as _issues_ e, por isso, elas têm grande importância.
+
+## Questões (Issues)
+
+Primeiramente, existe a necessidade de criação de uma nova _issue_. Caso esta represente a adição de um novo `problema` ou `melhoria`, basta cadastrá-la com o título nas seguintes estruturas:
+
+```
+[Problema/Bugs] - Tipo de Problema Encontrado
+```
+
+```
+[Melhoria] - Tipo de Melhoria
+```
+
+Todas as outras opções devem seguir a mesma estrutura, apenas mudando o tipo de _label_ dentro das chaves `[]`. Para descrever um `problema` ou `melhoria`, há a necessidade de inclusão de uma breve descrição da mesma e, se possível, exemplificá-lo, tornando mais fácil a explicação. Agora, caso haja o desejo de cadastro um novo documento, será preciso a apresentação do _link_ do mesmo, seguindo as estruturas anteriores.
 
 # Considerações Finais
-Como podem ter notado atualmente o processo de cadastro ainda esta manual, e já esta sendo implementado para a próxima versão uma página de cadastramento automatizada. Sem contar outras funcionalidades como tags para facilitar achar artigos apenas voltados para um determinado assunto. Estamos trabalhando bastante para que o projeto ganhe força, espero que gostem e desfrutem o máximo.
+
+Nota-se que, atualmente, o processo de cadastro é manual. Já esta sendo implementado, para a próxima versão, uma página de cadastramento automatizada, além de outras funcionalidades, como _tags_ para facilitar a pesquisa de artigos voltados a determinado assunto. Há um grande esforço para que o projeto ganhe força e esperamos que a comunidade receba-o com zelo, desfrutando-o ao máximo.
