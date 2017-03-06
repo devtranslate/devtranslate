@@ -12,7 +12,7 @@ Primeiro é preciso entender as labels, estas são de certa forma tags criadas p
 - **livros** - > referece a requisição de um novo livro no banco.
 - **melhoria** -> apresentar uma ideia nova de melhoria pra o projeto.
 - **problema/bugs** -> caso encontre algum problema informe-me nos imediatamente por meio dessa label.
-- **projetos** - > referece a um novo projeto para ser adicionado ao banco.
+- **projetos** - > referece a um novo projeto que esteja em andamento de tradução.
 
 Algumas destas labels são formas de complementar as issues e por isso elas tem grande importância.
 
