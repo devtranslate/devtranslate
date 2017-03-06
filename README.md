@@ -1,8 +1,8 @@
 # Versão Alfa
-Atualmente estamos em versão alfa, e com isso o site estará rodando com configurações muito básicas e simples. O intuito por agora é apenas verificar o interesse do público e assim decidir o que será preciso pra versões futuras, por exemplo, poderá ser necessário pagar para ter uma base de dados maior e que tenha uma maior transferência. Com isso por um tempo indeterminado ainda, estaremos verificando todas essas opções, quais serão as mais viáveis e que não prejudiquem nenhuma das partes. Enquanto isso gostariamos de ter sua contribuição e ajuda.
+Atualmente estamos em versão `alfa`, portanto, o _site_ está funcionando com configurações básicas. Por agora, o principal objetivo é apenas verificar o interesse do público, decidindo, assim, o que será preciso pra versões futuras, como, por exemplo, o investimento em uma base de dados maior ou aumento na quantidade de dados transferidos. Com isso, ainda por tempo indeterminado, estaremos analisando todas essas opções, as quais serão escolhidas por viabilidade, não prejudicando nenhuma das partes. Enquanto isto, gostariamos de ter sua contribuição e ajuda.
 
 # Guia de Contribuição
-Bom, caso queira cooperar com o projeto será necessário, primeiro ir na seção de issues do repositório no qual é representado por uma `!`. Lá você irá precisar seguir algumas instruções que serão apresentadas aqui para se ter uma melhor organização do repositório e do projeto em si.
+Caso queira cooperar com o projeto, primeiro será necessário ir na seção de _issues_ do repositório que é representado pelo caractere de exclamação (`!`). Você precisará seguir algumas instruções que são apresentadas neste local, para se ter uma melhor organização do repositório e do projeto em si.
 
 ## Labels
 Primeiro é preciso entender as labels, estas são de certa forma tags criadas para facilitar na identificação de uma nova issue. Atualmente temos 7 (sete) principais:
