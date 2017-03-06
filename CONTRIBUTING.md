@@ -30,6 +30,6 @@ Primeiramente, existe a necessidade de criação de uma nova _issue_. Caso esta 
 
 Todas as outras opções devem seguir a mesma estrutura, apenas mudando o tipo de _label_ dentro das chaves `[]`. Para descrever um `problema` ou `melhoria`, há a necessidade de inclusão de uma breve descrição da mesma e, se possível, exemplificá-lo, tornando mais fácil a explicação. Agora, caso haja o desejo de cadastro um novo documento, será preciso a apresentação do _link_ do mesmo, seguindo as estruturas anteriores.
 
-# Considerações Finais
+## Pull Request
 
-Nota-se que, atualmente, o processo de cadastro é manual. Já esta sendo implementado, para a próxima versão, uma página de cadastramento automatizada, além de outras funcionalidades, como _tags_ para facilitar a pesquisa de artigos voltados a determinado assunto. Há um grande esforço para que o projeto ganhe força e esperamos que a comunidade receba-o com zelo, desfrutando-o ao máximo.
+Em Breve.
