@@ -1,76 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="app">
 <head>
 	<meta charset="UTF-8">
-	<title>DEV#TRANSLATE</title>
+	<title>DEV#Translate</title>
 	<link rel="stylesheet" href="css/bulma.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />    
 </head>
 <body>
-	<!-- MENU -->
-	<nav class="nav has-shadow">
-		<div class="container">
-			<div class="nav-center">
-				<img src="img/logo-icon.png" alt="Ícone do Logo" class="icon-logo">
-				<a href="index.html" class="logo">DEV#TRANSLATE</a>					
-			</div>	
-		</div>
-	</nav>
+    <!-- UiView -->
+    <div ui-view></div>
 
-	<!-- SECTION -->
-	<section class="hero is-danger is-fullheight">
-		<div class="hero-body">
-			<div class="container has-text-centered">
-				<h1 class="title is-1">
-					Projeto em Construção!
-				</h1>
-				<br><br>
-				<h3 class="title is-3">
-					Aguarde!
-				</h3>
-				<h4 class="subtitle">
-					Em breve novidades.
-				</h4>
-			</div>
-		</div>
-	</section>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-	<!-- FOOTER -->
-	<footer class="footer">
-		<div class="container">
-			<div class="content has-text-centered">
-				<p>
-					<a class="button is-warning btn-space" href="https://medium.com/@larismourullo">
-						<span class="icon">
-							<i class="fa fa-medium"></i>
-						</span>
-						<span>Medium</span>
-					</a>
-					<a class="button is-warning btn-space" href="https://github.com/larismourullo">
-						<span class="icon">
-							<i class="fa fa-github"></i>
-						</span>
-						<span>GitHub</span>
-					</a>		
-					<a class="button is-warning btn-space" href="https://telegram.me/larismourullo">
-						<span class="icon">
-							<i class="fa fa-paper-plane"></i>
-						</span>
-						<span>Telegram</span>
-					</a>								
-					<a class="button is-warning btn-space" href="https://www.facebook.com/LarissaMourullo">
-						<span class="icon">
-							<i class="fa fa-facebook"></i>
-						</span>
-						<span>Facebook</span>
-					</a>													
-				</p>				
-			</div>
-			<div class="content has-text-centered">
-				<small>© 2017 - Todos os direitos reservados.</small>
-			</div>
-		</div>
-	</footer>	
+    <!-- jQuery Plugins -->
+    <script src="script/script.js"></script>
+
+    <!-- AngularJs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+    <script src="app/pagination/pagination.js"></script>
+
+    <!-- App -->
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.router.js"></script>
+    <script src="app/shell/ShellController.js"></script>
+    <script src="app/livros/LivrosController.js"></script>   
+    <script src="app/artigos/ArtigosController.js"></script>  
+    <script src="app/projetos/ProjetosController.js"></script>   
+    <script src="app/documentacao/DocumentacaoController.js"></script>         
 </body>
 </html>

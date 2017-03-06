@@ -1,0 +1,116 @@
+﻿<!-- Menu -->
+<nav class="nav has-shadow">
+    <div class="container">
+        <div class="nav-center">
+            <img src="img/logo-icon.png" alt="Ícone do Logo" class="icon-logo"/>
+            <a href="#" class="logo">DEV#TRANSLATE</a>
+        </div>
+        <span class="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+        <div class="nav-menu">
+            <a class="nav-item is-tab is-hidden-tablet" ng-class="{ 'is-active': vm.stateAtivo('sobre') }" ui-sref="sobre">Home</a>
+            <a class="nav-item is-tab is-hidden-tablet" ng-class="{ 'is-active': vm.stateAtivo('artigos') }" ui-sref="artigos">Artigos</a>
+            <a class="nav-item is-tab is-hidden-tablet" ng-class="{ 'is-active': vm.stateAtivo('documentacao') }" ui-sref="documentacao">Documentação</a>
+            <a class="nav-item is-tab is-hidden-tablet" ng-class="{ 'is-active': vm.stateAtivo('livros') }" ui-sref="livros">Livros</a>
+            <a class="nav-item is-tab is-hidden-tablet" ng-class="{ 'is-active': vm.stateAtivo('projetos') }" ui-sref="projetos">Projetos</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Header -->
+<section class="hero is-medium is-primary">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h2 class="title is-2">
+                Não sabe inglês? Não se preocupe.
+            </h2>
+            <h2 class="subtitle">
+                Aqui você encontra todo tipo de documento de tecnologia traduzido para o português.
+            </h2>
+        </div>
+    </div>
+
+    <div class="hero-foot is-hidden-mobile">
+        <nav class="tabs is-boxed is-fullwidth">
+            <div class="container">
+                <ul>
+                    <li ng-class="{ 'is-active': vm.stateAtivo('sobre') }">
+                        <a ui-sref="sobre">Home</a>
+                    </li>
+                    <li ng-class="{ 'is-active': vm.stateAtivo('artigos') }">
+                        <a ui-sref="artigos">Artigos</a>
+                    </li>
+                    <li ng-class="{ 'is-active': vm.stateAtivo('documentacao') }">
+                        <a ui-sref="documentacao">Documentação</a>
+                    </li>
+                    <li ng-class="{ 'is-active': vm.stateAtivo('livros') }">
+                        <a ui-sref="livros">Livros</a>
+                    </li>
+                    <li ng-class="{ 'is-active': vm.stateAtivo('projetos') }">
+                        <a ui-sref="projetos">Projetos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<!-- UiView -->
+<div ui-view></div>
+
+<!-- Section: Contribuição -->
+<section class="hero is-danger is-medium">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">
+                Não encontrou uma tradução em nosso site?
+            </h1>
+            <h2 class="subtitle">
+                Acesse o link abaixo e saiba como contribuir.
+            </h2>
+            <a class="button is-danger is-inverted btn-expand" href="https://github.com/devtranslate/devtranslate.github.io#vers%C3%A3o-alfa">
+                CLIQUE AQUI
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>
+                <a class="button is-warning btn-space" href="https://medium.com/@larismourullo">
+                    <span class="icon">
+                        <i class="fa fa-medium"></i>
+                    </span>
+                    <span>Medium</span>
+                </a>
+                <a class="button is-warning btn-space" href="https://github.com/devtranslate">
+                    <span class="icon">
+                        <i class="fa fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                </a>
+                <a class="button is-warning btn-space" href="https://telegram.me/larismourullo">
+                    <span class="icon">
+                        <i class="fa fa-paper-plane"></i>
+                    </span>
+                    <span>Telegram</span>
+                </a>
+                <a class="button is-warning btn-space" href="https://www.facebook.com/LarissaMourullo">
+                    <span class="icon">
+                        <i class="fa fa-facebook"></i>
+                    </span>
+                    <span>Facebook</span>
+                </a>
+            </p>
+        </div>
+        <div class="content has-text-centered">
+            <small>© 2017 - Todos os direitos reservados.</small>
+        </div>
+    </div>
+</footer>

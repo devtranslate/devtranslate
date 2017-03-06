@@ -21,3 +21,35 @@
 .btn-expand {
 	width: 300px;
 }
+
+.icon-sobre {
+    height: 70px;
+}
+
+.column-margin {
+    margin: 50px 45px 0px 45px;
+}
+
+.level-margin {
+    margin: 25px 0px 0px 0px;
+}
+
+.nav-margin {
+    margin: 50px 0px 0px 0px;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px dashed #ff3860;
+    font-weight: 400;
+}
+
+i {
+    color: #ff3860;
+}
+
+.titulo-div {
+    font-size: 15px;
+    color: #4a4a4a;
+    font-weight: 700;
+}

@@ -1,0 +1,36 @@
+<!-- Section: Documentação -->
+<section class="section is-medium animated fadeIn" ng-controller="DocumentacaoController as vm">
+	<div class="container">
+		<div class="has-text-centered">
+			<h1 class="title is-2">Documentação</h1>
+		</div>
+
+		<nav class="level level-margin">
+			<div class="level-item">				
+				<div class="control has-addons">
+					<input class="input" type="text" placeholder="Digite o nome da documentação" ng-model="vm.userSearch"/>
+					<button class="button" ng-click="vm.paginaAlterada(1)">
+						<i class="fa fa-search"></i>
+					</button>	
+				</div>					
+			</div>			
+		</nav>
+
+		<div class="columns is-multiline">
+			<div class="column is-one-third" dir-paginate="doc in vm.documentacao | itemsPerPage: vm.documentacaoPorPagina" total-items="vm.totalDocumentacao" current-page="vm.paginacao.current">					
+				<div class="animated fadeInUp">
+					<a class="image image is-2by1" href="{{doc.siteDoc}}" target="_blank">
+						<img ng-src="{{doc.imagemDoc}}"/>
+					</a>
+					<div class="media-left">
+						<p class="titulo-div">
+							<strong>{{doc.nomeDoc}}</strong>
+						</p>					
+					</div>	
+				</div>
+			</div>
+		</div>	
+
+		<dir-pagination-controls template-url="app/pagination/pagination.tpl.html" on-page-change="vm.paginaAlterada(newPageNumber)"></dir-pagination-controls>	
+	</div>
+</section>

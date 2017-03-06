@@ -576,7 +576,7 @@ table th {
   }
 }
 
-.is-disabled {
+.disabled, .is-disabled {
   pointer-events: none;
 }
 
@@ -1727,7 +1727,7 @@ a.box:active {
   color: #363636;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   max-width: 100%;
-  width: 100%;
+  width: 100% !important;
 }
 
 .input:focus, .input.is-focused, .input:active, .input.is-active,
@@ -2129,6 +2129,7 @@ a.box:active {
 .control {
   position: relative;
   text-align: left;
+  width: 100%;
 }
 
 .control:not(:last-child) {
@@ -4015,14 +4016,14 @@ a.nav-item.is-tab {
 
 .nav-item a.is-tab:hover,
 a.nav-item.is-tab:hover {
-  border-bottom-color: #00d1b2;
-  border-top-color: transparent;
+  background: #01bda1;
+  color: #ffffff;
 }
 
 .nav-item a.is-tab.is-active,
 a.nav-item.is-tab.is-active {
-  border-bottom: 3px solid #00d1b2;
-  color: #00d1b2;
+  background: #00d1b2;
+  color: #ffffff;
   padding-bottom: calc(0.5rem - 3px);
 }
 
@@ -4268,7 +4269,7 @@ a.nav-item.is-tab.is-active {
   padding-right: 0.75em;
 }
 
-.pagination-link.is-current {
+.active > a, .pagination-link is-current {
   background-color: #00d1b2;
   border-color: #00d1b2;
   color: #fff;
@@ -6762,7 +6763,7 @@ label.panel-block:hover {
 
 .section {
   background-color: white;
-  padding: 3rem 1.5rem;
+  padding: 6rem 1.5rem;
 }
 
 @media screen and (min-width: 1000px) {
