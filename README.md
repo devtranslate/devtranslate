@@ -1,5 +1,7 @@
 # Versão Alfa
 
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/devtranslate/Lobby)
+
 Atualmente, o repositório está em versão `alfa`, e, portanto, o _site_ funciona com configurações básicas. Por agora, o principal objetivo é verificar o interesse do público, decidindo, assim, o que será preciso pra versões futuras, como, por exemplo, o investimento em uma base de dados maior ou aumento na quantidade de dados transferidos. Com isso, ainda por tempo indeterminado, analisam-se todas essas opções, as quais serão escolhidas por viabilidade, não prejudicando nenhuma das partes. Enquanto isto, contribuições e ajudas são apreciadas.
 
 # Guia de Contribuição
