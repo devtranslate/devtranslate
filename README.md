@@ -3,7 +3,9 @@
 Atualmente, o repositório está em versão `alfa`, e, portanto, o _site_ funciona com configurações básicas. Por agora, o principal objetivo é verificar o interesse do público, decidindo, assim, o que será preciso pra versões futuras, como, por exemplo, o investimento em uma base de dados maior ou aumento na quantidade de dados transferidos. Com isso, ainda por tempo indeterminado, analisam-se todas essas opções, as quais serão escolhidas por viabilidade, não prejudicando nenhuma das partes. Enquanto isto, contribuições e ajudas são apreciadas.
 
 # Guia de Contribuição
-Para acessar ao guia de contribuição basta [clicar aqui](CONTRIBUTING.md).
+
+- Para acessar ao guia de contribuição basta [clicar aqui](CONTRIBUTING.md).
+- Para tirar dúvidas ou discutir sobre o guia temos o grupo no [Gitter] (https://gitter.im/devtranslate/Lobby).
 
 # Considerações Finais
 
