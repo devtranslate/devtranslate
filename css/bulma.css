@@ -1396,7 +1396,7 @@ a.box:active {
 }
 
 .button.is-medium {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .button.is-medium .icon:first-child:not(:last-child) {
@@ -1849,7 +1849,7 @@ a.box:active {
 
 .input.is-medium,
 .textarea.is-medium {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .input.is-large,
@@ -3870,9 +3870,9 @@ a.box:active {
 .nav-toggle {
   cursor: pointer;
   display: block;
-  height: 3.5rem;
+  height: 4.5rem;
   position: relative;
-  width: 3.5rem;
+  width: 4.5rem;
 }
 
 .nav-toggle span {
@@ -4008,10 +4008,10 @@ a.nav-item.is-active {
 a.nav-item.is-tab {
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
-  padding-bottom: calc(0.5rem - 1px);
+  padding-bottom: calc(1rem - 1px);
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: calc(0.5rem - 1px);
+  padding-top: calc(1rem - 1px);
 }
 
 .nav-item a.is-tab:hover,
@@ -4024,7 +4024,7 @@ a.nav-item.is-tab:hover {
 a.nav-item.is-tab.is-active {
   background: #00d1b2;
   color: #ffffff;
-  padding-bottom: calc(0.5rem - 3px);
+  padding-bottom: calc(1rem - 3px);
 }
 
 @media screen and (min-width: 1000px) {
@@ -4043,6 +4043,7 @@ a.nav-item.is-tab.is-active {
     right: 0;
     top: 100%;
     position: absolute;
+    border-top: 3px solid whitesmoke;
   }
   .nav-menu .nav-item {
     border-top: 1px solid rgba(219, 219, 219, 0.5);
@@ -4124,6 +4125,13 @@ a.nav-item.is-tab.is-active {
   position: relative;
   text-align: center;
   z-index: 2;
+}
+
+
+@media screen and (max-width: 999px) {
+  .nav {
+    min-height: 4.5rem;
+  }
 }
 
 .nav > .container {
@@ -5074,7 +5082,7 @@ label.panel-block:hover {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 999px) {
   .column.is-narrow, .column.is-narrow-tablet {
     -webkit-box-flex: 0;
         -ms-flex: none;
@@ -5646,7 +5654,7 @@ label.panel-block:hover {
           align-items: center;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 999px) {
   .columns:not(.is-desktop) {
     display: -webkit-box;
     display: -ms-flexbox;
