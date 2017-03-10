@@ -1396,7 +1396,7 @@ a.box:active {
 }
 
 .button.is-medium {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .button.is-medium .icon:first-child:not(:last-child) {
@@ -1849,7 +1849,7 @@ a.box:active {
 
 .input.is-medium,
 .textarea.is-medium {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .input.is-large,
@@ -3878,7 +3878,7 @@ a.box:active {
 .nav-toggle span {
   background-color: #4a4a4a;
   display: block;
-  height: 1px;
+  height: 2px;
   left: 50%;
   margin-left: -7px;
   position: absolute;
@@ -3955,6 +3955,7 @@ a.box:active {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.5rem 0.75rem;
+  font-size: 15px;
 }
 
 .nav-item a {
@@ -4233,6 +4234,7 @@ a.nav-item.is-tab.is-active {
 .pagination-link {
   border: 1px solid #dbdbdb;
   min-width: 2.5em;
+  font-size: 15px;
 }
 
 .pagination-previous:hover,
