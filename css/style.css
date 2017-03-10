@@ -15,8 +15,8 @@
 
 @media screen and (max-width: 999px) {
     .icon-logo {
-        height: 35px;
-        margin: 12px 10px 0px 0px;
+        height: 33px;
+        margin: 13px 10px 0px 0px;
     }
 
     .logo {
@@ -24,7 +24,6 @@
         font-size: 35px;
         font-weight: bold;
         font-family: 'Just Another Hand', cursive;  
-        margin-top: 12px;
     }
 
     .nav-center{
