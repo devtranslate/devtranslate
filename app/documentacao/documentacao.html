@@ -17,20 +17,20 @@
 		</nav>
 
 		<div class="columns is-multiline">
-			<div class="column is-one-third" dir-paginate="doc in vm.documentacao | itemsPerPage: vm.documentacaoPorPagina" total-items="vm.totalDocumentacao" current-page="vm.paginacao.current">					
-				<div class="animated fadeInUp">
-					<a class="image image is-2by1" href="{{doc.siteDoc}}" target="_blank">
-						<img ng-src="{{doc.imagemDoc}}"/>
-					</a>
-					<div class="media-left">
-						<p class="titulo-div">
-							<strong>{{doc.nomeDoc}}</strong>
-						</p>					
-					</div>	
-				</div>
-			</div>
+            <div class="column is-one-third" dir-paginate="doc in vm.documentacao | filter:vm.userSearch | itemsPerPage: vm.documentacaoPorPagina" current-page="vm.paginacao.current">
+                <div class="animated fadeInUp">
+                    <a class="image image is-2by1" href="{{doc.siteDoc}}" target="_blank">
+                        <img ng-src="{{doc.imagemDoc}}" />
+                    </a>
+                    <div class="media-left">
+                        <p class="titulo-div">
+                            <strong>{{doc.nomeDoc}}</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
 		</div>	
 
-		<dir-pagination-controls template-url="app/pagination/pagination.tpl.html" on-page-change="vm.paginaAlterada(newPageNumber)"></dir-pagination-controls>	
+		<dir-pagination-controls template-url="app/pagination/pagination.tpl.html"></dir-pagination-controls>	
 	</div>
 </section>

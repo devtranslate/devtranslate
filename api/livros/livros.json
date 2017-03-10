@@ -1,0 +1,109 @@
+{
+  "totalRows": 13,
+  "data": [
+    {
+      "id": 1,
+      "nomeLivro": "Editor de Texto Vim",
+      "autorLivro": "Cassio Botaro",
+      "tradutorLivro": "~",
+      "siteLivro": "https://github.com/cassiobotaro/vimbook",
+      "imagemLivro": "http://www.tecmint.com/wp-content/uploads/2016/11/Nerdtree-Explorer-for-Vim.png"
+    },
+    {
+      "id": 2,
+      "nomeLivro": "Eloquente JavaScript",
+      "autorLivro": "Marijn Haverbeke",
+      "tradutorLivro": "Eric Douglas",
+      "siteLivro": "https://github.com/braziljs/eloquente-javascript",
+      "imagemLivro": "https://www.javascript.com/images/pages/resources/img-eloquent-js.jpg"
+    },
+    {
+      "id": 3,
+      "nomeLivro": "The Swift Programming Language",
+      "autorLivro": "Apple",
+      "tradutorLivro": "CocoaHeadsBrasil",
+      "siteLivro": "https://github.com/CocoaHeadsBrasil/the-swift-programming-language-in-portuguese-br",
+      "imagemLivro": "http://imagazin.ro/wp-content/uploads/2015/11/cover29.jpg"
+    },
+    {
+      "id": 4,
+      "nomeLivro": "Learning JavaScript Design Patterns",
+      "autorLivro": "Addy Osmani",
+      "tradutorLivro": "Eric Oliveira",
+      "siteLivro": "https://github.com/fhferreira/aprendendo-padroes-de-projeto-javascript",
+      "imagemLivro": "https://camo.githubusercontent.com/affe20a0b3c2bfc8d288ab8a35d45b49a6972693/687474703a2f2f692e696d6775722e636f6d2f7035324b4742572e706e67"
+    },
+    {
+      "id": 5,
+      "nomeLivro": "Why's (Poignant) Guide to Ruby",
+      "autorLivro": "Mislav Marohnić",
+      "tradutorLivro": "Carlos Brando",
+      "siteLivro": "https://github.com/carlosbrando/poignant-br",
+      "imagemLivro": "http://i67.tinypic.com/1687gqa.png"
+    },
+    {
+      "id": 6,
+      "nomeLivro": "Pense em Python",
+      "autorLivro": "Allen B. Downey",
+      "tradutorLivro": "Think Python",
+      "siteLivro": "https://github.com/PenseAllen/PensePython2e",
+      "imagemLivro": "http://i63.tinypic.com/30s7p6g.png"
+    },
+    {
+      "id": 7,
+      "nomeLivro": "Clean Code Javascript",
+      "autorLivro": "Ryan McDermott",
+      "tradutorLivro": "Felipe Santos",
+      "siteLivro": "https://github.com/fesnt/clean-code-javascript",
+      "imagemLivro": "http://i67.tinypic.com/a43mg8.png"
+    },
+    {
+      "id": 8,
+      "nomeLivro": "You Don't Know JS",
+      "autorLivro": "Kyle Simpson",
+      "tradutorLivro": "Cezar Augusto.",
+      "siteLivro": "https://github.com/cezaraugusto/You-Dont-Know-JS",
+      "imagemLivro": "http://i63.tinypic.com/9hp310.png"
+    },
+    {
+      "id": 9,
+      "nomeLivro": "Learn You Node",
+      "autorLivro": "Node School",
+      "tradutorLivro": "Lucas Fernandes da Costa",
+      "siteLivro": "https://github.com/lucasfcosta/learnyounode-pt-br",
+      "imagemLivro": "http://i64.tinypic.com/2s96q9y.png"
+    },
+    {
+      "id": 10,
+      "nomeLivro": "Learning JavaScript Design Patterns",
+      "autorLivro": "Addy Osmani",
+      "tradutorLivro": "Eliel das Virgens Santos",
+      "siteLivro": "https://github.com/hc3/essencial-js-padroes-de-projeto",
+      "imagemLivro": "http://i68.tinypic.com/2e0lbvs.png"
+    },
+    {
+      "id": 11,
+      "nomeLivro": "Sinatra Book",
+      "autorLivro": "Chris Schneider",
+      "tradutorLivro": "Tailor Fontela",
+      "siteLivro": "https://github.com/taylorrf/sinatra-book-pt-br",
+      "imagemLivro": "http://i64.tinypic.com/27x1d7r.png"
+    },
+    {
+      "id": 12,
+      "nomeLivro": "Angular Style Guide",
+      "autorLivro": "John Papa",
+      "tradutorLivro": "Lennon Jesus, Lucas Moreira e Bruno Wego",
+      "siteLivro": "https://github.com/gilsondev/angular-styleguide-pt-br/blob/master/SUMMARY.md",
+      "imagemLivro": "http://i63.tinypic.com/15yu0s9.png"
+    },
+    {
+      "id": 13,
+      "nomeLivro": "Try Git",
+      "autorLivro": "Code School",
+      "tradutorLivro": "Gustavo Franco",
+      "siteLivro": "https://github.com/mandado/Experimente-Git",
+      "imagemLivro": "http://cdn.sixrevisions.com/0377-01_git_tip_try_git.png"
+    }
+  ]
+}

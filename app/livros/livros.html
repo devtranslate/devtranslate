@@ -17,21 +17,21 @@
 		</nav>
 
 		<div class="columns is-multiline">
-			<div class="column is-one-third" dir-paginate="livro in vm.livros | itemsPerPage: vm.livrosPorPagina" total-items="vm.totalLivros" current-page="vm.paginacao.current">					
-				<div class="animated fadeInUp">
-					<a class="image image is-2by1" href="{{livro.siteLivro}}" target="_blank">
-						<img ng-src="{{livro.imagemLivro}}"/>
-					</a>
-					<div class="media-left">
-						<p class="titulo-div">
-							<strong>{{livro.nomeLivro}}</strong>
-						</p>
-						<small><i>Autor:</i> {{livro.autorLivro}} | <i>Tradutor:</i> {{livro.tradutorLivro}}</small>				
-					</div>	
-				</div>
-			</div>
+            <div class="column is-one-third" dir-paginate="livro in vm.livros | filter:vm.userSearch | itemsPerPage: vm.livrosPorPagina" current-page="vm.paginacao.current">
+                <div class="animated fadeInUp">
+                    <a class="image image is-2by1" href="{{livro.siteLivro}}" target="_blank">
+                        <img ng-src="{{livro.imagemLivro}}" />
+                    </a>
+                    <div class="media-left">
+                        <p class="titulo-div">
+                            <strong>{{livro.nomeLivro}}</strong>
+                        </p>
+                        <small><i>Autor:</i> {{livro.autorLivro}} | <i>Tradutor:</i> {{livro.tradutorLivro}}</small>
+                    </div>
+                </div>
+            </div>
 		</div>	
 
-		<dir-pagination-controls template-url="app/pagination/pagination.tpl.html" on-page-change="vm.paginaAlterada(newPageNumber)"></dir-pagination-controls>	
+		<dir-pagination-controls template-url="app/pagination/pagination.tpl.html"></dir-pagination-controls>	
 	</div>
 </section>
