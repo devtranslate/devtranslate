@@ -128,6 +128,38 @@
       "tradutorArtigo": "Emanuel G de Souza",
       "siteArtigo": "https://medium.com/emanuelg-blog/série-es6-by-wes-bos-use-let-com-for-loops-em-javascript-891922dcea49#.dv05gwm0f",
       "imagemArtigo": "http://itschool-hillel.org/images/blog/488/ecma-1200x600__og.png"
+    },
+    {
+      "id": 17,
+      "nomeArtigo": "Escrevendo JavaScript com acessibilidade em mente",
+      "autorArtigo": "Manuel Matuzovic",
+      "tradutorArtigo": "Emanuel G de Souza",
+      "siteArtigo": "https://medium.com/emanuelg-blog/escrevendo-javascript-com-acessibilidade-em-mente-3720e9779969#.mmux2td5q",
+      "imagemArtigo": "https://cdn-images-1.medium.com/max/800/1*iAXxkKQ0YDwb0PV8v7t2Hw.png"
+    },
+    {
+      "id": 18,
+      "nomeArtigo": "Reflexão em padrões de projeto para Node.js",
+      "autorArtigo": "Kalin Chernev",
+      "tradutorArtigo": "Emanuel G de Souza",
+      "siteArtigo": "https://medium.com/emanuelg-blog/reflex%C3%A3o-em-padr%C3%B5es-de-projeto-para-node-js-b7344f2529c7#.gy5lnmau4",
+      "imagemArtigo": "https://cdn-images-1.medium.com/max/2000/1*sDKomwC8rfk_1qiYyncGLw.jpeg"
+    },
+    {
+      "id": 19,
+      "nomeArtigo": "Entendendo a precedência de estilo em CSS: Especificidade, Herança e Efeito Cascata",
+      "autorArtigo": "Steven Bradley",
+      "tradutorArtigo": "Emanuel G de Souza",
+      "siteArtigo": "https://medium.com/emanuelg-blog/entendendo-a-preced%C3%AAncia-de-estilo-em-css-especificidade-heran%C3%A7a-e-efeito-cascata-a437c4929173#.9fwxovjin",
+      "imagemArtigo": "https://d2tycqyw09ngo1.cloudfront.net/be-content/uploads/2016/08/26185102/Sites-CSS-surpreende.png"
+    },
+    {
+      "id": 20,
+      "nomeArtigo": "4 novos métodos de string em ES6 que você deveria conhecer",
+      "autorArtigo": "Wes Bos",
+      "tradutorArtigo": "Emanuel G de Souza",
+      "siteArtigo": "https://medium.com/emanuelg-blog/4-novos-m%C3%A9todos-de-string-em-es6-que-voc%C3%AA-deveria-conhecer-e85c7262123c#.o8tvbjyke",
+      "imagemArtigo": "http://www.cuelogic.com/blog/wp-content/uploads/2016/04/Advantages-of-JavaScript-ES6-over-ES51.jpg"
     }
   ]
 }
