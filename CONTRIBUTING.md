@@ -1,6 +1,6 @@
 # Guia de Contribuição
 
-Para cooperar com o projeto, a seção _issues_ de repositório está disponível. Existe a necessidade de seguir algumas instruções, apresentadas neste local, buscando melhorar a organização do mesmo e do projeto, conforme abaixo.
+Para cooperar com o projeto, a seção _issues_ do repositório está disponível. Existe a necessidade de seguir algumas instruções, apresentadas neste local, buscando melhorar a organização do mesmo e do projeto, conforme abaixo.
 
 ## Etiquetas (Labels)
 
