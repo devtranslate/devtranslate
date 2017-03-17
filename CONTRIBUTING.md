@@ -7,6 +7,7 @@ Para cooperar com o projeto, a seção _issues_ do repositório está disponíve
 As _labels_ (etiquetas, em tradução livre) são, de certa forma, referências criadas para facilitar a identificação de uma nova _issue_, conforme sua responsabilidade. Atualmente, existem 7 (sete) principais:
 
 - **artigo**: referencia a requisição de inclusão de um novo artigo no banco;
+- **duvidas**: caso a pessoas tenha alguma duvida referente ao projeto;
 - **correção**: informa a apresentação de erros, sejam ortográficos ou visuais da aplicação;
 - **documentação**: referencia a requisição de uma nova documentação no banco;
 - **livros**: adiciona a requisição de um novo livro no banco;
