@@ -1,5 +1,5 @@
 {
-    "totalRows": 20,
+    "totalRows": 21,
     "data": [
         {
             "id": 1,
@@ -160,6 +160,14 @@
             "tradutorArtigo": "Emanuel G de Souza",
             "siteArtigo": "https://medium.com/emanuelg-blog/4-novos-m%C3%A9todos-de-string-em-es6-que-voc%C3%AA-deveria-conhecer-e85c7262123c#.o8tvbjyke",
             "imagemArtigo": "http://www.cuelogic.com/blog/wp-content/uploads/2016/04/Advantages-of-JavaScript-ES6-over-ES51.jpg"
-        }
+        },
+        {
+            "id": 21,
+            "nomeArtigo": "Aventuras funcionais ocasionais em JavaScript",
+            "autorArtigo": "Štefan Maric",
+            "tradutorArtigo": "Suissa",
+            "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/Casual%20functional%20adventures%20in%20JavaScript",
+            "imagemArtigo": "http://blog.rangle.io/content/images/2016/11/rangle-blog-funtional-js-small-1-1.png"
+        }        
     ]
 }
