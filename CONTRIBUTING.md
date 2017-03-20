@@ -1,12 +1,13 @@
 # Guia de Contribuição
 
-Para cooperar com o projeto, a seção _issues_ de repositório está disponível. Existe a necessidade de seguir algumas instruções, apresentadas neste local, buscando melhorar a orgranização do mesmo e do projeto, conforme abaixo.
+Para cooperar com o projeto, a seção _issues_ do repositório está disponível. Existe a necessidade de seguir algumas instruções, apresentadas neste local, buscando melhorar a organização do mesmo e do projeto, conforme abaixo.
 
 ## Etiquetas (Labels)
 
 As _labels_ (etiquetas, em tradução livre) são, de certa forma, referências criadas para facilitar a identificação de uma nova _issue_, conforme sua responsabilidade. Atualmente, existem 7 (sete) principais:
 
 - **artigo**: referencia a requisição de inclusão de um novo artigo no banco;
+- **duvidas**: caso a pessoas tenha alguma duvida referente ao projeto;
 - **correção**: informa a apresentação de erros, sejam ortográficos ou visuais da aplicação;
 - **documentação**: referencia a requisição de uma nova documentação no banco;
 - **livros**: adiciona a requisição de um novo livro no banco;
@@ -28,7 +29,7 @@ Primeiramente, existe a necessidade de criação de uma nova _issue_. Caso esta 
 [Melhoria] - Tipo de Melhoria
 ```
 
-Todas as outras opções devem seguir a mesma estrutura, apenas mudando o tipo de _label_ dentro das chaves `[]`. Para descrever um `problema` ou `melhoria`, há a necessidade de inclusão de uma breve descrição da mesma e, se possível, exemplificá-lo, tornando mais fácil a explicação. Agora, caso haja o desejo de cadastro um novo documento, será preciso a apresentação do _link_ do mesmo, seguindo as estruturas anteriores.
+Todas as outras opções devem seguir a mesma estrutura, apenas mudando o tipo de _label_ dentro das chaves `[]`. Para descrever um `problema` ou `melhoria`, há a necessidade de inclusão de uma breve descrição da mesma e, se possível, exemplificá-lo, tornando mais fácil a explicação. Agora, caso seja desejado o cadastro de um novo documento, será preciso a apresentação do _link_ do mesmo, seguindo as estruturas anteriores.
 
 ## Pull Request
 

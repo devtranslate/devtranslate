@@ -1,5 +1,5 @@
 {
-    "totalRows": 21,
+    "totalRows": 22,
     "data": [
         {
             "id": 1,
@@ -168,6 +168,14 @@
             "tradutorArtigo": "Lucas Santos",
             "siteArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/tree/translation",
             "imagemArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/raw/master/logo.png?raw=true"
-        }
+        },
+        {
+            "id":22
+            "nomeArtigo": "Aventuras funcionais ocasionais em JavaScript",
+            "autorArtigo": "Štefan Maric",
+            "tradutorArtigo": "Suissa",
+            "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/Casual%20functional%20adventures%20in%20JavaScript",
+            "imagemArtigo": "http://blog.rangle.io/content/images/2016/11/rangle-blog-funtional-js-small-1-1.png"
+        }        
     ]
 }
