@@ -1,5 +1,5 @@
 {
-    "totalRows": 21,
+    "totalRows": 22,
     "data": [
         {
             "id": 1,
@@ -163,6 +163,14 @@
         },
         {
             "id": 21,
+            "nomeArtigo": "Design Patterns para Humanos",
+            "autorArtigo": "Kamran Ahmed",
+            "tradutorArtigo": "Lucas Santos",
+            "siteArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/tree/translation",
+            "imagemArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/raw/master/logo.png?raw=true"
+        },
+        {
+            "id":22
             "nomeArtigo": "Aventuras funcionais ocasionais em JavaScript",
             "autorArtigo": "Štefan Maric",
             "tradutorArtigo": "Suissa",
