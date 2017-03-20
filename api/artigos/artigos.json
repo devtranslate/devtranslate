@@ -170,7 +170,7 @@
             "imagemArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/raw/master/logo.png?raw=true"
         },
         {
-            "id":22
+            "id": 22,
             "nomeArtigo": "Aventuras funcionais ocasionais em JavaScript",
             "autorArtigo": "Štefan Maric",
             "tradutorArtigo": "Suissa",
