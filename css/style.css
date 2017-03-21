@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
 
-.logo {
-	color: #363636;
-	font-size: 25px;
-	font-weight: bold;
-	font-family: 'Just Another Hand', cursive;	
-	margin-top: 7px;
-}
 
-.icon-logo {
-    height: 25px;
-    margin: 11px 10px 0px 0px;
+@media screen and (min-width: 999px) {
+    .logo {
+    	color: #363636;
+    	font-size: 25px;
+    	font-weight: bold;
+    	font-family: 'Just Another Hand', cursive;	
+    	margin-top: 7px;
+    }
+
+    .icon-logo {
+        height: 25px;
+        margin: 11px 10px 0px 0px;
+    }
 }
 
 @media screen and (max-width: 999px) {
     .icon-logo {
         height: 33px;
-        margin: 14px 10px 0px 0px;
+        margin: 15px 10px 0px 0px;
     }
 
     .logo {
@@ -24,7 +27,7 @@
         font-size: 35px;
         font-weight: bold;
         font-family: 'Just Another Hand', cursive;  
-        margin-top: 12%;
+        padding-top: 13%;
     }
 
     .nav-center{
