@@ -6180,9 +6180,6 @@ label.panel-block:hover {
   .hero.is-light .nav-toggle.is-active span {
     background-color: #363636;
   }
-  .hero.is-light .nav-menu .nav-item {
-    border-top-color: rgba(54, 54, 54, 0.2);
-  }
 }
 
 .hero.is-dark {

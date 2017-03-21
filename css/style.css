@@ -18,14 +18,14 @@
 
 @media screen and (max-width: 999px) {
     .icon-logo {
-        height: 33px;
+        height: 28px;
         margin-right: 10px;
-        margin-top: 7px;
+        margin-top: 6px;
     }
 
     .logo {
         color: #363636;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: bold;
         font-family: 'Just Another Hand', cursive;  
     }
@@ -93,7 +93,8 @@ i {
 
 @media screen and (max-width: 999px) {
   .nav-left {
+    overflow: inherit;
     margin-left: 25px;
-    margin-top: 7px;
+    margin-top: 12px;
   }
 }
