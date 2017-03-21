@@ -71,3 +71,24 @@ i {
     color: #4a4a4a;
     font-weight: 700;
 }
+
+.nav-right .nav-item {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-right .nav-item:hover {
+    color: #00d1b2 !important;
+    background: none !important;
+}
+
+.nav-right .nav-item.is-active {
+    color: #ff3860 !important;
+    background: none !important;
+}
+
+@media screen and (max-width: 999px) {
+  .nav-left {
+    margin-left: 25px;
+  }
+}
