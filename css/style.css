@@ -20,6 +20,7 @@
     .icon-logo {
         height: 33px;
         margin: 15px 10px 0px 0px;
+        float: left;
     }
 
     .logo {
@@ -27,7 +28,7 @@
         font-size: 35px;
         font-weight: bold;
         font-family: 'Just Another Hand', cursive;  
-        padding-top: 13%;
+        margin-top: 13%;
     }
 
     .nav-center{
