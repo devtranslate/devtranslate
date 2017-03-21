@@ -3905,7 +3905,7 @@ a.box:active {
 }
 
 .nav-toggle:hover {
-  background-color: whitesmoke;
+  background-color: #eee;
 }
 
 .nav-toggle.is-active span {
