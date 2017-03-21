@@ -29,6 +29,7 @@
         font-weight: bold;
         font-family: 'Just Another Hand', cursive;  
         margin-top: 13%;
+        float: left;
     }
 
     .nav-center{
