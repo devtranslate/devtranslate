@@ -10,5 +10,5 @@ Criado em Março de 2017, o _DEV#TRANSLATE_ tem como objetivo a organização e 
 * **Comunidade**: Uma forma das pessoas poderem contribuir com a comunidade. Desta forma elas podem encontrar os projetos de tradução que estão em andamento.
 * **Habilidades**: Uma das vantagens de contribuir com traduções é a melhora de habilidade com línguas estrangeiras, e também com o conteúdo que esteja traduzindo.
 
-# Guia de Contribuição
+## Guia de Contribuição
 Para acessar ao guia de contribuição basta [clicar aqui](CONTRIBUTING.md).
