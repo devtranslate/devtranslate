@@ -1,9 +1,16 @@
 ﻿<!-- Menu -->
-<nav class="nav has-shadow">
+<nav class="nav has-shadow hero is-light">
     <div class="container">
-        <div class="nav-center">
+        <div class="nav-left">
             <img src="img/logo-icon.png" alt="Ícone do Logo" class="icon-logo"/>
             <a href="#" class="logo">DEV#TRANSLATE</a>
+        </div>
+        <div class="nav-right">
+          <a class="nav-item is-tab is-hidden-touch" ng-class="{ 'is-active': vm.stateAtivo('sobre') }" ui-sref="sobre">Home</a>
+            <a class="nav-item is-tab is-hidden-touch" ng-class="{ 'is-active': vm.stateAtivo('artigos') }" ui-sref="artigos">Artigos</a>
+            <a class="nav-item is-tab is-hidden-touch" ng-class="{ 'is-active': vm.stateAtivo('documentacao') }" ui-sref="documentacao">Documentação</a>
+            <a class="nav-item is-tab is-hidden-touch" ng-class="{ 'is-active': vm.stateAtivo('livros') }" ui-sref="livros">Livros e Outros</a>
+            <a class="nav-item is-tab is-hidden-touch" ng-class="{ 'is-active': vm.stateAtivo('projetos') }" ui-sref="projetos">Projetos em Andamento</a>
         </div>
         <span class="nav-toggle">
             <span></span>
@@ -19,44 +26,6 @@
         </div>
     </div>
 </nav>
-
-<!-- Header -->
-<section class="hero is-medium is-primary">
-    <div class="hero-body">
-        <div class="container has-text-centered">
-            <h2 class="title is-2">
-                Não sabe inglês? Não se preocupe.
-            </h2>
-            <h2 class="subtitle">
-                Aqui você encontra todo tipo de documento de tecnologia traduzido para o português.
-            </h2>
-        </div>
-    </div>
-
-    <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth is-hidden-touch">
-            <div class="container">
-                <ul>
-                    <li ng-class="{ 'is-active': vm.stateAtivo('sobre') }">
-                        <a ui-sref="sobre">Home</a>
-                    </li>
-                    <li ng-class="{ 'is-active': vm.stateAtivo('artigos') }">
-                        <a ui-sref="artigos">Artigos</a>
-                    </li>
-                    <li ng-class="{ 'is-active': vm.stateAtivo('documentacao') }">
-                        <a ui-sref="documentacao">Documentação</a>
-                    </li>
-                    <li ng-class="{ 'is-active': vm.stateAtivo('livros') }">
-                        <a ui-sref="livros">Livros e Outros</a>
-                    </li>
-                    <li ng-class="{ 'is-active': vm.stateAtivo('projetos') }">
-                        <a ui-sref="projetos">Projetos em Andamento</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</section>
 
 <!-- UiView -->
 <div ui-view></div>

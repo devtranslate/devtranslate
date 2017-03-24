@@ -3905,7 +3905,7 @@ a.box:active {
 }
 
 .nav-toggle:hover {
-  background-color: whitesmoke;
+  background-color: #eee;
 }
 
 .nav-toggle.is-active span {
@@ -4013,6 +4013,7 @@ a.nav-item.is-tab {
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: calc(1rem - 1px);
+  text-transform: uppercase;
 }
 
 .nav-item a.is-tab:hover,
@@ -4025,7 +4026,7 @@ a.nav-item.is-tab:hover {
 a.nav-item.is-tab.is-active {
   background: #00d1b2;
   color: #ffffff;
-  padding-bottom: calc(1rem - 3px);
+  padding-bottom: calc(1rem - 1px);
 }
 
 @media screen and (min-width: 1000px) {
@@ -6134,7 +6135,7 @@ label.panel-block:hover {
 .hero.is-light a.nav-item:hover, .hero.is-light a.nav-item.is-active,
 .hero.is-light .nav-item a:not(.button):hover,
 .hero.is-light .nav-item a:not(.button).is-active {
-  color: #363636;
+  color: #fff;
 }
 
 .hero.is-light .tabs a {
@@ -6178,9 +6179,6 @@ label.panel-block:hover {
   }
   .hero.is-light .nav-toggle.is-active span {
     background-color: #363636;
-  }
-  .hero.is-light .nav-menu .nav-item {
-    border-top-color: rgba(54, 54, 54, 0.2);
   }
 }
 

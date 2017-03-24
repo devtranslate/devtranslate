@@ -1,12 +1,14 @@
-# Versão Alfa
+<p align="center">
+  <img src="http://i68.tinypic.com/idsuv7.png" alt="Logo DevTranslate"/>
+</p>
 
-[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/devtranslate/Lobby)
+[![Join the chat at https://gitter.im/devtranslate/Lobby](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/devtranslate/Lobby)
+[![GitHub stars](https://img.shields.io/github/stars/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/stargazers)
 
-Atualmente, o repositório está em versão `alfa`, e, portanto, o _site_ funciona com configurações básicas. Por agora, o principal objetivo é verificar o interesse do público, decidindo, assim, o que será preciso pra versões futuras, como, por exemplo, o investimento em uma base de dados maior ou aumento na quantidade de dados transferidos. Com isso, ainda por tempo indeterminado, analisam-se todas essas opções, as quais serão escolhidas por viabilidade, não prejudicando nenhuma das partes. Enquanto isto, contribuições e ajudas são apreciadas.
+Criado em Março de 2017, o _DEV#TRANSLATE_ tem como objetivo a organização e localização de documentos técnicos referentes à área de TI traduzidos de outras línguas para o português. Desta forma evitando excluir uma parte da comunidade de adquirir conhecimento ou começar na área de tecnologia. Apresentamos abaixo alguns dos problemas que buscamos resolver com a criação deste site:
+* **Fácil localização**: Por terem várias traduções de documentos de tecnologia espalhadas pela internet, às vezes se torna difícil encontrar algum documento específico em meio a tanta informação.
+* **Comunidade**: Uma forma das pessoas poderem contribuir com a comunidade. Desta forma elas podem encontrar os projetos de tradução que estão em andamento.
+* **Habilidades**: Uma das vantagens de contribuir com traduções é a melhora de habilidade com línguas estrangeiras, e também com o conteúdo que esteja traduzindo.
 
-# Guia de Contribuição
+## Guia de Contribuição
 Para acessar ao guia de contribuição basta [clicar aqui](CONTRIBUTING.md).
-
-# Considerações Finais
-
-Nota-se que, atualmente, o processo de cadastro é manual. Já esta sendo implementado, para a próxima versão, uma página de cadastramento automatizada, além de outras funcionalidades, como _tags_ para facilitar a pesquisa de artigos voltados a determinado assunto. Há um grande esforço para que o projeto ganhe força e esperamos que a comunidade receba-o com zelo, desfrutando-o ao máximo.
