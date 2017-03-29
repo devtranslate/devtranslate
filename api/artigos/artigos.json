@@ -1,5 +1,5 @@
 {
-    "totalRows": 22,
+    "totalRows": 23,
     "data": [
         {
             "id": 1,
@@ -176,6 +176,14 @@
             "tradutorArtigo": "Suissa",
             "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/Casual%20functional%20adventures%20in%20JavaScript",
             "imagemArtigo": "http://blog.rangle.io/content/images/2016/11/rangle-blog-funtional-js-small-1-1.png"
-        }        
+        },
+        {
+            "id": 23,
+            "nomeArtigo": "Como o Flexbox funciona— explicado com gifs grandes e coloridos",
+            "autorArtigo": "Scott Domes",
+            "tradutorArtigo": "Lucas Silva",
+            "siteArtigo": "https://medium.com/@lucasjs/como-o-flexbox-funciona-explicado-com-gifs-grandes-e-coloridos-26c42a0bcdc",
+            "imagemArtigo": "https://cdn-images-1.medium.com/max/1000/1*naWgwUzZAZxxAfbc6OISpQ.png"
+        }
     ]
 }
