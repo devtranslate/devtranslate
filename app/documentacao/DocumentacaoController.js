@@ -24,7 +24,7 @@
             $http
                 .get(getURL)
                 .then(function (response) {
-                    vm.documentacao = response.data.data;
+                    vm.documentacao = _.orderBy(response.data.data, ["nomeDoc"], ["asc"]);
                 });
         }
     }

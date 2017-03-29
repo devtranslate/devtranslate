@@ -24,7 +24,7 @@
             $http
                 .get(getURL)
                 .then(function (response) {
-                    vm.livros = response.data.data;
+                    vm.livros = _.orderBy(response.data.data, ["nomeLivro"], ["asc"]);
                 });
         }
     }
