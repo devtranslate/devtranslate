@@ -2362,6 +2362,13 @@ a.nav-item.is-tab.is-active {
   }
 }
 
+@media screen and (max-width: 769px) {
+  .hero.is-medium .hero-body {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+  }
+}
+
 .section {
   background-color: white;
   padding: 6rem 1.5rem;
