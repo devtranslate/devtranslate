@@ -184,6 +184,14 @@
             "tradutorArtigo": "Lucas Silva",
             "siteArtigo": "https://medium.com/@lucasjs/como-o-flexbox-funciona-explicado-com-gifs-grandes-e-coloridos-26c42a0bcdc",
             "imagemArtigo": "https://cdn-images-1.medium.com/max/1000/1*naWgwUzZAZxxAfbc6OISpQ.png"
+        },
+        {
+            "id": 24,
+            "nomeArtigo": "Code Coverage com Istanbul",
+            "autorArtigo": "DWYL",
+            "tradutorArtigo": "Lucas Santos",
+            "siteArtigo": "https://github.com/khaosdoctor/learn-istanbul/blob/master/README.md",
+            "imagemArtigo": "http://i.imgur.com/tXKAgL9.png"
         }
     ]
 }
