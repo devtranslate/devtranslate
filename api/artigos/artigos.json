@@ -191,7 +191,15 @@
             "autorArtigo": "DWYL",
             "tradutorArtigo": "Lucas Santos",
             "siteArtigo": "https://github.com/khaosdoctor/learn-istanbul/blob/master/README.md",
-            "imagemArtigo": "http://i.imgur.com/tXKAgL9.png"
+            "imagemArtigo": "http://www.gregjopa.com/images/posts/2014/istanbul_bad_test_coverage_screenshot.png"
+        },
+        {
+            "id": 25,
+            "nomeArtigo": "O que significa const no ES6?",
+            "autorArtigo": "Jacopo Daeli",
+            "tradutorArtigo": "Suissa",
+            "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/What%20does%20const%20stand%20for%20in%20ES6%3F",
+            "imagemArtigo": "https://i.ytimg.com/vi/2A-cjljq7ts/maxresdefault.jpg"
         }
     ]
 }
