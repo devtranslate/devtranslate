@@ -1,5 +1,5 @@
 {
-    "totalRows": 14,
+    "totalRows": 15,
     "data": [
         {
             "id": 1,
@@ -84,6 +84,12 @@
             "nomeDoc": "Documentação do Joomla",
             "siteDoc": "https://docs.joomla.org/Joomla_info_page/pt-BR",
             "imagemDoc": "https://cdn.joomla.org/images/joomla-org-og.jpg"
-        }        
+        },
+        {
+            "id": 15,
+            "nomeDoc": "Documentação do Vue.js",
+            "siteDoc": "https://br.vuejs.org/",
+            "imagemDoc": "https://i.ytimg.com/vi/DsuTwV0jwaY/maxresdefault.jpg"
+        }       
     ]
 }
