@@ -1,5 +1,5 @@
 {
-    "totalRows": 15,
+    "totalRows": 16,
     "data": [
         {
             "id": 1,
@@ -90,6 +90,12 @@
             "nomeDoc": "Documentação do Vue.js",
             "siteDoc": "https://br.vuejs.org/",
             "imagemDoc": "https://i.ytimg.com/vi/DsuTwV0jwaY/maxresdefault.jpg"
-        }       
+        },
+        {
+            "id": 16,
+            "nomeDoc": "Documentação de RSCSS",
+            "siteDoc": "https://silvamateus.gitbooks.io/rscss/content/",
+            "imagemDoc": "http://syndicode.co/wp-content/uploads/2016/07/article-logo.jpg  "
+        }           
     ]
 }
