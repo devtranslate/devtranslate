@@ -1,5 +1,5 @@
 {
-    "totalRows": 25,
+    "totalRows": 26,
     "data": [
         {
             "id": 1,
@@ -200,6 +200,14 @@
             "tradutorArtigo": "Suissa",
             "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/What%20does%20const%20stand%20for%20in%20ES6%3F",
             "imagemArtigo": "https://i.ytimg.com/vi/2A-cjljq7ts/maxresdefault.jpg"
-        }
+        },
+        {
+            "id": 26,
+            "nomeArtigo": "Carreira Front-End",
+            "autorArtigo": "William Oliveira",
+            "tradutorArtigo": "William Oliveira, Bruno Silva, Ricardo Shiota Yasuda, Gabriel Brito e Danilo Vaz",
+            "siteArtigo": "https://github.com/woliveiras/front-end-career/blob/master/translations/pt-br/README.md",
+            "imagemArtigo": "http://i67.tinypic.com/k1uxef.png"
+        }  
     ]
 }
