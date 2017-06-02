@@ -33,4 +33,4 @@ Todas as outras opções devem seguir a mesma estrutura, apenas mudando o tipo d
 
 ## Pull Request
 
-Em Breve.
+Para realização do Pull Request não existe um padrão definido até o presente momento, ou seja, basta **forkar** o projeto, **adicionar as informações** no json mockado, fazer todo o processo de **add** + **commit** + **push** e depois simplesmente criar seu PR para a verificação.
