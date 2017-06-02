@@ -1,5 +1,5 @@
 {
-    "totalRows": 26,
+    "totalRows": 27,
     "data": [
         {
             "id": 1,
@@ -167,7 +167,7 @@
             "autorArtigo": "Kamran Ahmed",
             "tradutorArtigo": "Lucas Santos",
             "siteArtigo": "https://github.com/khaosdoctor/design-patterns-for-humans/tree/translation",
-            "imagemArtigo": "http://www.deepakkamboj.com/wp-content/uploads/2015/11/designpatterns-720x340.png"
+            "imagemArtigo": "https://speckycdn-sdm.netdna-ssl.com/wp-content/uploads/2017/02/weekly-news-for-designers-february-26-15.png"
         },
         {
             "id": 22,
@@ -208,6 +208,14 @@
             "tradutorArtigo": "William Oliveira, Bruno Silva, Ricardo Shiota Yasuda, Gabriel Brito e Danilo Vaz",
             "siteArtigo": "https://github.com/woliveiras/front-end-career/blob/master/translations/pt-br/README.md",
             "imagemArtigo": "http://i67.tinypic.com/k1uxef.png"
+        },
+        {
+            "id": 27,
+            "nomeArtigo": "Tudo sobre Recursão, PTC, TCO e STC em JavaScript",
+            "autorArtigo": "Lucas Fernandes da Costa",
+            "tradutorArtigo": "Suissa",
+            "siteArtigo": "https://medium.com/@osuissa/tudo-sobre-recurs%C3%A3o-ptc-tco-e-stc-em-javascript-58953a5a846a",
+            "imagemArtigo": "http://blog.flatironschool.com/wp-content/uploads/2013/11/Ruby-and-JavaScript.jpg"
         }  
     ]
 }

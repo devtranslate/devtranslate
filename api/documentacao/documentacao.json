@@ -95,7 +95,13 @@
             "id": 16,
             "nomeDoc": "Documentação de RSCSS",
             "siteDoc": "https://silvamateus.gitbooks.io/rscss/content/",
-            "imagemDoc": "http://syndicode.co/wp-content/uploads/2016/07/article-logo.jpg  "
-        }           
+            "imagemDoc": "http://syndicode.co/wp-content/uploads/2016/07/article-logo.jpg"
+        },
+        {
+            "id": 17,
+            "nomeDoc": "Documentação do Jest",
+            "siteDoc": "http://facebook.github.io/jest/pt-BR/",
+            "imagemDoc": "https://marmelab.com/images/blog/jest.png"
+        }             
     ]
 }
