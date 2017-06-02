@@ -1,5 +1,5 @@
 {
-    "totalRows": 27,
+    "totalRows": 28,
     "data": [
         {
             "id": 1,
@@ -216,6 +216,14 @@
             "tradutorArtigo": "Suissa",
             "siteArtigo": "https://medium.com/@osuissa/tudo-sobre-recurs%C3%A3o-ptc-tco-e-stc-em-javascript-58953a5a846a",
             "imagemArtigo": "http://blog.flatironschool.com/wp-content/uploads/2013/11/Ruby-and-JavaScript.jpg"
+        },
+        {
+            "id": 28,
+            "nomeArtigo": "Pare de usar CSS no JavaScript para desenvolvimento web",
+            "autorArtigo": "Gajus Kuizinas",
+            "tradutorArtigo": "Carlos Eduardo Olivieri",
+            "siteArtigo": "https://medium.com/@cadutech/pare-de-usar-css-no-javascript-para-desenvolvimento-web-b4a2e8fbb85e",
+            "imagemArtigo": "https://cdn-images-1.medium.com/max/800/1*Z7uoOFGKoI4-OOEE9yoNdg.jpeg"
         }  
     ]
 }
