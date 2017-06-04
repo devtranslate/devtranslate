@@ -1,5 +1,5 @@
 {
-    "totalRows": 29,
+    "totalRows": 42,
     "data": [
         {
             "id": 1,
@@ -143,7 +143,7 @@
             "autorArtigo": "Kalin Chernev",
             "tradutorArtigo": "Emanuel G de Souza",
             "siteArtigo": "https://medium.com/emanuelg-blog/reflex%C3%A3o-em-padr%C3%B5es-de-projeto-para-node-js-b7344f2529c7#.gy5lnmau4",
-            "imagemArtigo": "https://cdn-images-1.medium.com/max/2000/1*sDKomwC8rfk_1qiYyncGLw.jpeg"
+            "imagemArtigo": "https://tadeuesteves.files.wordpress.com/2014/05/nodejs_0.png"
         },
         {
             "id": 19,
@@ -174,7 +174,7 @@
             "nomeArtigo": "Aventuras funcionais ocasionais em JavaScript",
             "autorArtigo": "Štefan Maric",
             "tradutorArtigo": "Suissa",
-            "siteArtigo": "https://github.com/suissa/blog/tree/master/traducoes/Casual%20functional%20adventures%20in%20JavaScript",
+            "siteArtigo": "https://medium.com/@osuissa/aventuras-funcionais-ocasionais-em-javascript-54d3e168c4da",
             "imagemArtigo": "http://blog.rangle.io/content/images/2016/11/rangle-blog-funtional-js-small-1-1.png"
         },
         {
@@ -264,7 +264,7 @@
             "tradutorArtigo": "Wellington Mitrut",
             "siteArtigo": "https://medium.com/blog-do-mitrut/xamarin-vs-nativo-36e46ec2c566",
             "imagemArtigo": "https://cdn-images-1.medium.com/max/1000/1*ZS0F2bXqEELjlzVJ-Hpw6A.png"
-        }  ,
+        },
         {
             "id": 34,
             "nomeArtigo": "Então Você Quer Ser um Programador Funcional (Parte 1)",
@@ -272,6 +272,70 @@
             "tradutorArtigo": "Charles Scalfani",
             "siteArtigo": "https://medium.com/@mapaiva/ent%C3%A3o-voc%C3%AA-quer-ser-um-programador-funcional-parte-1-f3bdb7baeedb",
             "imagemArtigo": "https://blog.jscrambler.com/content/images/2016/12/functional_programming.jpg"
-        }  
+        },
+        {
+            "id": 35,
+            "nomeArtigo": "PyPi — Quem mantém e como",
+            "autorArtigo": "Donald Stuff",
+            "tradutorArtigo": "Cadu Leite",
+            "siteArtigo": "https://medium.com/@cadu_leite/mantendo-o-%C3%ADndice-de-pacotes-python-pypi-deb403b0d984",
+            "imagemArtigo": "https://15809-presscdn-0-93-pagely.netdna-ssl.com/wp-content/uploads/2016/02/MTE5NDg0MDYxMTk4NTUwNTQz.png"
+        },
+        {
+            "id": 36,
+            "nomeArtigo": "Como escrever código Go",
+            "autorArtigo": "Golang",
+            "tradutorArtigo": "Viliam",
+            "siteArtigo": "https://medium.com/@viliamjr/como-escrever-codigo-go-95381b84ba82",
+            "imagemArtigo": "https://s.dou.ua/storage-files/golang600.png"
+        },
+        {
+            "id": 37,
+            "nomeArtigo": "As 5 Regras da Programação - Segundo Rob Pike",
+            "autorArtigo": "Rob Pike",
+            "tradutorArtigo": "Viliam",
+            "siteArtigo": "https://medium.com/@viliamjr/as-5-regras-da-programacao-segundo-rob-pike-ae3c8b599f50",
+            "imagemArtigo": "https://spzone-simpleprogrammer.netdna-ssl.com/wp-content/uploads/2016/08/Untitled-5-1024x576.png"
+        },
+        {
+            "id": 38,
+            "nomeArtigo": "Como dar um treinamento de segurança digital",
+            "autorArtigo": "Rachel Weidinger, Cooper Quintin, Martin Shelton e Matt Mitchell",
+            "tradutorArtigo": "Narrira Lemos",
+            "siteArtigo": "https://medium.com/@narriral/como-dar-um-treinamento-de-seguran%C3%A7a-digital-48c1df2f0b35",
+            "imagemArtigo": "http://blog.futurecom.com.br/wp-content/uploads/2017/02/seguranca-ti-futurecom.png"
+        },
+        {
+            "id": 39,
+            "nomeArtigo": "Aprenda lua em 15 minutos",
+            "autorArtigo": "Corona Labs",
+            "tradutorArtigo": "Júnior Pires",
+            "siteArtigo": "https://medium.com/@junior_pires/saaripar-valida%C3%A7%C3%A3o-de-campos-no-android-9d35821a493d",
+            "imagemArtigo": "http://2.bp.blogspot.com/-c87b0AB50aE/Upcb2dnCdRI/AAAAAAAAAC8/w-2ZQwfvhe0/w1200-h630-p-k-no-nu/logo-lua.png"
+        },
+        {
+            "id": 40,
+            "nomeArtigo": "Como usar o GitHub como um ser humano adequado",
+            "autorArtigo": "Daniel Gallegos",
+            "tradutorArtigo": "Juliano Padilha",
+            "siteArtigo": "https://medium.com/@julianopadilha/como-usar-o-github-como-um-ser-humano-adequado-5a0a2e1afd18",
+            "imagemArtigo": "https://xakep.ru/wp-content/uploads/2015/07/collabocats.jpg"
+        },
+        {
+            "id": 41,
+            "nomeArtigo": "PSR-2 pt-BR Classes",
+            "autorArtigo": "PHP-Fig",
+            "tradutorArtigo": "Artur Afonso",
+            "siteArtigo": "https://blog.arturafonso.com.br/psr-2-pt-br-classes-fe332b6421fd",
+            "imagemArtigo": "https://s7.postimg.org/4u0acjq1n/2i0eudgdfgdfgdfg.png"
+        },
+        {
+            "id": 42,
+            "nomeArtigo": "Substituindo instruções de switch por objetos literais",
+            "autorArtigo": "Todd Motto",
+            "tradutorArtigo": "Suissa",
+            "siteArtigo": "https://medium.com/@osuissa/substituindo-instru%C3%A7%C3%B5es-de-switch-por-objetos-literais-93a3a78463a1",
+            "imagemArtigo": "https://cdn.programiz.com/sites/tutorial2program/files/switch-case_0.jpg"
+        }
     ]
 }
