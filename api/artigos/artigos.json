@@ -1,5 +1,5 @@
 {
-    "totalRows": 28,
+    "totalRows": 29,
     "data": [
         {
             "id": 1,
@@ -63,7 +63,7 @@
             "autorArtigo": "Ignacio Piantanida",
             "tradutorArtigo": "Leandro Cavalcante",
             "siteArtigo": "https://medium.com/@leandrw/css-do-odeio-essa-m-a-pode-deixar-comigo-f4203edfaec5#.grv17sx57",
-            "imagemArtigo": "http://cssjockey.com/wp-content/uploads/2013/05/cssjockey-css.png"
+            "imagemArtigo": "http://mediamaxdesign.com/wp-content/uploads/2016/12/use-CSS.png"
         },
         {
             "id": 9,
@@ -224,6 +224,54 @@
             "tradutorArtigo": "Carlos Eduardo Olivieri",
             "siteArtigo": "https://medium.com/@cadutech/pare-de-usar-css-no-javascript-para-desenvolvimento-web-b4a2e8fbb85e",
             "imagemArtigo": "https://cdn-images-1.medium.com/max/800/1*Z7uoOFGKoI4-OOEE9yoNdg.jpeg"
+        },
+        {
+            "id": 29,
+            "nomeArtigo": "Vue.js vale a tentativa?",
+            "autorArtigo": "Lukas Zkups",
+            "tradutorArtigo": "Walter Gandarella",
+            "siteArtigo": "https://blog.wgbn.com.br/vue-js-vale-a-tentativa-6e63b6e74a3b",
+            "imagemArtigo": "https://i.ytimg.com/vi/DsuTwV0jwaY/maxresdefault.jpg"
+        },
+        {
+            "id": 30,
+            "nomeArtigo": "Escrevendo HTML com acessibilidade em mente",
+            "autorArtigo": "Manuel Matuzovic",
+            "tradutorArtigo": "Emanuel G de Souza",
+            "siteArtigo": "https://medium.com/emanuelg-blog/escrevendo-html-com-acessibilidade-em-mente-4af1b8599246",
+            "imagemArtigo": "https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2016/03/featured15.jpg"
+        },
+        {
+            "id": 31,
+            "nomeArtigo": "FIRE Stack, uma nova arquitetura",
+            "autorArtigo": "Chris Esplin",
+            "tradutorArtigo": "Walter Gandarella",
+            "siteArtigo": "https://blog.wgbn.com.br/fire-stack-uma-nova-arquitetura-11f33b4fb3f",
+            "imagemArtigo": "https://s23.postimg.org/mtsuss8kr/fdgddfg.png"
+        },
+        {
+            "id": 32,
+            "nomeArtigo": "Como Kotlin se tornou a nossa linguagem principal para Android",
+            "autorArtigo": "Dima Kovalenko",
+            "tradutorArtigo": "Wellington Mitrut",
+            "siteArtigo": "https://medium.com/blog-do-mitrut/como-kotlin-se-tornou-a-nossa-linguagem-principal-para-android-24c9492fa273",
+            "imagemArtigo": "https://novemberfive.co/images/blog/kotlin-implementation/img-header.a35685e862fa39ad24d32cce13e741f7330b330efc4d432bc5a14479e05ce7ec.jpg"
+        },
+        {
+            "id": 33,
+            "nomeArtigo": "Xamarin vs. Nativo",
+            "autorArtigo": "Colby Williams",
+            "tradutorArtigo": "Wellington Mitrut",
+            "siteArtigo": "https://medium.com/blog-do-mitrut/xamarin-vs-nativo-36e46ec2c566",
+            "imagemArtigo": "https://cdn-images-1.medium.com/max/1000/1*ZS0F2bXqEELjlzVJ-Hpw6A.png"
+        }  ,
+        {
+            "id": 34,
+            "nomeArtigo": "Então Você Quer Ser um Programador Funcional (Parte 1)",
+            "autorArtigo": "Colby Williams",
+            "tradutorArtigo": "Charles Scalfani",
+            "siteArtigo": "https://medium.com/@mapaiva/ent%C3%A3o-voc%C3%AA-quer-ser-um-programador-funcional-parte-1-f3bdb7baeedb",
+            "imagemArtigo": "https://blog.jscrambler.com/content/images/2016/12/functional_programming.jpg"
         }  
     ]
 }
