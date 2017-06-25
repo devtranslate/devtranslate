@@ -336,6 +336,14 @@
             "tradutorArtigo": "Suissa",
             "siteArtigo": "https://medium.com/@osuissa/substituindo-instru%C3%A7%C3%B5es-de-switch-por-objetos-literais-93a3a78463a1",
             "imagemArtigo": "https://cdn.programiz.com/sites/tutorial2program/files/switch-case_0.jpg"
+        },
+        {
+            "id": 43,
+            "nomeArtigo": "Code Like a Girl",
+            "autorArtigo": "~",
+            "tradutorArtigo": "~",
+            "siteArtigo": "https://code.likeagirl.io/portugues/home",
+            "imagemArtigo": "https://static1.squarespace.com/static/5516b370e4b06fca171025cd/t/55a4e406e4b088e0a71cb066/1436869641329/?format=750w"
         }
     ]
 }
