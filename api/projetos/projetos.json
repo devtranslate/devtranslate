@@ -114,6 +114,12 @@
             "nomeProjeto": "Documentação React Native",
             "siteProjeto": "https://github.com/AnthonyMRodrigues/docsreactnative",
             "imagemProjeto": "http://i.imgur.com/oudmGva.png"
+        },
+        {
+            "id": 20,
+            "nomeProjeto": "Documentação Hexo - Template Estático em Node.js",
+            "siteProjeto": "https://github.com/lucianobarauna/dochexo",
+            "imagemProjeto": "http://i.imgur.com/HLrmbRw.jpg"
         }        
     ]
 }
