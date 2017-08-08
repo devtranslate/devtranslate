@@ -26,7 +26,7 @@
                         <p class="titulo-div">
                             <strong>{{livro.nomeLivro}}</strong>
                         </p>
-                        <small><i>Autor:</i> {{livro.autorLivro}} | <i>Tradutor:</i> {{livro.tradutorLivro}}</small>
+                        <small><i>Autor:</i> {{livro.autorLivro}} | <i>Tradutor:</i> {{livro.tradutorLivro}}<br><i>Tags:</i> <span ng-repeat="tag in livro.tags"> {{tag}}</span></small>
                     </div>
                 </div>
             </div>
