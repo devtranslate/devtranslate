@@ -1,5 +1,5 @@
 {
-    "totalRows": 18,
+    "totalRows": 19,
     "data": [
         {
             "id": 1,
@@ -108,6 +108,12 @@
             "nomeDoc": "Documentação do Django",
             "siteDoc": "https://docs.djangoproject.com/pt-br/1.11/",
             "imagemDoc": "https://i0.wp.com/edlibre.com/new/wp-content/uploads/2016/02/djangopony.jpg"
-        }             
+        },
+        {
+            "id": 19,
+            "nomeDoc": "Documentação de Lua 5.2",
+            "siteDoc": "https://www.lua.org/manual/5.2/pt/",
+            "imagemDoc": "https://2.bp.blogspot.com/-c87b0AB50aE/Upcb2dnCdRI/AAAAAAAAAC8/w-2ZQwfvhe0/w1200-h630-p-k-no-nu/logo-lua.png"
+        }
     ]
 }
