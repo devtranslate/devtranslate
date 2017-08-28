@@ -2,11 +2,20 @@
   <img src="http://i68.tinypic.com/idsuv7.png" alt="Logo DevTranslate"/>
 </p>
 
-[![Join the chat at https://gitter.im/devtranslate/Lobby](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg?style=flat-square)](https://gitter.im/devtranslate/Lobby)
+[![Join the chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-cc2b5e.svg?style=flat-square)](https://gitter.im/devtranslate/Lobby)
+[![Like the page on facebook](https://img.shields.io/badge/facebook-like%20the%20page%20%E2%86%92-4267b2.svg?style=flat-square)](https://www.facebook.com/devtranslate/)
+[![Join the chat](https://img.shields.io/badge/telegram-join%20chat%20%E2%86%92-0088cc.svg?style=flat-square)](https://telegram.me/devtranslate)
+[![Follow on medium](https://img.shields.io/badge/medium-follow%20us%20%E2%86%92-02b875.svg?style=flat-square)](https://medium.com/devtranslate)
+[![GitHub issues](https://img.shields.io/github/issues/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/issues)
 [![GitHub stars](https://img.shields.io/github/stars/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/network)
 
-## Guia de Contribuição
-Para acessar ao guia de contribuição basta [clicar aqui](CONTRIBUTING.md).
+# Contents
+1. [Portuguese](https://github.com/devtranslate/devtranslate.github.io#portuguese)
+2. [English](https://github.com/devtranslate/devtranslate.github.io#english)
 
-## Novo Layout
-Em breve.
+## Portuguese
+Em Breve.
+
+## English
+Soon.
