@@ -1,6 +1,9 @@
 {
   "name": "devtranslate",
-  "private": true,
+  "version": "2.0",
+  "description": "Project created to help find and translate technology documents to any language",
+  "repository": "https://github.com/devtranslate/devtranslate.github.io",
+  "author": "Larissa Mourullo <larismourullo@live.com>",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
@@ -27,10 +30,22 @@
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
     "jit-grunt": "^0.9.1",
-    "time-grunt": "^1.0.0",
-    "jshint-stylish": "^1.0.0"
+    "jshint-stylish": "^1.0.0",
+    "time-grunt": "^1.0.0"
   },
   "engines": {
-    "node": ">=0.10.0"
-  }
+    "node": ">=0.10.0",
+    "yarn": ">= 1.1.0",
+    "bower": ">= 1.8.2"
+  },
+  "scripts": {
+    "setup": "yarn global add bower grunt-cli -force && yarn install && bower install -allow-root -quiet",
+    "serve": "grunt serve",
+    "test": "grunt test",
+    "release:major": "bash shell/release-major.sh",
+    "release:minor": "bash shell/release-minor.sh"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "private": false
 }
