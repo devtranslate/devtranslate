@@ -10,6 +10,8 @@ body {
 
 a, a:hover, a:focus, a:visited {
     color: #4b4b4b;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .header {
@@ -38,13 +40,11 @@ a, a:hover, a:focus, a:visited {
         height:100%;
     }
 
-    .nav-links {
+    .nav-links-hover {
         display: -webkit-inline-box;
         display: -moz-box;
 
         li > a {
-            font-size: 14px;
-            font-weight: 300;
             text-transform: uppercase;
         }
 
@@ -55,8 +55,42 @@ a, a:hover, a:focus, a:visited {
 
         .circle {
             color: #f94e4e;
-            margin: 10px;
+            margin: 10px 5px;
             font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .nav-links-hover, .nav-links-default {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 767px) {
+        .dropdown {
+            display: none;
+        }
+    }
+
+    #btn-toogle {
+        margin-right: 0px;
+
+        .icon-bar {
+            background: #f94e4e;
+        }
+    }
+
+    .dropdown {
+        margin-top: 60px;
+
+        a {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        a:hover, a:focus {
+            background: none;
+            text-decoration: line-through #fabd07;
         }
     }
 }

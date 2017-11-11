@@ -41,11 +41,15 @@
   "scripts": {
     "setup": "yarn global add bower grunt-cli -force && yarn install && bower install -allow-root -quiet",
     "serve": "grunt serve",
+    "build": "grunt build",
     "test": "grunt test",
     "release:major": "bash shell/release-major.sh",
     "release:minor": "bash shell/release-minor.sh"
   },
   "main": "index.js",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  }
 }
