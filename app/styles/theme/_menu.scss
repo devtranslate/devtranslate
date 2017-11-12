@@ -1,0 +1,78 @@
+// Variables --------------------------------------
+$menu-border: 2px solid #ebebeb;
+
+// Code -------------------------------------------
+.header {
+    .navbar {
+        min-height: 80px;
+        border-bottom: $menu-border;
+    }
+
+    .navbar-brand {
+        float: none;
+        background: $white-base;
+
+        img {
+            height: 45px;
+            display: inherit;
+        }
+    }
+
+    .navbar-center{
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin: auto;
+        height: 100%;
+    }
+
+    .nav-links-hover {
+        display: -webkit-inline-box;
+        display: -moz-box;
+
+        li > a {
+            text-transform: uppercase;
+        }
+
+        li > a:hover, li > a:focus {
+            background: none;
+            text-decoration: $line-through;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .nav-links-hover, .nav-links-default {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 767px) {
+        .dropdown {
+            display: none;
+        }
+    }
+
+    #btn-toogle {
+        margin-right: 0px;
+
+        .icon-bar {
+            background: $pink-base;
+        }
+    }
+
+    .dropdown {
+        margin-top: 60px;
+
+        a {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        a:hover, a:focus {
+            background: none;
+            text-decoration: $line-through;
+        }
+    }
+}

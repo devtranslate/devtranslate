@@ -1,0 +1,62 @@
+// Variables --------------------------------------
+$search-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.075);
+
+// Code -------------------------------------------
+.search {
+	margin: 40px 0px;
+
+	.inner-addon { 
+	    position: relative; 
+
+	    .glyphicon {
+			position: absolute;
+			padding: 11px;
+			pointer-events: none;
+		    color: #f94e4e;
+    		font-size: 16px;
+		}
+
+		.form-control {
+			font-size: 12px;
+			height: 40px;
+			border: 0px;
+			border-radius: 0px;
+			border-bottom: 1px solid #f94e4e;
+			-webkit-box-shadow: $search-shadow;
+   			-moz-box-shadow: $search-shadow;
+	        box-shadow: $search-shadow;
+		}
+	}
+
+	.left-addon {
+		.glyphicon { 
+			left: 0px;
+		}
+
+		input { 
+			padding-left: 37px; 
+		}
+	}
+
+	.filter {
+		margin-top: 10px;
+
+		label {
+			font-size: $font-small;
+    		margin-right: 4%;
+		}
+
+		label:last-child {
+    		margin-right: 0px;
+		}
+
+		.filter-text {
+			color: $text-dark;
+			text-transform: uppercase;
+		}
+
+		.checkbox-inline {
+			color: $text-gray-search;
+		}
+	}
+}

@@ -1,96 +1,14 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+
+// Font Import
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
-body {
-    color: #4b4b4b;
-    background: #f5f5f5;   
-    font-family: 'Lato', sans-serif;
-}
+// Core Variables
+@import "theme/variables";
 
-a, a:hover, a:focus, a:visited {
-    color: #4b4b4b;
-    font-size: 14px;
-    font-weight: 300;
-}
-
-.header {
-    .navbar {
-        min-height: 80px;
-        border-bottom: #ebebeb solid 2px;
-    }
-
-    .navbar-brand {
-        float: none;
-        background: #ffffff;
-
-        img {
-            height: 45px;
-            display: inherit;
-        }
-    }
-
-    .navbar-center{
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        text-align: center;
-        margin: auto;
-        height:100%;
-    }
-
-    .nav-links-hover {
-        display: -webkit-inline-box;
-        display: -moz-box;
-
-        li > a {
-            text-transform: uppercase;
-        }
-
-        li > a:hover, li > a:focus {
-            background: none;
-            text-decoration: line-through #fabd07;
-        }
-
-        .circle {
-            color: #f94e4e;
-            margin: 10px 5px;
-            font-size: 12px;
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-        .nav-links-hover, .nav-links-default {
-            display: none;
-        }
-    }
-
-    @media screen and (min-width: 767px) {
-        .dropdown {
-            display: none;
-        }
-    }
-
-    #btn-toogle {
-        margin-right: 0px;
-
-        .icon-bar {
-            background: #f94e4e;
-        }
-    }
-
-    .dropdown {
-        margin-top: 60px;
-
-        a {
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        a:hover, a:focus {
-            background: none;
-            text-decoration: line-through #fabd07;
-        }
-    }
-}
+// Theme Components
+@import "theme/footer";
+@import "theme/general";
+@import "theme/menu";
+@import "theme/search";
