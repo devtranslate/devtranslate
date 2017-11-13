@@ -1,0 +1,38 @@
+.thumbnail {
+    padding: 0px;
+    background: none;
+    border: 0px;
+    border-radius: 0px;
+
+    .caption {
+        padding: 0px;
+
+        h5 {
+        	font-weight: $weight-large;
+    		color: $text-gray-title;
+        }
+
+        p {
+		    margin: 0px;
+		    font-size: $font-small;
+
+		    span {
+		    	font-weight: 700;
+    			color: $text-pink;
+		    }
+		}
+
+		.tags {
+		    margin-top: 10px;
+
+			.label-primary {
+				background-color: $text-pink;
+			}
+
+			.label-secondary {
+				background-color: $text-yellow;
+			}
+
+		}
+    }
+}

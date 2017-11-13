@@ -8,7 +8,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "theme/variables";
 
 // Theme Components
+@import "theme/content";
 @import "theme/footer";
 @import "theme/general";
 @import "theme/menu";
+@import "theme/pagination";
 @import "theme/search";
