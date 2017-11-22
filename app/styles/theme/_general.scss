@@ -7,7 +7,7 @@ body {
     color: $text-gray-dark;
     margin-bottom: 150px;
     background: $gray-light-base;   
-    font-family: 'Lato', sans-serif;
+    font-family: $opensans;
 }
 
 a, a:hover, a:focus, a:visited {

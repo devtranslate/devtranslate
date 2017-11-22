@@ -3,6 +3,8 @@ $menu-border: 2px solid #ebebeb;
 
 // Code -------------------------------------------
 .header {
+    font-family: $lato;
+    
     .navbar {
         min-height: 80px;
         border-bottom: $menu-border;

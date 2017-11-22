@@ -23,13 +23,19 @@ $text-gray-title: $gray-title-base;
 
 // Text Size -------------------------------
 $font-small: 11px;
+$font-normal: 12px;
 $font-medium: 14px;
 $font-large: 16px;
 
 // Font Weight -----------------------------
 $weight-small: 300;
 $weight-normal: 400;
+$weight-medium: 600;
 $weight-large: 700;
 
 // Personalize Style -----------------------
 $line-through: line-through #fabd07;
+
+// Font Family -----------------------------
+$opensans: 'Open Sans', sans-serif;
+$lato: 'Lato', sans-serif;

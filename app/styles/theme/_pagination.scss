@@ -1,3 +1,28 @@
 .paginations {
 	padding: 30px 0px;
+	font-family: $lato;
+
+	.pagination {
+		li {
+			a {
+				border: 0px;
+			    color: $text-pink;
+			}
+
+			a:hover {
+				color: $text-gray-title;
+		    	font-weight: $weight-medium;
+		    }
+
+		    .change-color {
+			    color: $text-gray-placeholder;
+			    font-weight: $weight-large;
+			}
+
+			.change-color:hover {
+			    color: $text-yellow;
+			}
+		}
+	}
+	
 }

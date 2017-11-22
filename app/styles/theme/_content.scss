@@ -17,13 +17,14 @@
 		    font-size: $font-small;
 
 		    span {
-		    	font-weight: 700;
+		    	font-weight: $weight-large;
     			color: $text-pink;
 		    }
 		}
 
-		.tags {
+		.tags {			
 		    margin-top: 10px;
+		    font-family: $lato;
 
 			.label-primary {
 				background-color: $text-pink;
