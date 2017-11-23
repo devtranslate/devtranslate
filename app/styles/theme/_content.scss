@@ -2,15 +2,21 @@
     padding: 0px;
     background: none;
     border: 0px;
-    border-radius: 0px;
+    border-radius: 0px;    
 
     .caption {
         padding: 0px;
 
-        h5 {
-        	font-weight: $weight-large;
-    		color: $text-gray-title;
-        }
+    	a {
+    		h5 {
+	        	font-weight: $weight-large;
+	    		color: $text-gray-title;
+	    	}
+
+	    	h5:hover {
+	    		color: $text-dark;
+	    	}
+	    }
 
         p {
 		    margin: 0px;
@@ -35,5 +41,17 @@
 			}
 
 		}
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .thumbnail {
+		padding-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 767px) {
+    .thumbnail {
+		height: 320px;
     }
 }

@@ -1,7 +1,7 @@
 <section class="search">
 	<div class="inner-addon left-addon">
-	    <i class="glyphicon glyphicon-search"></i>
-	    <input type="text" class="form-control" placeholder="Busque pelo título, autor ou tradutor" />
+		<i class="glyphicon glyphicon-search"></i>
+		<input type="text" class="form-control" placeholder="Busque pelo título, autor ou tradutor" ng-model="searchString"/>
 	</div>
 
 	<div class="filter">
@@ -20,95 +20,20 @@
 
 <section class="content">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="http://netdna.webdesignerdepot.com/uploads/2015/01/featured7.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
+		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | filter: searchString">
+			<div class="thumbnail">
+				<img src="{{item.image}}" alt="{{item.name}}">
+				<div class="caption">
+					<a ng-href="{{item.site}}"><h5>{{item.name}}</h5></a>	        
+					<p><span>Autor:</span> {{item.author}}</p>
+					<p><span>Tradutor:</span> {{item.translators}}</p>
+					<div class="tags">
+						<span class="label label-primary">{{item.type}}</span>
+						<span class="label label-secondary">{{item.project}}</span>
+					</div>
 				</div>
-		      </div>
-		    </div>
+			</div>
 		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="https://17404-presscdn-0-71-pagely.netdna-ssl.com/studio/wp-content/uploads/2016/03/featured15.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
-				</div>
-		      </div>
-		    </div>
-		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="https://www.adslzone.net/app/uploads/2016/12/javascript.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
-				</div>
-		      </div>
-		    </div>
-		</div>		
-
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="http://baboon.ir/uploads/2016/08/discover-meteor-wallpaper-with-logo-950x490.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
-				</div>
-		      </div>
-		    </div>
-		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="http://jonathasguerra.com.br/blog/wp-content/uploads/2017/01/laravel-covercover.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
-				</div>
-		      </div>
-		    </div>
-		</div>
-
-		<div class="col-xs-12 col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="http://blog.flatironschool.com/wp-content/uploads/2013/11/Ruby-and-JavaScript.jpg" alt="img1">
-		      <div class="caption">
-		        <h5>Boas Práticas para Rolagem Infinita</h5>		        
-		        <p><span>Autor:</span> Nick Babich</p>
-				<p><span>Tradutor:</span> Renan C. Araujo</p>
-				<div class="tags">
-					<span class="label label-primary">Artigos</span>
-					<span class="label label-secondary">Concluído</span>
-				</div>
-		      </div>
-		    </div>
-		</div>	
 	</div>
 </section>
 

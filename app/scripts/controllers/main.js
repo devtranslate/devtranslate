@@ -8,10 +8,23 @@
  * Controller of the devtranslateApp
  */
 angular.module('devtranslateApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', ['ApiService', '$location',
+      	function (ApiService, $location) {
+      		var self = this;
+
+      		self.language = 'portuguese';
+
+            var getData = function() {
+                return ApiService.getData(self.language).then(function(resp) {
+                    self.result = resp.data;
+                }, function(error) {
+                    console.log(error);
+                });
+            }
+
+            self.init = (function(){
+                getData();
+            })();
+      	}
+    ]
+);
