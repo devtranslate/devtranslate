@@ -13,16 +13,34 @@
 				color: $text-gray-title;
 		    	font-weight: $weight-medium;
 		    }
+		}
 
-		    .change-color {
+		li:first-child,
+		li:nth-child(2),
+		li:last-child,
+		li:nth-last-child(2) {
+			a {
 			    color: $text-gray-placeholder;
 			    font-weight: $weight-large;
 			}
 
-			.change-color:hover {
+			a:hover {
 			    color: $text-yellow;
 			}
 		}
+
+		.active {
+			a {
+				color: $text-white;
+				background-color: $pink-base;
+			}
+
+			a:hover {	
+				color: $text-white;			
+				font-weight: $weight-small;
+			}
+		}
+
 	}
 	
 }

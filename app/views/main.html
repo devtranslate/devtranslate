@@ -6,21 +6,21 @@
 
 	<div class="filter">
 		<label class="filter-text">Tipo de Tradução:</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Artigos</label>		
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Livros</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Códigos</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Documentações</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Outros</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Articles'" ng-model="searchType"><span></span>Artigos</label>		
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Books'" ng-model="searchType"><span></span>Livros</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Codes'" ng-model="searchType"><span></span>Códigos</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Documentation'" ng-model="searchType"><span></span>Documentações</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Others'" ng-model="searchType"><span></span>Outros</label>
 		<label class="circle">•</label>
 		<label class="filter-text">Projeto:</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Concluído</label>
-		<label class="checkbox-inline"><input type="checkbox" value=""><span></span>Em Andamento</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Completed'" ng-model="searchProject"><span></span>Concluído</label>
+		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'In Progress'" ng-model="searchProject"><span></span>Em Andamento</label>
 	</div>
 </section>
 
 <section class="content">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | filter: searchString">
+		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | orderBy: '-id' | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject | limitTo: 9:9*(mainCtrl.currentPage - 1)">
 			<div class="thumbnail">
 				<img src="{{item.image}}" alt="{{item.name}}">
 				<div class="caption">
@@ -38,15 +38,5 @@
 </section>
 
 <section class="paginations text-center">
-
-	<ul class="pagination">
-		<li><a href="#" class="change-color">&lsaquo;</a></li>
-		<li><a href="#">1</a></li>
-		<li><a href="#">2</a></li>
-		<li><a href="#">3</a></li>
-		<li><a href="#">4</a></li>
-		<li><a href="#">5</a></li>
-		<li><a href="#" class="change-color">&rsaquo;</a></li>
-	</ul>
-	
+    <ul class="pagination" uib-pagination total-items="mainCtrl.displayItens.totalRows" ng-model="mainCtrl.currentPage" max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9" ng-change="mainCtrl.changePage(mainCtrl.result.data)"></ul>
 </section>

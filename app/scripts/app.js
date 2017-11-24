@@ -15,7 +15,9 @@
         'ngMessages',
         'ngResource',
         'ngRoute',
-        'ngTouch'
+        'ngTouch',
+        'angular.filter',
+        'ui.bootstrap'
         ])
     .config(function ($routeProvider) {
         $routeProvider
