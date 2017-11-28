@@ -8,23 +8,28 @@
  * Controller of the devtranslateApp
  */
 angular.module('devtranslateApp')
-    .controller('MainCtrl', ['ApiService',
-      	function (ApiService) {
+    .controller('MainCtrl', ['ApiService', 'DataService',
+      	function (ApiService, DataService) {
             var self = this;
+            self.currentPage = 1;
 
-      		self.language = 'portuguese';
+            self.languageList = DataService.getLanguageList();
 
-            /*self.changePage = function(array) {
-                self.displayItens.push(array.slice( 9 * (self.currentPage - 1), 9 * self.currentPage));
-            };*/
+            self.changeLanguage = function(language) {
+                getData(language);
+            };
 
-            self.init = (function(){
-                return ApiService.getData(self.language).then(function(resp) {
+            var getData = function(language) {
+                return ApiService.getData(language).then(function(resp) {
                     self.result = resp.data;
                     self.displayItens = resp.data.data.slice(0, 9);
                 }, function(error) {
                     console.log(error);
                 });
+            };
+
+            self.init = (function(){
+                getData(self.languageList[0].value);
             })();
       	}
     ]

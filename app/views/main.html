@@ -1,3 +1,17 @@
+<section class="language">
+	<span uib-dropdown on-toggle="toggled(open)" class="dropdown-links-hover">
+		<a href id="dropdown" uib-dropdown-toggle>
+			Idioma
+			<span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu pull-right" uib-dropdown-menu aria-labelledby="dropdown">
+			<li ng-repeat="lang in mainCtrl.languageList">
+				<a href="" ng-click="mainCtrl.changeLanguage(lang.value)"><img src="{{lang.image}}" class="brand" /> {{lang.language}}</a>
+			</li>
+		</ul>
+	</span>
+</section>
+
 <section class="search">
 	<div class="inner-addon left-addon">
 		<i class="glyphicon glyphicon-search"></i>
@@ -20,7 +34,7 @@
 
 <section class="content">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | orderBy: '-id' | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject | limitTo: 9:9*(mainCtrl.currentPage - 1)">
+		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject | limitTo: 9:9*(mainCtrl.currentPage - 1)">
 			<div class="thumbnail">
 				<img src="{{item.image}}" alt="{{item.name}}">
 				<div class="caption">
@@ -38,5 +52,5 @@
 </section>
 
 <section class="paginations text-center">
-    <ul class="pagination" uib-pagination total-items="mainCtrl.displayItens.totalRows" ng-model="mainCtrl.currentPage" max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9" ng-change="mainCtrl.changePage(mainCtrl.result.data)"></ul>
+	<ul class="pagination" uib-pagination total-items="mainCtrl.result.totalRows" ng-model="mainCtrl.currentPage" max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
 </section>

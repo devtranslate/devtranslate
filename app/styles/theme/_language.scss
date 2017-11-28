@@ -1,0 +1,27 @@
+.language {
+    font-family: $lato;
+    text-align: right;
+    margin-top: 30px; 
+
+    .dropdown-links-hover {
+        display: -webkit-inline-box;
+        display: -moz-box;
+
+        a {
+            text-transform: uppercase;
+
+            .caret {
+                color: $text-pink;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        border-radius: 0px;
+        border-color: $gray-border-base;
+
+        .brand {
+            margin-right: 5px;
+        }
+    }
+}
