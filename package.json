@@ -6,6 +6,7 @@
   "author": "Larissa Mourullo <larismourullo@live.com>",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
+    "generate-changelog": "^1.6.0",
     "grunt": "^0.4.5",
     "grunt-angular-templates": "^0.5.7",
     "grunt-concurrent": "^1.0.0",
@@ -48,8 +49,5 @@
   },
   "main": "index.js",
   "license": "MIT",
-  "private": false,
-  "dependencies": {
-    "lite-server": "^2.3.0"
-  }
+  "private": false
 }
