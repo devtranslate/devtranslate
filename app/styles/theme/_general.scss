@@ -17,23 +17,6 @@ a, a:hover, a:focus, a:visited {
     text-decoration: none;
 }
 
-input[type="checkbox"] {
-    margin: 1px 0 0;
-}
-
-input[type="checkbox"]:before {
-    border: 1px solid #ecbb27;
-    content: "\00a0";
-    display: inline-block;
-    height: 14px;
-    background: #ffffff;
-    width: 14px;
-}
-
-input[type="checkbox"]:checked:before {
-    background: #fbcd44;
-}
-
 small {
     font-size: 11px;
     color: #9d9d9d;

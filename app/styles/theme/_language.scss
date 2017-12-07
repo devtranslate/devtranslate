@@ -1,7 +1,6 @@
 .language {
     font-family: $lato;
     text-align: right;
-    margin-top: 30px; 
 
     .dropdown-links-hover {
         display: -webkit-inline-box;
@@ -22,6 +21,10 @@
 
         .brand {
             margin-right: 5px;
+        }
+
+        li {
+            padding: 3px 0px;
         }
     }
 }

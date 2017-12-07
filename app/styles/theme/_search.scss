@@ -12,7 +12,7 @@ $search-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.075);
 			position: absolute;
 			padding: 11px;
 			pointer-events: none;
-		    color: #f94e4e;
+		    color: $text-pink;
     		font-size: 16px;
 		}
 
@@ -43,11 +43,7 @@ $search-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.075);
 
 		label {
 			font-size: $font-normal;
-    		margin-right: 3.3%;
-		}
-
-		label:last-child {
-    		margin-right: 0px;
+    		margin-right: 3.75%;
 		}
 
 		.filter-text {
@@ -55,8 +51,28 @@ $search-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.075);
 			text-transform: uppercase;
 		}
 
-		.checkbox-inline {
-			color: $text-gray-search;
+		.pretty {
+			margin-right: 3.75%;
+		}
+
+		.pretty:last-child {
+    		margin-right: 0px;
+		}
+
+		.pretty input:checked~.state.p-warning-o label:before, .pretty.p-toggle .state.p-warning-o label:before {
+		    border-color: $text-yellow;
+		}
+
+		.pretty.p-default:not(.p-fill) input:checked~.state.p-warning-o label:after {
+		    background-color: $text-yellow !important;
+		}
+
+		.pretty .state label:before {
+		    border-color: $text-yellow;
+		}
+
+		.state {
+			margin-top: -1.5px;
 		}
 	}
 }
