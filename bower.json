@@ -1,6 +1,6 @@
 {
   "name": "devtranslate",
-  "version": "0.0.0",
+  "version": "1.9.0",
   "dependencies": {
     "angular": "^1.4.0",
     "bootstrap-sass-official": "^3.2.0",
