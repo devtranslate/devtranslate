@@ -17,7 +17,8 @@
         'ngRoute',
         'ngTouch',
         'angular.filter',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'pascalprecht.translate'
         ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -26,5 +27,13 @@
             controller: 'MainCtrl',
             controllerAs: 'mainCtrl'
         });
+    }).config(function ($translateProvider) {
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'scripts/translate/',
+            suffix: '.json'
+        });
+
+        $translateProvider.preferredLanguage('portuguese');
+        $translateProvider.useSanitizeValueStrategy(null);
     }
 );

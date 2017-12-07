@@ -19,12 +19,12 @@
 	 			return [
 	 			{   
 	 				image: 'images/brazil.png',
-	 				language: 'Português (BR)',
+	 				language: 'PTBR',
 	 				value: 'portuguese'
 	 			},
 	 			{
 	 				image: 'images/united-states.png',
-	 				language: 'Inglês (USA)',
+	 				language: 'ENG',
 	 				value: 'english'
 	 			}
 	 			];

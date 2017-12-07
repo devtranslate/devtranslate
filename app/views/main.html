@@ -1,12 +1,12 @@
 <section class="language">
 	<span uib-dropdown on-toggle="toggled(open)" class="dropdown-links-hover">
 		<a href id="dropdown" uib-dropdown-toggle>
-			Idioma
+			{{ 'LANGUAGE' | translate }}
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu pull-right" uib-dropdown-menu aria-labelledby="dropdown">
 			<li ng-repeat="lang in mainCtrl.languageList">
-				<a href="" ng-click="mainCtrl.changeLanguage(lang.value)"><img src="{{lang.image}}" class="brand" /> {{lang.language}}</a>
+				<a href="" ng-click="mainCtrl.changeLanguage(lang.value)"><img ng-src="{{lang.image}}" class="brand" /> {{ 'LANGUAGE_' + lang.language | translate }}</a>
 			</li>
 		</ul>
 	</span>
@@ -15,35 +15,67 @@
 <section class="search">
 	<div class="inner-addon left-addon">
 		<i class="glyphicon glyphicon-search"></i>
-		<input type="text" class="form-control" placeholder="Busque pelo título, autor ou tradutor" ng-model="searchString"/>
+		<input type="text" class="form-control" placeholder="{{ 'PLACEHOLDER' | translate }}" ng-model="searchString"/>
 	</div>
 
 	<div class="filter">
-		<label class="filter-text">Tipo de Tradução:</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Articles'" ng-model="searchType"><span></span>Artigos</label>		
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Books'" ng-model="searchType"><span></span>Livros</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Codes'" ng-model="searchType"><span></span>Códigos</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Documentation'" ng-model="searchType"><span></span>Documentações</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Others'" ng-model="searchType"><span></span>Outros</label>
+		<label class="filter-text">{{ 'TRANSLATE_TYPE' | translate }}:</label>
+
+		<div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Articles'" ng-model="searchType"/>
+	        <div class="state p-warning-o"><label>{{ 'TYPE_Articles' | translate }}</label></div>
+	    </div>
+
+	    <div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Books'" ng-model="searchType"/>
+	        <div class="state p-warning-o"><label>{{ 'TYPE_Books' | translate }}</label></div>
+	    </div>
+
+		<div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Codes'" ng-model="searchType"/>
+	        <div class="state p-warning-o"><label>{{ 'TYPE_Codes' | translate }}</label></div>
+	    </div>
+
+	    <div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Documentation'" ng-model="searchType"/>
+	        <div class="state p-warning-o"><label>{{ 'TYPE_Documentation' | translate }}</label></div>
+	    </div>
+
+	    <div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Others'" ng-model="searchType"/>
+	        <div class="state p-warning-o"><label>{{ 'TYPE_Others' | translate }}</label></div>
+	    </div>
+
 		<label class="circle">•</label>
-		<label class="filter-text">Projeto:</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'Completed'" ng-model="searchProject"><span></span>Concluído</label>
-		<label class="checkbox-inline"><input type="checkbox" ng-true-value="'In Progress'" ng-model="searchProject"><span></span>Em Andamento</label>
+
+		<label class="filter-text">{{ 'PROJECT' | translate }}:</label>
+
+		<div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'Completed'" ng-model="searchProject"/>
+	        <div class="state p-warning-o"><label>{{ 'PJC_Completed' | translate }}</label></div>
+	    </div>
+
+	    <div class="pretty p-default">
+	        <input type="checkbox" ng-true-value="'In Progress'" ng-model="searchProject"/>
+	        <div class="state p-warning-o"><label>{{ 'PJC_In Progress' | translate }}</label></div>
+	    </div>
 	</div>
 </section>
 
 <section class="content">
 	<div class="row">
-		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in mainCtrl.result.data | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject | limitTo: 9:9*(mainCtrl.currentPage - 1)">
+		<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in displayItens = (mainCtrl.result.data | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject) | limitTo: 9:9*(mainCtrl.currentPage - 1)">
 			<div class="thumbnail">
-				<img src="{{item.image}}" alt="{{item.name}}">
+				<a ng-href="{{item.site}}">
+					<img ng-src="{{item.image}}" alt="{{item.name}}">
+				</a>
 				<div class="caption">
 					<a ng-href="{{item.site}}"><h5>{{item.name}}</h5></a>	        
-					<p><span>Autor:</span> {{item.author}}</p>
-					<p><span>Tradutor:</span> {{item.translators}}</p>
+					<p><span>{{ 'AUTHOR' | translate }}:</span> {{item.author}}</p>
+					<p><span>{{ 'TRANSLATOR' | translate }}:</span> {{item.translators}}</p>
 					<div class="tags">
-						<span class="label label-primary">{{item.type}}</span>
-						<span class="label label-secondary">{{item.project}}</span>
+						<span class="label label-primary">{{ 'TYPE_' + item.type | translate }}</span>
+						<span class="label label-secondary">{{ 'PJC_' +  item.project | translate }}</span>
 					</div>
 				</div>
 			</div>
@@ -52,5 +84,6 @@
 </section>
 
 <section class="paginations text-center">
-	<ul class="pagination" uib-pagination total-items="mainCtrl.result.totalRows" ng-model="mainCtrl.currentPage" max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
+	<ul uib-pagination class="pagination" total-items="displayItens.length" ng-model="mainCtrl.currentPage"
+        max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
 </section>

@@ -6,7 +6,8 @@
     <meta name="description" content="Project created to help find and translate technology documents to any language">
     <meta name="viewport" content="width=device-width">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
 </head>
 <body ng-app="devtranslateApp">  
     <div class="header">
@@ -18,15 +19,15 @@
                     <span class="icon-bar"></span>                        
                 </button>
                 <ul class="nav nav-links-hover">
-                    <li><a href="https://github.com/devtranslate/about/blob/master/README.md">Sobre</a></li>
+                    <li><a href="https://github.com/devtranslate/about/blob/master/README.md">{{ 'ABOUT' | translate }}</a></li>
                     <li class="circle">•</li>
-                    <li><a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md">Contribuição</a></li>
+                    <li><a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md">{{ 'CONTRIBUTING' | translate }}</a></li>
                 </ul>
                 <a href="#">
                     <img src="images/logo.png" alt="Logo">
                 </a>
                 <ul class="nav nav-links-hover">
-                    <li><a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md">Contribuidores</a></li>
+                    <li><a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md">{{ 'CONTRIBUTORS' | translate }}</a></li>
                     <li class="circle">•</li>
                     <li><a href="https://medium.com/devtranslate">Medium</a></li>
                 </ul>
@@ -34,9 +35,9 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="https://github.com/devtranslate/about/blob/master/README.md" class="dropdown-toggle">About</a>
-                        <a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md" class="dropdown-toggle">Contributing</a>
-                        <a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md" class="dropdown-toggle">Contributors</a>
+                        <a href="https://github.com/devtranslate/about/blob/master/README.md" class="dropdown-toggle">{{ 'ABOUT' | translate }}</a>
+                        <a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md" class="dropdown-toggle">{{ 'CONTRIBUTING' | translate }}</a>
+                        <a href="https://github.com/devtranslate/about/blob/master/CONTRIBUTORS.md" class="dropdown-toggle">{{ 'CONTRIBUTORS' | translate }}</a>
                         <a href="https://medium.com/devtranslate" class="dropdown-toggle">Medium</a>
                     </li>
                 </ul>
@@ -69,7 +70,7 @@
                 <i class="fa fa-rss fa-2x fa-fw"></i>
             </a>
         </div>
-        <small>Devtranslate © 2017 - Todos Os Direitos Reservados</small>
+        <small>Devtranslate © 2017 - {{ 'COPYRIGHT' | translate }}</small>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -95,10 +96,12 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/maincontroller.js"></script>
     <script src="scripts/services/dataservice.js"></script>
     <script src="scripts/services/apiservice.js"></script>
 </body>

@@ -8,8 +8,8 @@
  * Controller of the devtranslateApp
  */
 angular.module('devtranslateApp')
-    .controller('MainCtrl', ['ApiService', 'DataService',
-      	function (ApiService, DataService) {
+    .controller('MainCtrl', ['ApiService', 'DataService', '$translate',
+      	function (ApiService, DataService, $translate) {
             var self = this;
             self.currentPage = 1;
 
@@ -17,6 +17,7 @@ angular.module('devtranslateApp')
 
             self.changeLanguage = function(language) {
                 getData(language);
+                $translate.use(language);
             };
 
             var getData = function(language) {
