@@ -1,0 +1,21 @@
+{
+	"ABOUT": "Sobre",
+	"CONTRIBUTING": "Contribuição",
+	"CONTRIBUTORS": "Contribuidores",
+    "LANGUAGE": "Idioma",
+    "LANGUAGE_PTBR": "Português (BR)",
+    "LANGUAGE_ENG": "Inglês (USA)",
+    "PLACEHOLDER": "Busque pelo título, autor ou tradutor",
+    "TRANSLATE_TYPE": "Tipo de Tradução",
+	"TYPE_Articles": "Artigos",
+	"TYPE_Books": "Livros",
+	"TYPE_Codes": "Códigos",
+	"TYPE_Documentation": "Documentações",
+	"TYPE_Others": "Outros",
+    "PROJECT": "Projeto",
+	"PJC_Completed": "Concluído",
+	"PJC_In Progress": "Em Progresso",
+	"AUTHOR": "Autor",
+	"TRANSLATOR": "Tradutor",
+    "COPYRIGHT": "Todos os Direitos Reservados"
+}
