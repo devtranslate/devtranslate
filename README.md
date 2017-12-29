@@ -17,5 +17,8 @@
 ## Portuguese
 Neste repositório se encontra hospedado nosso site onde você poderá localizar artigos, documentações, ou seja, qualquer conteúdo que desejar de tecnologia que tenha alguma tradução. É possível também acessar o conteúdo original alterando o idioma da página.
 
+### Contribuição
+Caso deseje contribuir com alguma alteração acesse o nosso guia de contribuição [clicando aqui](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md).
+
 ## English
 Soon.
