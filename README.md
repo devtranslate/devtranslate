@@ -15,7 +15,7 @@
 2. [English](https://github.com/devtranslate/devtranslate.github.io#english)
 
 ## Portuguese
-Em Breve.
+Neste repositório se encontra hospedado nosso site onde você poderá localizar artigos, documentações, ou seja, qualquer conteúdo que desejar de tecnologia que tenha alguma tradução. É possível também acessar o conteúdo original alterando o idioma da página.
 
 ## English
 Soon.
