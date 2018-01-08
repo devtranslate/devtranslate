@@ -1,7 +1,7 @@
 <section class="language">
 	<span uib-dropdown on-toggle="toggled(open)" class="dropdown-links-hover">
 		<a href id="dropdown" uib-dropdown-toggle>
-			{{ 'LANGUAGE' | translate }}
+			<img ng-src="{{mainCtrl.actualLanguage}}" class="brand" />
 			<span class="caret"></span>
 		</a>
 		<ul class="dropdown-menu pull-right" uib-dropdown-menu aria-labelledby="dropdown">

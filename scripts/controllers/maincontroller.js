@@ -12,11 +12,23 @@ angular.module('devtranslateApp')
       	function (ApiService, DataService, $translate) {
             var self = this;
             self.currentPage = 1;
-
             self.languageList = DataService.getLanguageList();
+            self.actualLanguage = self.languageList[0].image;
 
             self.changeLanguage = function(language) {
                 getData(language);
+
+                console.log(language);
+
+                switch (language) {
+                    case 'portuguese':
+                        self.actualLanguage = self.languageList[0].image;
+                        break;
+                    case 'english':
+                        self.actualLanguage = self.languageList[1].image;
+                        break;
+                }
+
                 $translate.use(language);
             };
 
