@@ -8751,6 +8751,14 @@ button.close {
   .thumbnail {
     padding-bottom: 30px;
   }
+
+  .search .filter label {
+    margin-right: 3% !important;
+  }
+
+  .pagination {
+    margin: 0px;
+  }
 }
 @media screen and (min-width: 767px) {
   /* line 54, ../../app/styles/theme/_content.scss */
@@ -8844,6 +8852,11 @@ small {
   color: #f94e4e;
   margin: 10px 5px;
   font-size: 11px;
+}
+
+.text-pink {
+  color: #f94e4e;
+  vertical-align: unset;
 }
 
 /* line 31, ../../app/styles/theme/_general.scss */
@@ -8988,7 +9001,7 @@ small {
 
 /* line 1, ../../app/styles/theme/_pagination.scss */
 .paginations {
-  padding: 30px 0px;
+  margin: 0px 0px 40px 0px;
   font-family: "Lato", sans-serif;
 }
 /* line 7, ../../app/styles/theme/_pagination.scss */
@@ -9062,21 +9075,23 @@ small {
 }
 /* line 41, ../../app/styles/theme/_search.scss */
 .search .filter {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 /* line 44, ../../app/styles/theme/_search.scss */
 .search .filter label {
   font-size: 12px;
-  margin-right: 3.75%;
+  margin-right: 4%;
 }
 /* line 49, ../../app/styles/theme/_search.scss */
 .search .filter .filter-text {
   color: #000000;
+  margin-top: 6px;
   text-transform: uppercase;
 }
 /* line 54, ../../app/styles/theme/_search.scss */
 .search .filter .pretty {
   margin-right: 3.75%;
+  margin-bottom: 5px;
 }
 /* line 58, ../../app/styles/theme/_search.scss */
 .search .filter .pretty:last-child {

@@ -18,7 +18,7 @@
 		<input type="text" class="form-control" placeholder="{{ 'PLACEHOLDER' | translate }}" ng-model="searchString"/>
 	</div>
 
-	<div class="filter">
+	<div class="filter text-justify">
 		<label class="filter-text">{{ 'TRANSLATE_TYPE' | translate }}:</label>
 
 		<div class="pretty p-default">
@@ -46,7 +46,7 @@
 	        <div class="state p-warning-o"><label>{{ 'TYPE_Others' | translate }}</label></div>
 	    </div>
 
-		<label class="circle">•</label>
+		<label class="text-pink">//</label>
 
 		<label class="filter-text">{{ 'PROJECT' | translate }}:</label>
 
@@ -85,5 +85,5 @@
 
 <section class="paginations text-center">
 	<ul uib-pagination class="pagination" total-items="displayItens.length" ng-model="mainCtrl.currentPage"
-        max-size="9" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
+        max-size="5" boundary-links="true" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
 </section>
