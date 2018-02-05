@@ -79,7 +79,7 @@
 
 <section class="content">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in displayItens = (mainCtrl.result.data | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject) | limitTo: 9:9*(mainCtrl.currentPage - 1)">
+    <div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="item in displayItens = (mainCtrl.result.data | filterBy: ['name', 'author', 'translators']: searchString | filterBy: ['type']: searchType | filterBy: ['project']: searchProject) | limitTo: 6:6*(mainCtrl.currentPage - 1)">
       <div class="thumbnail">
         <a ng-href="{{item.site}}">
           <img ng-src="{{item.image}}" alt="{{item.name}}">
@@ -104,5 +104,5 @@
 
 <section class="paginations text-center">
   <ul uib-pagination class="pagination" total-items="displayItens.length" ng-model="mainCtrl.currentPage" max-size="5" boundary-links="true"
-    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="9"></ul>
+    previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" items-per-page="6"></ul>
 </section>

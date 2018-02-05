@@ -16,7 +16,7 @@ angular.module('devtranslateApp')
       var getData = function (language) {
         return ApiService.getData(language).then(function (resp) {
           self.result = resp.data;
-          self.displayItens = resp.data.data.slice(0, 9);
+          self.displayItens = resp.data.data.slice(0, 6);
         }, function (error) {
           console.log(error);
         });
