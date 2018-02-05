@@ -7,28 +7,14 @@
  * # DataService
  * Service in the devtranslateApp.
  */
- angular.module('devtranslateApp')
- 	.service('DataService', function () {
-	 	var apiURL = 'https://devtranslate.github.io/apinew/language';
+angular.module('devtranslateApp')
+  .service('DataService', function () {
+    var apiURL = 'https://devtranslate.github.io/api/';
 
-	 	return {
-	 		getApiURL: function() {
-	 			return apiURL;
-	 		},
-	 		getLanguageList: function() {
-	 			return [
-	 			{   
-	 				image: 'images/brazil.png',
-	 				language: 'PTBR',
-	 				value: 'portuguese'
-	 			},
-	 			{
-	 				image: 'images/united-states.png',
-	 				language: 'ENG',
-	 				value: 'english'
-	 			}
-	 			];
-	 		}
-	 	};
-	 }
- );
+    return {
+      getApiURL: function () {
+        return apiURL + 'language';
+      }
+    };
+  }
+);
