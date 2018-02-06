@@ -9,6 +9,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/issues)
 [![GitHub stars](https://img.shields.io/github/stars/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/devtranslate/devtranslate.github.io.svg?style=flat-square)](https://github.com/devtranslate/devtranslate.github.io/network)
+[![Open Source Helpers](https://www.codetriage.com/devtranslate/devtranslate.github.io/badges/users.svg)](https://www.codetriage.com/devtranslate/devtranslate.github.io)
 
 # Contents
 1. [Portuguese](https://github.com/devtranslate/devtranslate.github.io#portuguese)
