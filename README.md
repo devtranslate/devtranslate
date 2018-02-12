@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://ap.imagensbrasil.org/images/2017/08/30/fsfdsff46e54.png" alt="Logo DevTranslate"/>
+  <img src="https://raw.githubusercontent.com/devtranslate/devtranslate.github.io/master/images/logo.png" alt="Logo DevTranslate"/>
 </p>
 
 [![Join the chat](https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-cc2b5e.svg?style=flat-square)](https://gitter.im/devtranslate/Lobby)
