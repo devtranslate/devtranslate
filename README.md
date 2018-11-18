@@ -15,6 +15,7 @@
 # Contents
 1. [Portuguese](https://github.com/devtranslate/devtranslate.github.io#portuguese)
 2. [English](https://github.com/devtranslate/devtranslate.github.io#english)
+3. [Spanish](https://github.com/devtranslate/devtranslate.github.io#spanish)
 
 # Portuguese
 Neste repositório se encontra hospedado nosso site onde você poderá localizar artigos, documentações e qualquer conteúdo que desejar de tecnologia que tenha alguma tradução. É possível também acessar o conteúdo original alterando o idioma no menu do topo da página.
@@ -27,3 +28,9 @@ Repository created to host our site where you can find articles, documentation a
 
 ### Contributing
 If you wish to contribute, check out our contribute guide by [clicking here](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md).
+
+# Spanish
+Repositorio creado para alojar nuestro sitio donde podrás encontrar artículos, documentacíon y cualquier contenido tecnológico con traducciones. También es posible acceder al contenido original cambiando el idioma en el menú en la parte superior de la página.
+
+### Contribuyendo
+Si quieres contribuir, echa un vistazo a nuestra guía de contribucíon [haciendo clic aquí](https://github.com/devtranslate/about/blob/master/CONTRIBUTING.md).
