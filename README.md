@@ -4,10 +4,10 @@
   <a href="https://medium.com/devtranslate">
     <img src="https://img.shields.io/badge/medium-translate-brightgreen.svg?style=for-the-badge" alt="Medium"/>
   </a>
-  <a href="(https://telegram.me/devtranslate">
+  <a href="https://telegram.me/devtranslate">
     <img src="https://img.shields.io/badge/telegram-group-lightgrey.svg?style=for-the-badge" alt="Telegram"/>
   </a>
-  <a href="(https://www.facebook.com/devtranslate">
+  <a href="https://www.facebook.com/devtranslate">
     <img src="https://img.shields.io/badge/facebook-oficial_page-blue.svg?style=for-the-badge" alt="Facebook"/>
   </a>
 </p>
