@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+
+@media screen and (min-width: 999px) {
+    .logo {
+    	color: #363636;
+    	font-size: 25px;
+    	font-weight: bold;
+    	font-family: 'Just Another Hand', cursive;	
+    	margin-top: 7px;
+    }
+
+    .icon-logo {
+        height: 25px;
+        margin: 11px 10px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .icon-logo {
+        height: 28px;
+        margin-right: 10px;
+        margin-top: 6px;
+    }
+
+    .logo {
+        color: #363636;
+        font-size: 30px;
+        font-weight: bold;
+        font-family: 'Just Another Hand', cursive;  
+    }
+
+    .nav-center{
+        margin-left: 3%;
+    }
+}
+
+.btn-space {
+    width: 105px;
+    margin: 3px 3px 3px 5px;
+}
+
+.btn-expand {
+	width: 300px;
+}
+
+.icon-sobre {
+    height: 70px;
+}
+
+.column-margin {
+    margin: 50px 45px 0px 45px;
+}
+
+.level-margin {
+    margin: 25px 0px 0px 0px;
+}
+
+.nav-margin {
+    margin: 50px 0px 0px 0px;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px dashed #ff3860;
+    font-weight: 400;
+}
+
+i {
+    color: #ff3860;
+}
+
+.titulo-div {
+    font-size: 15px;
+    color: #4a4a4a;
+    font-weight: 700;
+}
+
+.nav-right .nav-item {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-right .nav-item:hover {
+    color: #00d1b2 !important;
+    background: none !important;
+}
+
+.nav-right .nav-item.is-active {
+    color: #ff3860 !important;
+    background: none !important;
+}
+
+@media screen and (max-width: 999px) {
+  .nav-left {
+    overflow: inherit;
+    margin-left: 25px;
+    margin-top: 12px;
+  }
+}
