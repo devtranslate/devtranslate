@@ -27,13 +27,4 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'mainCtrl'
       });
-  }).config(function ($translateProvider) {
-    $translateProvider.useStaticFilesLoader({
-      prefix: 'scripts/translate/',
-      suffix: '.json'
-    });
-
-    $translateProvider.preferredLanguage('portuguese');
-    $translateProvider.useSanitizeValueStrategy(null);
-  }
-);
+  });
