@@ -11,18 +11,11 @@ angular.module('devtranslateApp')
   .service('ApiService', ['DataService', '$http',
     function (DataService, $http) {
       var apiURL = DataService.getApiURL();
+      var recordsPerPage = 6;
 
       var service = {
-        getData: function (language) {
-          return $http.get(apiURL + '/' + language + '/data.json').then(function (resp) {
-            return resp;
-          }, function (error) {
-            return error;
-          });
-        },
-
-        getLanguage: function () {
-          return $http.get(apiURL + '/translation.json').then(function (resp) {
+        getData: function (page) {
+          return $http.get(apiURL + 'translations?page=' + page + '&recordsPerPage=' + recordsPerPage).then(function (resp) {
             return resp;
           }, function (error) {
             return error;

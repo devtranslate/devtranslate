@@ -14,6 +14,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.grid {
+  margin-top: 50px;
+}
+
 /* line 19, ../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_normalize.scss */
 body {
   margin: 0;
@@ -8954,6 +8958,7 @@ small {
 .header .nav-links-hover {
   display: -webkit-inline-box;
   display: -moz-box;
+  vertical-align: bottom;
 }
 /* line 37, ../../app/styles/theme/_menu.scss */
 .header .nav-links-hover li > a {
