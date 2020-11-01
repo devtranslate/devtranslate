@@ -9,11 +9,9 @@
  */
 angular.module('devtranslateApp')
   .service('DataService', function () {
-    var apiURL = 'https://devtranslate.github.io/api/';
-
     return {
       getApiURL: function () {
-        return apiURL + 'language';
+        return 'https://api.devtranslate.io/';
       }
     };
   }
