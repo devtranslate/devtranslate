@@ -14,11 +14,26 @@ module.exports = (_, { mode }) => {
     entry: path.resolve(__dirname, './src/index'),
     output: {
       path: path.resolve(__dirname, './build'),
-      filename: 'static/js/[name].[contenthash:8].js',
+      filename: isDevelopment ? 'static/js/[name].js' : 'static/js/[name].[contenthash:8].js',
+      chunkFilename: isDevelopment ? 'static/js/[name].chunk.js' : 'static/js/[name].[contenthash:8].chunk.js',
       clean: true
     },
     resolve: {
       extensions: ['.jsx', '.js']
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            chunks: 'initial'
+          }
+        }
+      },
+      runtimeChunk: {
+        name: (entrypoint) => `runtime-${entrypoint.name}`,
+      }
     },
     module: {
       rules: [
@@ -37,10 +52,12 @@ module.exports = (_, { mode }) => {
       ]
     },
     devtool: isDevelopment ? 'cheap-module-source-map' : false,
-    devServer: isDevelopment ? { port: 3000, open: false, hot: true } : undefined,
+    devServer: isDevelopment ? { port: 3000, open: false, hot: true, contentBase: path.resolve(__dirname, './public')} : undefined,
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './public/index.html'),
+        inject: true,
+        favicon: './public/favicon.ico'
       }),
       isDevelopment && new ReactRefreshWebpackPlugin(),
       isProduction && new MiniCssExtractPlugin({
