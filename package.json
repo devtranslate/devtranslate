@@ -2,7 +2,7 @@
   "name": "devtranslate",
   "version": "3.0.0",
   "description": "Translations catalog, find any type of document translated into other languages",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
