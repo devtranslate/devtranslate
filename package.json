@@ -8,8 +8,8 @@
     "build": "webpack --mode=production",
     "lint-code": "eslint .",
     "lint-code:fix": "eslint --fix .",
-    "lint-styles": "stylelint \"**/*.{css,scss,sass}\"",
-    "lint-styles:fix": "stylelint --fix \"**/*.{css,scss,sass}\""
+    "lint-styles": "stylelint \"**/*.{css,scss,sass,js,jsx}\"",
+    "lint-styles:fix": "stylelint --fix \"**/*.{css,scss,sass,js,jsx}\""
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,13 @@
-import './styles.css';
+import styled from 'styled-components';
 
 const App = () => (
   <div>
-    <h1>Devtranslate</h1>
+    <Title>Devtranslate</Title>
   </div>
 );
+
+const Title = styled.h1`
+  color: #fc5156;
+`;
 
 export default App;

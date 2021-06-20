@@ -1,6 +1,7 @@
 {
   "extends": [
-    "stylelint-prettier/recommended"
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
   ],
   "rules": {
     "color-no-invalid-hex": true,
