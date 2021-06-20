@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "steoates.autoimport",
+    "formulahendry.auto-rename-tag",
+    "dbaeumer.vscode-eslint",
+    "christian-kohler.npm-intellisense",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint"
+  ]
+}
