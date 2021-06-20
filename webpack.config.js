@@ -16,10 +16,10 @@ module.exports = (_, { mode }) => {
       path: path.resolve(__dirname, './build'),
       filename: isDevelopment ? 'static/js/[name].js' : 'static/js/[name].[contenthash:8].js',
       chunkFilename: isDevelopment ? 'static/js/[name].chunk.js' : 'static/js/[name].[contenthash:8].chunk.js',
-      clean: true
+      clean: true,
     },
     resolve: {
-      extensions: ['.jsx', '.js']
+      extensions: ['.jsx', '.js'],
     },
     optimization: {
       splitChunks: {
@@ -27,43 +27,45 @@ module.exports = (_, { mode }) => {
           commons: {
             test: /[\\/]node_modules[\\/]/,
             name: 'vendor',
-            chunks: 'initial'
-          }
-        }
+            chunks: 'initial',
+          },
+        },
       },
       runtimeChunk: {
         name: (entrypoint) => `runtime-${entrypoint.name}`,
-      }
+      },
     },
     module: {
       rules: [
         {
           test: /\.jsx?$/,
           exclude: /node_modules/,
-          use: 'babel-loader'
+          use: 'babel-loader',
         },
         {
           test: /\.css$/,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-            'css-loader'
-          ]
-        }
-      ]
+            'css-loader',
+          ],
+        },
+      ],
     },
     devtool: isDevelopment ? 'cheap-module-source-map' : false,
-    devServer: isDevelopment ? { port: 3000, open: false, hot: true, contentBase: path.resolve(__dirname, './public')} : undefined,
+    devServer: isDevelopment ? {
+      port: 3000, open: false, hot: true, contentBase: path.resolve(__dirname, './public'),
+    } : undefined,
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './public/index.html'),
         inject: true,
-        favicon: './public/favicon.ico'
+        favicon: './public/favicon.ico',
       }),
       isDevelopment && new ReactRefreshWebpackPlugin(),
       isProduction && new MiniCssExtractPlugin({
         filename: 'static/css/[name].[contenthash:8].css',
-        chunkFilename: 'static/css/[name].[contenthash:8].chunk.css'
-      })
+        chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+      }),
     ].filter(Boolean),
-  }
+  };
 };
