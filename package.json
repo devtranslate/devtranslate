@@ -7,7 +7,9 @@
     "start": "webpack serve --mode=development",
     "build": "webpack --mode=production",
     "lint-code": "eslint .",
-    "lint-code:fix": "eslint --fix ."
+    "lint-code:fix": "eslint --fix .",
+    "lint-styles": "stylelint \"**/*.{css,scss,sass}\"",
+    "lint-styles:fix": "stylelint --fix \"**/*.{css,scss,sass}\""
   },
   "repository": {
     "type": "git",
