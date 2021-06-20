@@ -44,17 +44,19 @@ module.exports = (_, { mode }) => {
         },
         {
           test: /\.css$/,
-          use: [
-            isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
-            'css-loader',
-          ],
+          use: [isProduction ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader'],
         },
       ],
     },
     devtool: isDevelopment ? 'cheap-module-source-map' : false,
-    devServer: isDevelopment ? {
-      port: 3000, open: false, hot: true, contentBase: path.resolve(__dirname, './public'),
-    } : undefined,
+    devServer: isDevelopment
+      ? {
+          port: 3000,
+          open: false,
+          hot: true,
+          contentBase: path.resolve(__dirname, './public'),
+        }
+      : undefined,
     plugins: [
       new HtmlWebpackPlugin({
         template: path.resolve(__dirname, './public/index.html'),
@@ -62,10 +64,11 @@ module.exports = (_, { mode }) => {
         favicon: './public/favicon.ico',
       }),
       isDevelopment && new ReactRefreshWebpackPlugin(),
-      isProduction && new MiniCssExtractPlugin({
-        filename: 'static/css/[name].[contenthash:8].css',
-        chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
-      }),
+      isProduction &&
+        new MiniCssExtractPlugin({
+          filename: 'static/css/[name].[contenthash:8].css',
+          chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+        }),
     ].filter(Boolean),
   };
 };
