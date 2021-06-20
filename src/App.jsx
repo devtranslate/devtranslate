@@ -1,13 +1,14 @@
-import styled from 'styled-components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/home';
 
 const App = () => (
-  <div>
-    <Title>Devtranslate</Title>
-  </div>
+  <Router>
+    <Switch>
+      <Route path="/">
+        <Home />
+      </Route>
+    </Switch>
+  </Router>
 );
-
-const Title = styled.h1`
-  color: #fc5156;
-`;
 
 export default App;
