@@ -11,10 +11,17 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "import"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": 0,
+    "react/no-array-index-key": 0,
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/order": [
+      "error",
+      { "groups": ["builtin", "external", "index", "sibling", "parent", "internal", "object", "type"] }
+    ]
   }
 }
