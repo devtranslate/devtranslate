@@ -33,7 +33,7 @@ const NavbarLink = styled.a`
   cursor: pointer;
 
   ${({ theme, disabled }) => css`
-    color: ${theme.colors.tertiary.darkest};
+    color: ${theme.colors.tertiary.dark};
     font-size: ${theme.fontSize.xxs};
     line-height: ${theme.fontSize.xxs};
     padding: ${theme.spacing.sm};

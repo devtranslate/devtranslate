@@ -38,7 +38,7 @@ const NavbarToggleBar = styled.span`
   opacity: 1;
 
   ${({ theme }) => css`
-    background: ${theme.colors.tertiary.darkest};
+    background: ${theme.colors.tertiary.dark};
     border-radius: ${theme.borderRadius.sm};
   `}
 

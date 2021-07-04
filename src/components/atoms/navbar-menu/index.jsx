@@ -30,6 +30,7 @@ const NavbarMenuContainer = styled.ul`
       box-shadow: ${theme.elevation.floatin};
       border-radius: ${theme.borderRadius.xs};
       visibility: hidden;
+      z-index: 1;
 
       ${active &&
       css`
