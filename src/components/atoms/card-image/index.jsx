@@ -6,6 +6,7 @@ const CardImage = ({ src }) => {
 
 const CardImageContainer = styled.img`
   width: 100%;
+  min-height: 144px;
 
   ${({ theme }) =>
     css`

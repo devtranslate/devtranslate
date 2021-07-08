@@ -54,7 +54,6 @@ const NavbarLink = styled.a`
     ${disabled &&
     css`
       cursor: not-allowed;
-      text-decoration: line-through;
       color: ${theme.colors.grey.dark};
       text-decoration-color: ${theme.colors.grey.medium};
     `}
