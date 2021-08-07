@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components';
 import Card from '../../molecules/card';
+import Search from '../../molecules/search';
 
 const Main = () => {
   return (
     <MainContainer>
       <Container>
+        <Search />
         <Grid>
           {Array.from(Array(9)).map(() => (
             <Card />
@@ -18,6 +20,11 @@ const Main = () => {
 const MainContainer = styled.main`
   ${({ theme }) => css`
     background: ${theme.colors.grey.lightest};
+    padding: ${theme.spacing.xxl} 0;
+
+    @media (max-width: ${theme.breakpoints.touch}) {
+      padding: ${theme.spacing.xl} 0;
+    }
   `}
 `;
 
@@ -38,7 +45,7 @@ const Grid = styled.div`
   `}
 
   ${({ theme }) => css`
-    padding: ${theme.spacing.sm};
+    padding: 0 ${theme.spacing.sm};
     grid-row-gap: ${theme.spacing.md};
     grid-column-gap: ${theme.spacing.xxl};
   `}

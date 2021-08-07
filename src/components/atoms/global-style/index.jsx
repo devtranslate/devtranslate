@@ -29,18 +29,15 @@ const GlobalStyle = createGlobalStyle`
   ${getResetCssStyles()}
 
   ${({ theme }) => css`
-    * {
+    *,
+    body,
+    input {
       outline-color: ${theme.colors.primary.medium};
-    }
-
-    body {
       font-family: ${theme.fontFamily};
+      text-decoration: none;
     }
   `}
 
-  a {
-    text-decoration: none;
-  }
 `;
 
 export default GlobalStyle;

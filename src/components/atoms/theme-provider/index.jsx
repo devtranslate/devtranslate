@@ -12,7 +12,7 @@ const theme = {
     fullhd: '1408px',
   },
   elevation: {
-    skim: '0px 0px 4px 0 rgba(0,0,0,0.1)',
+    skim: '0px 0px 4px 0 rgba(0,0,0,0.07)',
     lifted: '0 4px 8px 0 rgba(0,0,0,0.1)',
     raised: '0 6px 12px 0 rgba(0,0,0,0.1)',
     floatin: '0 8px 16px 0 rgba(0,0,0,0.1)',
