@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import HomeLoading from '../../components/templates/home-loading';
 import HomeResult from '../../components/templates/home-result';
 
-const Home = () => {
+const Home = ({ history }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Home = () => {
     return <HomeLoading />;
   }
 
-  return <HomeResult />;
+  return <HomeResult history={history} />;
 };
 
 export default Home;

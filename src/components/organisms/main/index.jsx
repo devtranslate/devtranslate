@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components';
+import DeviceDetector from './device-detector';
 import Card from '../../molecules/card';
 import Search from '../../molecules/search';
+import PaginationStyled from '../../molecules/pagination';
 
-const Main = () => {
+const Main = ({ history }) => {
   return (
     <MainContainer>
       <Container>
@@ -12,6 +14,12 @@ const Main = () => {
             <Card />
           ))}
         </Grid>
+        <PaginationStyled
+          history={history}
+          limit={DeviceDetector() === 'mobile' ? 3 : 5}
+          pageSize={6}
+          totalPages={26}
+        />
       </Container>
     </MainContainer>
   );
