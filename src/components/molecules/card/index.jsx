@@ -9,26 +9,65 @@ import CardGroup from '../../atoms/card-group';
 import CardSubtitle from '../../atoms/card-subtitle';
 import CardText from '../../atoms/card-text';
 
-const Card = () => {
+const getType = (type) => {
+  switch (type) {
+    case 'articles':
+      return 'Artigo';
+    case 'documentation':
+      return 'Documentação';
+    case 'books':
+      return 'Livro';
+    case 'others':
+      return 'Outro';
+    default:
+      return '';
+  }
+};
+
+const getStatus = (status) => {
+  switch (status) {
+    case 'completed':
+      return 'Concluído';
+    case 'inProgress':
+      return 'Em progresso';
+    default:
+      return '';
+  }
+};
+
+const getLanguage = (language) => {
+  switch (language) {
+    case 'portuguese':
+      return 'Português';
+    case 'english':
+      return 'Inglês';
+    default:
+      return '';
+  }
+};
+
+const Card = ({ translation }) => {
+  const { url, imageUrl, type, status, language, title, author, translator } = translation;
+
   return (
-    <CardContainer href="/">
-      <CardImage src="https://image.ibb.co/b9GdKb/1.png" />
+    <CardContainer href={url}>
+      <CardImage src={imageUrl} />
       <CardFloat>
         <CardHeader>
-          <CardBadge variant="type">Artigo</CardBadge>
-          <CardBadge variant="status">Concluído</CardBadge>
-          <CardBadge variant="language">Português</CardBadge>
+          <CardBadge variant="type">{getType(type)}</CardBadge>
+          <CardBadge variant="status">{getStatus(status)}</CardBadge>
+          <CardBadge variant="language">{getLanguage(language)}</CardBadge>
         </CardHeader>
         <CardBody>
-          <CardTitle>Pare de usar CSS no JavaScript para desenvolvimento web</CardTitle>
+          <CardTitle>{title}</CardTitle>
           <CardFooter>
             <CardGroup>
               <CardSubtitle>Autor</CardSubtitle>
-              <CardText>Gajus Kuizinas</CardText>
+              <CardText>{author}</CardText>
             </CardGroup>
             <CardGroup>
               <CardSubtitle>Tradutor</CardSubtitle>
-              <CardText>Carlos Eduardo Olivieri</CardText>
+              <CardText>{translator}</CardText>
             </CardGroup>
           </CardFooter>
         </CardBody>

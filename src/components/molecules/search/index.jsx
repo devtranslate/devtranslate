@@ -1,11 +1,19 @@
+import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import SearchSelect from '../../atoms/search-select';
 import SearchInput from '../../atoms/search-input';
 import SearchButton from '../../atoms/search-button';
 
-const Search = () => {
+const Search = ({ history }) => {
+  const [search, setSearch] = useState('');
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    history.replace(`/${search}`);
+  };
+
   return (
-    <SearchContainer>
+    <SearchContainer onSubmit={(e) => handleSearch(e)}>
       <SearchSelect
         options={[
           { value: 'status', label: 'Status', disabled: true, selected: true },
@@ -13,7 +21,11 @@ const Search = () => {
           { value: 'concluded', label: 'Concluído' },
         ]}
       />
-      <SearchInput placeholder="Busque pelo título, autor ou tradutor" />
+      <SearchInput
+        value={search}
+        placeholder="Busque pelo título, autor ou tradutor"
+        onChange={(e) => setSearch(e.target.value)}
+      />
       <SearchButton type="submit" value="Buscar tradução" />
     </SearchContainer>
   );

@@ -1,13 +1,9 @@
-import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import Pagination from 'react-js-pagination';
 
-const PaginationStyled = ({ history, limit, pageSize, totalPages }) => {
-  const [activePage, setActivePage] = useState();
-
-  const handlePageChange = (pageNumber) => {
-    setActivePage(pageNumber);
-    history.replace(`?page=pageNumber`);
+const PaginationStyled = ({ history, limit, activePage, pageSize, totalPages }) => {
+  const handlePageChange = (page) => {
+    history.replace(`?page=${page}`);
   };
 
   return (

@@ -7,9 +7,9 @@ const SearchSelect = ({ options }) => {
 
   return (
     <SearchSelectContainer name="select">
-      {options.map((option) => {
+      {options.map((option, index) => {
         return (
-          <Option value={option.value} disabled={option.disabled} selected={option.selected}>
+          <Option value={option.value} disabled={option.disabled} selected={option.selected} key={`option-${index}`}>
             {option.label}
           </Option>
         );

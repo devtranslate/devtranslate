@@ -4,43 +4,25 @@ import Card from '../../molecules/card';
 import Search from '../../molecules/search';
 import PaginationStyled from '../../molecules/pagination';
 
-const Main = ({ history }) => {
+const Main = ({ translations, pagination, history }) => {
   return (
-    <MainContainer>
-      <Container>
-        <Search />
-        <Grid>
-          {Array.from(Array(9)).map(() => (
-            <Card />
-          ))}
-        </Grid>
-        <PaginationStyled
-          history={history}
-          limit={DeviceDetector() === 'mobile' ? 3 : 5}
-          pageSize={6}
-          totalPages={26}
-        />
-      </Container>
-    </MainContainer>
+    <>
+      <Search history={history} />
+      <Grid>
+        {translations.map((translation) => (
+          <Card key={`card-${translation.id}`} translation={translation} />
+        ))}
+      </Grid>
+      <PaginationStyled
+        history={history}
+        limit={DeviceDetector() === 'mobile' ? 3 : 5}
+        activePage={pagination.page}
+        pageSize={pagination.pageSize}
+        totalPages={pagination.totalPages}
+      />
+    </>
   );
 };
-
-const MainContainer = styled.main`
-  ${({ theme }) => css`
-    background: ${theme.colors.grey.lightest};
-    padding: ${theme.spacing.xxl} 0;
-
-    @media (max-width: ${theme.breakpoints.touch}) {
-      padding: ${theme.spacing.xl} 0;
-    }
-  `}
-`;
-
-const Container = styled.div`
-  max-width: 1280px;
-  margin: auto;
-  min-height: 95vh;
-`;
 
 const Grid = styled.div`
   display: grid;

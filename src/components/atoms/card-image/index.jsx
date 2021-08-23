@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const CardImage = ({ src }) => {
-  return <CardImageContainer src={src} aria-hidden="true" />;
+  return <CardImageContainer src={src} aria-hidden="true" alt="" />;
 };
 
 const CardImageContainer = styled.img`
@@ -12,6 +12,7 @@ const CardImageContainer = styled.img`
     css`
       border-radius: ${theme.borderRadius.sm};
       box-shadow: ${theme.elevation.skim};
+      background-color: ${theme.colors.grey.light};
     `}
 `;
 

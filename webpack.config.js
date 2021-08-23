@@ -54,6 +54,7 @@ module.exports = (_, { mode }) => {
           port: 3000,
           open: false,
           hot: true,
+          historyApiFallback: true,
           contentBase: path.resolve(__dirname, './public'),
         }
       : undefined,

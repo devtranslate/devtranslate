@@ -5,6 +5,11 @@ const CardBody = ({ children }) => {
 };
 
 const CardBodyContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 62px;
+
   ${({ theme }) =>
     css`
       padding: ${theme.spacing.xs} ${theme.spacing.xs};

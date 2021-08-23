@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
-const SearchInput = ({ placeholder }) => {
-  return <SearchInputContainer type="text" placeholder={placeholder} />;
+const SearchInput = ({ value, placeholder, onChange }) => {
+  return <SearchInputContainer type="text" value={value} placeholder={placeholder} onChange={onChange} />;
 };
 
 const SearchInputContainer = styled.input`

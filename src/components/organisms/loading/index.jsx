@@ -1,21 +1,17 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import Loader from '../../atoms/loader';
+import Search from '../../molecules/search';
 
-const Loading = () => {
+const Loading = ({ history }) => {
   return (
-    <LoadingContainer>
+    <>
+      <Search history={history} />
       <Container>
         <Loader width={50} />
       </Container>
-    </LoadingContainer>
+    </>
   );
 };
-
-const LoadingContainer = styled.main`
-  ${({ theme }) => css`
-    background: ${theme.colors.grey.lightest};
-  `}
-`;
 
 const Container = styled.div`
   display: flex;
@@ -23,7 +19,7 @@ const Container = styled.div`
   justify-content: center;
   max-width: 1280px;
   margin: auto;
-  height: 95vh;
+  height: 80vh;
 `;
 
 export default Loading;

@@ -42,8 +42,8 @@ const theme = {
     sm: '16px',
     md: '18px',
     lg: '20px',
-    xl: '22px',
-    xxl: '24px',
+    xl: '26px',
+    xxl: '32px',
   },
   fontFamily: 'Cera Round Pro, sans-serif',
   fontWeight: {
