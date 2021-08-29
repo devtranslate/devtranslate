@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 
-const SearchSelect = ({ options }) => {
+const SearchSelect = ({ options, onChange }) => {
   if (!options) {
     return null;
   }
 
   return (
-    <SearchSelectContainer name="select">
+    <SearchSelectContainer name="select" onChange={onChange}>
       {options.map((option, index) => {
         return (
           <Option value={option.value} disabled={option.disabled} selected={option.selected} key={`option-${index}`}>

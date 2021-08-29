@@ -1,10 +1,19 @@
 import styled, { css } from 'styled-components';
 import Pagination from 'react-js-pagination';
+import queryString from 'query-string';
 
 const PaginationStyled = ({ history, limit, activePage, pageSize, totalPages }) => {
   const handlePageChange = (page) => {
-    history.replace(`?page=${page}`);
+    const parseQs = queryString.parse(history.location.search);
+    const { query, status } = parseQs;
+
+    const params = { query, status, page };
+    return history.replace(`?${queryString.stringify(params)}`);
   };
+
+  if (totalPages <= 1) {
+    return null;
+  }
 
   return (
     <PaginationContainer>

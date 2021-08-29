@@ -5,6 +5,8 @@ import Search from '../../molecules/search';
 import PaginationStyled from '../../molecules/pagination';
 
 const Main = ({ translations, pagination, history }) => {
+  const { page, pageSize, totalPages } = pagination;
+
   return (
     <>
       <Search history={history} />
@@ -16,9 +18,9 @@ const Main = ({ translations, pagination, history }) => {
       <PaginationStyled
         history={history}
         limit={DeviceDetector() === 'mobile' ? 3 : 5}
-        activePage={pagination.page}
-        pageSize={pagination.pageSize}
-        totalPages={pagination.totalPages}
+        activePage={page}
+        pageSize={pageSize}
+        totalPages={totalPages}
       />
     </>
   );

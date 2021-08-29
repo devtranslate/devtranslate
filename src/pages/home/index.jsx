@@ -3,22 +3,22 @@ import queryString from 'query-string';
 import HomeResult from '../../components/templates/home-result';
 import apiService from '../../services/api';
 
-const Home = ({ history, match }) => {
+const Home = (props) => {
+  const { location } = props;
+  const parseQs = queryString.parse(location.search);
+
   const [data, setData] = useState();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const { page } = queryString.parse(history.location.search);
-  const { query } = match.params;
-
-  const currentPage = page ? `&page=${page}` : '';
-  const currentQuery = query ? `&query=${query}` : '';
+  const { query, status, page } = parseQs;
+  const params = { page, query, status, pageSize: 9 };
 
   useEffect(() => {
     setLoading(true);
 
     apiService
-      .get(`/translations?pageSize=9${currentPage}${currentQuery}`)
+      .get(`/translations?${queryString.stringify(params)}`)
       .then((response) => {
         setData(response.data);
         setLoading(false);
@@ -26,9 +26,9 @@ const Home = ({ history, match }) => {
       .catch(() => {
         setError(true);
       });
-  }, [page, query]);
+  }, [page, query, status]);
 
-  return <HomeResult data={data} error={error} loading={loading} history={history} />;
+  return <HomeResult data={data} error={error} loading={loading} {...props} />;
 };
 
 export default Home;

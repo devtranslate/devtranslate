@@ -1,30 +1,43 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
+import queryString from 'query-string';
 import SearchSelect from '../../atoms/search-select';
 import SearchInput from '../../atoms/search-input';
 import SearchButton from '../../atoms/search-button';
 
 const Search = ({ history }) => {
-  const [search, setSearch] = useState('');
+  const [query, setQuery] = useState('');
+  const [status, setStatus] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
-    history.replace(`/${search}`);
+
+    const params = { query, status, page: 1 };
+    return history.replace(`?${queryString.stringify(params)}`);
   };
+
+  const parseQs = queryString.parse(history.location.search);
+  const { query: queryQs, status: statusQs } = parseQs;
+
+  useEffect(() => {
+    setQuery(queryQs || '');
+    setStatus(statusQs || '');
+  }, [queryQs, statusQs]);
 
   return (
     <SearchContainer onSubmit={(e) => handleSearch(e)}>
       <SearchSelect
+        onChange={(e) => setStatus(e.target.value)}
         options={[
-          { value: 'status', label: 'Status', disabled: true, selected: true },
-          { value: 'inprogress', label: 'Em progresso' },
-          { value: 'concluded', label: 'Concluído' },
+          { value: 'status', label: 'Status', disabled: true, selected: status === '' },
+          { value: 'inProgress', label: 'Em progresso', selected: status === 'inProgress' },
+          { value: 'completed', label: 'Concluído', selected: status === 'completed' },
         ]}
       />
       <SearchInput
-        value={search}
+        value={query}
         placeholder="Busque pelo título, autor ou tradutor"
-        onChange={(e) => setSearch(e.target.value)}
+        onChange={(e) => setQuery(e.target.value)}
       />
       <SearchButton type="submit" value="Buscar tradução" />
     </SearchContainer>
