@@ -28,7 +28,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: build
-        path: published
+        path: build
 
   deploy:
     runs-on: ubuntu-latest
@@ -38,7 +38,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: build
-          path: published
+          path: build
       - name: Transfering files
         uses: garygrossgarten/github-action-scp@v0.7.3
         with:
