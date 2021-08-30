@@ -14,8 +14,12 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-    - run: npm ci
-    - run: npm run build
+    - uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: install --frozen-lockfile
+    - uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: build
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v2
       with:
