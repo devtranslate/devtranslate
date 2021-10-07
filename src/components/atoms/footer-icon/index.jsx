@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 const FooterIcon = ({ name, href, brand }) => {
   return (
     <FooterIconContainer href={href} target="_blank" rel="nofollow">
+      <Name>{name}</Name>
       <Icon className={`fa${brand ? 'b' : 's'} fa-${name} fa-2x`} />
     </FooterIconContainer>
   );
@@ -45,4 +46,10 @@ const Icon = styled.span`
   }
 `;
 
+const Name = styled.p`
+  display: none;
+  @media speech {
+    display: block;
+  }
+`;
 export default FooterIcon;
