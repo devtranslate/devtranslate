@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
-const NavbarItem = ({ children, href, title, disabled }) => {
+const NavbarItem = ({ children, href, title, disabled, accesskey }) => {
   return (
     <NavbarItemContainer role="none">
-      <NavbarLink href={href} title={title} disabled={disabled} role="menuitem">
+      <NavbarLink href={href} title={title} disabled={disabled} role="menuitem" accesskey={accesskey}>
         {children}
       </NavbarLink>
     </NavbarItemContainer>

@@ -19,8 +19,8 @@ const Navbar = () => {
       />
       <NavbarToggle active={active} onClick={() => setActive(!active)} />
       <NavbarMenu active={active}>
-        <NavbarItem href="/" title="Ir para a página inicial do Devtranslate">
-          Home
+        <NavbarItem href="/" title="Ir para a página inicial do Devtranslate" accesskey="h">
+          TESTE
         </NavbarItem>
         <NavbarItem disabled>Sobre</NavbarItem>
         <NavbarItem disabled>Como contribuir</NavbarItem>
