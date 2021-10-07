@@ -9,12 +9,12 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <FooterIconWrapper>
-          <FooterIcon name="telegram" href="https://telegram.me/devtranslate" brand />
-          <FooterIcon name="linkedin" href="https://www.linkedin.com/company/devtranslate/" brand />
-          <FooterIcon name="instagram" href="https://instagram.com/devtranslate" brand />
-          <FooterIcon name="facebook" href="https://facebook.com/devtranslate/" brand />
-          <FooterIcon name="github" href="https://github.com/devtranslate" brand />
-          <FooterIcon name="rss" href="https://github.com/devtranslate" />
+          <FooterIcon name="Telegram" href="https://telegram.me/devtranslate" brand />
+          <FooterIcon name="Linkedin" href="https://www.linkedin.com/company/devtranslate/" brand />
+          <FooterIcon name="Instagram" href="https://instagram.com/devtranslate" brand />
+          <FooterIcon name="Facebook" href="https://facebook.com/devtranslate/" brand />
+          <FooterIcon name="Github" href="https://github.com/devtranslate" brand />
+          <FooterIcon name="Rss" href="https://github.com/devtranslate" />
         </FooterIconWrapper>
         <FooterText>Devtranslate © {currentYear} - Todos os Direitos Reservados</FooterText>
       </Container>
