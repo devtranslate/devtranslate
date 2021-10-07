@@ -49,7 +49,10 @@ const Icon = styled.span`
 const Name = styled.p`
   display: none;
   @media speech {
-    display: block;
+    code {
+      display: block;
+      speak: literal-punctuation;
+    }
   }
 `;
 export default FooterIcon;
