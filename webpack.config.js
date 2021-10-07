@@ -55,7 +55,6 @@ module.exports = (_, { mode }) => {
           open: false,
           hot: true,
           historyApiFallback: true,
-          contentBase: path.resolve(__dirname, './public'),
         }
       : undefined,
     plugins: [
