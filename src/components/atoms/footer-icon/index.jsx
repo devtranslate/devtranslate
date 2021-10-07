@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-const FooterIcon = ({ name, href, brand }) => {
+const FooterIcon = ({ name, href, brand, title }) => {
   return (
-    <FooterIconContainer href={href} target="_blank" rel="nofollow">
+    <FooterIconContainer href={href} target="_blank" rel="nofollow" title={title}>
       <Icon className={`fa${brand ? 'b' : 's'} fa-${name} fa-2x`} />
     </FooterIconContainer>
   );
