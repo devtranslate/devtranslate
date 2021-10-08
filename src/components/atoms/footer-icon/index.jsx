@@ -4,7 +4,7 @@ const FooterIcon = ({ name, href, brand }) => {
   return (
     <FooterIconContainer href={href} target="_blank" rel="nofollow">
       <Name>{name}</Name>
-      <Icon className={`fa${brand ? 'b' : 's'} fa-${name} fa-2x`} />
+      <Icon className={`fa${brand ? 'b' : 's'} fa-${name.toLowerCase()} fa-2x`} />
     </FooterIconContainer>
   );
 };
