@@ -15,7 +15,7 @@ const Navbar = () => {
         href="/"
         title="Ir para a página inicial do Devtranslate"
         src="https://devtranslate.io/assets/images/logo-horizontal.svg"
-        alt="Duas caixas de texto. Uma na cor vermelha com um caracter oriental dentro e outra na cor amarela com um caracter ocidental dentro. As duas contém uma seta apontando uma para outra representando a tradução para ambos os idiomas."
+        alt="Duas caixas de texto. Uma na cor vermelha com um caracter oriental dentro e outra na cor amarela com um caracter ocidental dentro. As duas contém uma seta apontando uma para outra representando a tradução para ambos os idiomas. Ao lado dessas caixas de texto há o texto 'Devtranslate'."
       />
       <NavbarToggle active={active} onClick={() => setActive(!active)} />
       <NavbarMenu active={active}>
