@@ -9,12 +9,12 @@ const Footer = () => {
     <FooterContainer>
       <Container>
         <FooterIconWrapper>
-          <FooterIcon name="Telegram" href="https://telegram.me/devtranslate" brand />
-          <FooterIcon name="Linkedin" href="https://www.linkedin.com/company/devtranslate/" brand />
-          <FooterIcon name="Instagram" href="https://instagram.com/devtranslate" brand />
-          <FooterIcon name="Facebook" href="https://facebook.com/devtranslate/" brand />
-          <FooterIcon name="Github" href="https://github.com/devtranslate" brand />
-          <FooterIcon name="Rss" href="https://github.com/devtranslate" />
+          <FooterIcon name="Telegram" href="https://telegram.me/devtranslate" brand title="Acompanhe-nos no Telegram! Observação: Este link é aberto em uma nova janela." />
+          <FooterIcon name="Linkedin" href="https://www.linkedin.com/company/devtranslate/" brand title="Acompanhe-nos no Linkedin! Observação: Este link é aberto em uma nova janela." />
+          <FooterIcon name="Instagram" href="https://instagram.com/devtranslate" brand title="Acompanhe-nos no Instagram! Observação: Este link é aberto em uma nova janela." />
+          <FooterIcon name="Facebook" href="https://facebook.com/devtranslate/" brand title="Acompanhe-nos no Facebook! Observação: Este link é aberto em uma nova janela." />
+          <FooterIcon name="Github" href="https://github.com/devtranslate" brand title="Acompanhe-nos no Github! Observação: Este link é aberto em uma nova janela." />
+          <FooterIcon name="RSS" href="https://github.com/devtranslate" title="Siga nosso feed RSS! Observação: Este link é aberto em uma nova janela." />
         </FooterIconWrapper>
         <FooterText>Devtranslate © {currentYear} - Todos os Direitos Reservados</FooterText>
       </Container>
