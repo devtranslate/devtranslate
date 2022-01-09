@@ -1,6 +1,6 @@
 {
   "name": "devtranslate",
-  "version": "3.0.0",
+  "version": "3.0.5",
   "description": "Translations catalog, find any type of document translated into other languages",
   "main": "index.jsx",
   "scripts": {
@@ -15,15 +15,12 @@
     "type": "git",
     "url": "git+https://github.com/devtranslate/devtranslate.git"
   },
-  "keywords": [
-    "translations, catalog, language, technology"
-  ],
   "author": "Larissa Mourullo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/devtranslate/devtranslate/issues"
   },
-  "homepage": "https://github.com/devtranslate/devtranslate#readme",
+  "homepage": "https://devtranslate.io/",
   "dependencies": {
     "axios": "^0.22.0",
     "query-string": "^7.0.1",
