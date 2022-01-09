@@ -6,6 +6,7 @@
     "christian-kohler.npm-intellisense",
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
-    "jpoissonnier.vscode-styled-components"
+    "styled-components.vscode-styled-components",
+    "editorconfig.editorconfig"
   ]
 }
