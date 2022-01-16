@@ -19,7 +19,7 @@ module.exports = (_, { mode }) => {
       clean: true,
     },
     resolve: {
-      extensions: ['.jsx', '.js'],
+      extensions: ['.tsx', '.ts', '.jsx', '.js'],
     },
     optimization: {
       splitChunks: {
@@ -38,7 +38,7 @@ module.exports = (_, { mode }) => {
     module: {
       rules: [
         {
-          test: /\.jsx?$/,
+          test: /\.[t|j]sx?$/,
           exclude: /node_modules/,
           use: 'babel-loader',
         },
