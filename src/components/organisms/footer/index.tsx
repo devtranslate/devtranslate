@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           />
           <FooterIcon
             name="RSS"
-            href="https://github.com/devtranslate"
+            href="https://api.devtranslate.io/rss"
             title="Siga nosso feed RSS! Observação: Este link é aberto em uma nova janela."
           />
         </FooterIconWrapper>
