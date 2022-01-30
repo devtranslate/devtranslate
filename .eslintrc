@@ -25,7 +25,13 @@
       "error",
       { "groups": ["builtin", "external", "index", "sibling", "parent", "internal", "object", "type"] }
     ],
-    "@typescript-eslint/no-use-before-define": "off"
+    "@typescript-eslint/no-use-before-define": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [".storybook/**", "src/**/*.stories.@(js|jsx|ts|tsx)"]
+      }
+    ]
   },
   "settings": {
     "react": {
