@@ -1,10 +1,8 @@
-import Home from './pages/home';
-
 const routes = [
   {
     path: '/',
     type: 'home',
-    render: () => <Home />,
+    render: () => <h1>Em contrução</h1>,
   },
 ];
 

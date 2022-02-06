@@ -1,6 +1,6 @@
 {
   "name": "devtranslate",
-  "version": "3.0.5",
+  "version": "3.3.0",
   "description": "Translations catalog, find any type of document translated into other languages",
   "main": "index.tsx",
   "scripts": {
@@ -27,7 +27,6 @@
     "query-string": "^7.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-js-pagination": "^3.0.3",
     "react-router-dom": "^5.3.0",
     "styled-components": "^5.3.3"
   },
