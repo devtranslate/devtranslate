@@ -31,7 +31,8 @@
       {
         "devDependencies": [".storybook/**", "src/**/*.stories.@(js|jsx|ts|tsx)"]
       }
-    ]
+    ],
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "react": {

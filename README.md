@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://devtranslate.io/assets/images/logo-horizontal.svg" alt="DevTranslate logo" width="700" />
+  <img src="https://devtranslate.io/static/images/logo.svg" alt="DevTranslate logo" width="700" />
 </p>
 
 <h3 align="center">💾 Devtranslate</h3>
