@@ -8,5 +8,6 @@ module.exports = {
     "@storybook/addon-essentials",
     '@storybook/addon-a11y'
   ],
-  "framework": "@storybook/react"
+  "framework": "@storybook/react",
+  "staticDirs": ['../public'],
 }
