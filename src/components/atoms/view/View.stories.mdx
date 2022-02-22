@@ -1,0 +1,80 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { View } from './View';
+
+<Meta title="Design System/Atoms/View" component={View} />
+
+export const Template = (args) => <View {...args} />;
+
+export const ViewBorder = styled(View)`
+  outline: 1px solid #d4d4d8;
+`;
+
+# View
+
+O **View** serve como um container genérico para qualquer tipo de conteúdo.
+
+<Canvas>
+  <Story name="Default" args={{ inline: { xs: true }, tag: 'div', children: 'Exemplo de componente View' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Espaçamento
+
+As propriedades **padding**, **paddingBottom**, **paddingLeft**, **paddingRight** e **paddingTop** permitem a configuração do espaçamento interno das Columns.
+
+> **Obs:** Caso queira remover o espaçamento ou preenchimento em telas maiores, utilize `none`, desta forma ele irar zerar o valor. Por exemplo: `{ xs: "s", s: "none" }`.
+
+export const renderViewPadding = () => {
+  const paddingSizes = ['none', 'xs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'];
+  return paddingSizes.map((item, index) => {
+    return (
+      <ViewBorder key={`view-${index - 1}`} padding={{ xs: item }}>
+        <b>Padding ({`${item}`})</b>
+      </ViewBorder>
+    );
+  });
+};
+
+<Story name="Padding" args={{ paddingTop: { xs: 'xs' }, paddingBottom: { xs: 'l' }, children: renderViewPadding() }}>
+  {Template.bind({})}
+</Story>
+
+## Direcionamento
+
+Ao utilizar a propriedade **inline** é possível configurar em qual direção os itens serão exibidos em cada breackpoint.
+
+export const renderViewInline = () => {
+  return Array.apply(0, Array(3)).map((_, index) => {
+    return (
+      <ViewBorder padding={{ xs: 's' }} key={`view-${index - 1}`}>
+        <b>Inline no mobile e não inline no desktop.</b>
+      </ViewBorder>
+    );
+  });
+};
+
+<Story
+  name="Inline"
+  args={{
+    paddingTop: { xs: 'xs' },
+    paddingBottom: { xs: 'l' },
+    inline: { xs: true, m: false },
+    children: renderViewInline(),
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+## Semântica
+
+Atualmente este componente oferece as tags `section` e `div`.
+
+> Lembre-se sempre de analizar o componente que pretende implementar e passar a prop `tag` condizente com o contexto onde ele será inserido. Esta prática é importante pois ajuda a prezar pela semântica da página.
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />
