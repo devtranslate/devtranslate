@@ -1,0 +1,130 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Grid } from './Grid';
+import { Column } from '../column/Column';
+
+<Meta title="Design System/Atoms/Grid" component={Grid} />
+
+export const Template = (args) => <Grid {...args} />;
+
+export const ColumnBorder = styled(Column)`
+  outline: 1px solid #d4d4d8;
+`;
+
+# Grid
+
+O component **Grid** deve ser usado quando se deseja dispor informações de maneiras diferentes em cada breakpoint. Por definição todo `Grid` deve ter como filhos apenas o componente `Column`, pois este oferece diversas props que facilitam seu desenvolvimento. Porém também é possível adicionar outros tipos de filhos, como por exemplo `Views`.
+
+Atualmente o Grid é dividido em 12 colunas:
+
+export const renderDefaultGrid = () => {
+  return Array.apply(0, Array(12)).map((_, index) => {
+    return (
+      <ColumnBorder
+        alignItems={{ xs: 'center' }}
+        justifyContent={{ xs: 'center' }}
+        paddingTop={{ xs: 's' }}
+        paddingBottom={{ xs: 's' }}
+        xs={3}
+        s={2}
+        m={1}
+        key={`column-${index - 1}`}
+      >
+        <b>Coluna {`${index + 1}`}</b>
+      </ColumnBorder>
+    );
+  });
+};
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{ tag: 'div', container: false, justifyContent: { xs: 'space-between' }, children: renderDefaultGrid() }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Espaçamento
+
+As propriedades **padding**, **paddingBottom**, **paddingLeft**, **paddingRight** e **paddingTop** permitem a configuração do espaçamento interno do Grid.
+
+> **Obs:** Caso queira remover o espaçamento ou preenchimento em telas maiores, utilize `none`, desta forma ele irar zerar o valor. Por exemplo: `{ xs: "s", s: "none" }`.
+
+export const renderGridPadding = (padding, name) => {
+  return (
+    <Grid {...padding}>
+      <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }}>
+        <b>{name}</b>
+      </ColumnBorder>
+    </Grid>
+  );
+};
+
+<Story name="Padding">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {renderGridPadding({ paddingBottom: { xs: 's' } }, 'paddingBottom')}
+    {renderGridPadding({ paddingLeft: { xs: 's' } }, 'paddingLeft')}
+    {renderGridPadding({ padding: { xs: 's' } }, 'padding')}
+    {renderGridPadding({ paddingRight: { xs: 's' } }, 'paddingRight')}
+    {renderGridPadding({ paddingTop: { xs: 's' } }, 'paddingTop')}
+  </Grid>
+</Story>
+
+## Distribuição
+
+Passe a propriedade **justifyContent** para configurar a forma como os itens internos serão distribuídos em cada breakpoint.
+
+export const renderGridJustify = (justifyContent, none) => {
+  return (
+    <Grid justifyContent={{ xs: justifyContent }} paddingBottom={{ xs: !none && 's' }}>
+      {Array.apply(0, Array(2)).map((_, index) => {
+        return (
+          <ColumnBorder
+            alignItems={{ xs: 'center' }}
+            justifyContent={{ xs: 'center' }}
+            padding={{ xs: 's' }}
+            xs={4}
+            key={`column-${index - 1}`}
+          >
+            <b>{justifyContent}</b>
+          </ColumnBorder>
+        );
+      })}
+    </Grid>
+  );
+};
+
+<Story name="JustifyContent">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {renderGridJustify('flex-start')}
+    {renderGridJustify('flex-end')}
+    {renderGridJustify('center')}
+    {renderGridJustify('space-between')}
+    {renderGridJustify('space-around', true)}
+  </Grid>
+</Story>
+
+## Largura Máxima
+
+Por meio da propriedade **container** é possível configurar se existe uma largura máxima para o Grid. Caso receba `true` ele irá definir a largura máxima padrão de `1280px`.
+
+<Story name="Container">
+  <Grid container={true} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }}>
+      <b>Exemplo da Grid com largura máxima.</b>
+    </ColumnBorder>
+  </Grid>
+</Story>
+
+## Semântica
+
+Atualmente este componente oferece as tags `section` e `div`.
+
+> Lembre-se sempre de analizar o componente que pretende implementar e passar a prop `tag` condizente com o contexto onde ele será inserido. Esta prática é importante pois ajuda a prezar pela semântica da página.
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />

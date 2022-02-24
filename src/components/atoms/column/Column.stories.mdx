@@ -1,0 +1,114 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Column } from './Column';
+import { Grid } from '../grid/Grid';
+
+<Meta title="Design System/Atoms/Column" component={Column} />
+
+export const Template = (args) => {
+  return <Column {...args} />;
+};
+
+export const ColumnBorder = styled(Column)`
+  outline: 1px solid #d4d4d8;
+`;
+
+# Column
+
+O component **Column** deve ser usado quando se deseja dispor informações de maneiras diferentes em cada breakpoint. Por definição todo `Column` deve ter como pai apenas o componente `Grid`, pois este oferece diversas props que facilitam seu desenvolvimento.
+
+<Canvas>
+  <Story name="Default" args={{ children: 'Exemplo de componente Column' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Espaçamento
+
+As propriedades **padding**, **paddingBottom**, **paddingLeft**, **paddingRight** e **paddingTop** permitem a configuração do espaçamento interno das Columns.
+
+> **Obs:** Caso queira remover o espaçamento ou preenchimento em telas maiores, utilize `none`, desta forma ele irar zerar o valor. Por exemplo: `{ xs: "s", s: "none" }`.
+
+export const paddingSizes = ['none', 'xs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'];
+
+<Story name="Padding">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {paddingSizes.map((item, index) => {
+      return (
+        <ColumnBorder
+          alignItems={{ xs: 'center' }}
+          justifyContent={{ xs: 'center' }}
+          key={`column-${index - 1}`}
+          padding={{ xs: item }}
+        >
+          <b>Padding ({`${item}`})</b>
+        </ColumnBorder>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Alinhamento
+
+Ao utilizar a propriedade **alignItems** é possível configurar o alinhamento dos itens no eixo transversal em cada breakpoint.
+
+export const renderColumnAlign = (alignItems) => {
+  return (
+    <ColumnBorder alignItems={{ xs: alignItems }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }} xs={4}>
+      <b>{alignItems}</b>
+    </ColumnBorder>
+  );
+};
+
+<Story name="AlignItems">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    {renderColumnAlign('flex-start')}
+    {renderColumnAlign('center')}
+    {renderColumnAlign('flex-end')}
+  </Grid>
+</Story>
+
+Basta adicionar a propriedade **justifyContent** no caso de alinhamento dos itens no eixo principal em cada breakpoint.
+
+export const renderColumnJustify = (justifyContent) => {
+  return (
+    <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: justifyContent }} padding={{ xs: 's' }} xs={4}>
+      <b>{justifyContent}</b>
+    </ColumnBorder>
+  );
+};
+
+<Story name="JustifyContent">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {renderColumnJustify('flex-start')}
+    {renderColumnJustify('center')}
+    {renderColumnJustify('flex-end')}
+  </Grid>
+</Story>
+
+## Lacunas entre as colunas
+
+Ao usar a propriedade **columnGap** é criado um espaço entre as colunas do Grid. Essa propriedade pertence ao componente `Column` e é necessário que o `Grid` possua a propriedade `justifyContent` como `space-between`, para funcionar corretamente.
+
+<Story name="ColumnGap">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }} justifyContent={{ xs: 'space-between' }}>
+    {Array.apply(0, Array(3)).map((_, index) => {
+      return (
+        <ColumnBorder
+          alignItems={{ xs: 'center' }}
+          justifyContent={{ xs: 'center' }}
+          padding={{ xs: 's' }}
+          xs={4}
+          columnGap={true}
+          key={`column-${index - 1}`}
+        >
+          <b>Coluna</b>
+        </ColumnBorder>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Propriedades
+
+<ArgsTable story="Default" />
