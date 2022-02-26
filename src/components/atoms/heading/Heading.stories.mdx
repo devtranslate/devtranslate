@@ -1,0 +1,121 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Heading } from './Heading';
+import { View } from '../view/View';
+
+<Meta title="Design System/Atoms/Heading" component={Heading} />
+
+export const Template = (args) => <Heading {...args} />;
+
+# Heading
+
+O componente **Heading** deve ser usado para títulos que apresentem novas sessões.
+
+<Canvas>
+  <Story name="Default" args={{ tag: 'h2', variant: 'default', children: 'Heading' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Variações
+
+A propriedade **variant** permite realizar a configuração das variações do componente Heading, que podem mudar de acordo com o contexto onde está inserido. Atualmente o Heading possui as seguintes variações disponíveis:
+
+<br />
+
+### Default
+
+<Story name="Variant (Default)">
+  <Heading size={{ xs: 'xl' }} variant="default" paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    Heading Default
+  </Heading>
+</Story>
+
+### Display
+
+<Story name="Variant (Display)">
+  <Heading size={{ xs: 'xxs' }} variant="display" paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    Heading Display
+  </Heading>
+</Story>
+
+## Tamanhos
+
+Com a propriedade **size**, é possível configurar o componente em seis tamanhos diferentes:
+
+export const headingSizes = ['xl', 'l', 'm', 's', 'xs', 'xxs'];
+
+<Story name="Size">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {headingSizes.map((item, index) => {
+      return (
+        <Heading size={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
+          Heading {item}
+        </Heading>
+      );
+    })}
+  </View>
+</Story>
+
+## Cores
+
+Alterando a propriedade **color** é possível definir as cores da marca no componente.
+
+export const headingColors = ['default', 'primary', 'secondary', 'tertiary'];
+
+<Story name="Color">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {headingColors.map((item, index) => {
+      return (
+        <Heading color={item} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
+          Heading {item}
+        </Heading>
+      );
+    })}
+  </View>
+</Story>
+
+## Truncar
+
+Passe a propriedade **lineClamp** com a o número de linhas desejado para truncar o texto.
+
+<Story name="LineClamp">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <Heading size={{ xs: 'xxs' }} lineClamp={2}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Heading>
+  </View>
+</Story>
+
+## Alinhamento
+
+Utilize a propriedade **textAlign** para alterar o alinhamento do texto.
+
+export const headingAlign = ['left', 'center', 'right'];
+
+<Story name="TextAlign">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {headingAlign.map((item, index) => {
+      return (
+        <Heading textAlign={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
+          Heading {item}
+        </Heading>
+      );
+    })}
+  </View>
+</Story>
+
+## Semântica
+
+Atualmente este componente oferece as tags `h1`, `h2`, `h3`, `h4`, `h5`, `h6` e `span`.
+
+> Lembre-se sempre de analizar o componente que pretende implementar e passar a prop `tag` condizente com o contexto onde ele será inserido. Esta prática é importante pois ajuda a prezar pela semântica da página.
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />

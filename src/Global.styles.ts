@@ -8,9 +8,10 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
     }
 
     body {
-      color: ${theme.textColor};
-      font-family: ${theme.fontFamily};
-      font-size: ${theme.fontSize};
+      color: ${theme.brand.colors.default};
+      font-family: ${theme.brand.typography.fontFamily};
+      font-size: ${theme.brand.typography.fontSize};
+      line-height: ${theme.brand.typography.lineHeight};
     }
   `}
 `;

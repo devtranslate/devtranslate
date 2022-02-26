@@ -5,48 +5,60 @@ export const typography: Typography = {
     sans: 'Cera Round Pro, Nunito, Quicksand, sans-serif',
     mono: 'Roboto Mono, Ubuntu Mono, Consolas, monospace',
   },
-  heading: {
-    fontWeight: 'bold',
-    fontSizes: {
-      xxxl: '80px',
-      xxl: '72px',
-      xl: '64px',
-      l: '56px',
-      m: '48px',
-      s: '40px',
-      xs: '32px',
-      xxs: '24px',
-    },
-    lineHeight: {
-      xxxl: '96px',
-      xxl: '88px',
-      xl: '80px',
-      l: '72px',
-      m: '64px',
-      s: '56px',
-      xs: '48px',
-      xxs: '40px',
+  fontWeights: {
+    heading: {
+      default: 'bold',
+      display: 'normal',
     },
   },
-  body: {
-    fontWeight: 'normal',
-    fontSizes: {
-      xxl: '22px',
-      xl: '20px',
-      l: '18px',
-      m: '16px',
-      s: '14px',
-      xs: '12px',
-      xxs: '10px',
+  fontSizes: {
+    heading: {
+      default: {
+        xxs: '20px',
+        xs: '24px',
+        s: '28px',
+        m: '32px',
+        l: '36px',
+        xl: '40px',
+      },
+      display: {
+        xxs: '44px',
+        xs: '48px',
+        s: '52px',
+        m: '56px',
+        l: '60px',
+        xl: '64px',
+      },
     },
-    lineHeight: {
-      xxl: '32px',
-      xl: '28px',
-      l: '24px',
-      m: '20px',
-      s: '18px',
-      xs: '16px',
-      xxs: '14px',
+    body: {
+      s: '12px',
+      m: '14px',
+      l: '16px',
+    },
+  },
+  lineHeights: {
+    heading: {
+      default: {
+        xxs: '24px',
+        xs: '28px',
+        s: '32px',
+        m: '36px',
+        l: '40px',
+        xl: '44px',
+      },
+      display: {
+        xxs: '48px',
+        xs: '52px',
+        s: '56px',
+        m: '60px',
+        l: '64px',
+        xl: '68px',
+      },
+    },
+    body: {
+      s: '16px',
+      m: '18px',
+      l: '20px',
     },
   },
 };
