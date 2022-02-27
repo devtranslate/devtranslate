@@ -1,6 +1,7 @@
 import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
 import styled from 'styled-components';
 import { View } from './View';
+import { Text } from '../text/Text';
 
 <Meta title="Design System/Atoms/View" component={View} />
 
@@ -31,7 +32,7 @@ export const renderViewPadding = () => {
   return paddingSizes.map((item, index) => {
     return (
       <ViewBorder key={`view-${index - 1}`} padding={{ xs: item }}>
-        <b>Padding ({`${item}`})</b>
+        <Text as="b">Padding ({`${item}`})</Text>
       </ViewBorder>
     );
   });
@@ -49,7 +50,7 @@ export const renderViewInline = () => {
   return Array.apply(0, Array(3)).map((_, index) => {
     return (
       <ViewBorder padding={{ xs: 's' }} key={`view-${index - 1}`}>
-        <b>Inline no mobile e não inline no desktop.</b>
+        <Text as="b">Inline no mobile e não inline no desktop.</Text>
       </ViewBorder>
     );
   });

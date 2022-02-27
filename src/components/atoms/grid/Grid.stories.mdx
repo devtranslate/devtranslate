@@ -2,6 +2,7 @@ import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
 import styled from 'styled-components';
 import { Grid } from './Grid';
 import { Column } from '../column/Column';
+import { Text } from '../text/Text';
 
 <Meta title="Design System/Atoms/Grid" component={Grid} />
 
@@ -30,7 +31,7 @@ export const renderDefaultGrid = () => {
         m={1}
         key={`column-${index - 1}`}
       >
-        <b>Coluna {`${index + 1}`}</b>
+        <Text as="b">Coluna {`${index + 1}`}</Text>
       </ColumnBorder>
     );
   });
@@ -55,7 +56,7 @@ export const renderGridPadding = (padding, name) => {
   return (
     <Grid {...padding}>
       <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }}>
-        <b>{name}</b>
+        <Text as="b">{name}</Text>
       </ColumnBorder>
     </Grid>
   );
@@ -87,7 +88,7 @@ export const renderGridJustify = (justifyContent, none) => {
             xs={4}
             key={`column-${index - 1}`}
           >
-            <b>{justifyContent}</b>
+            <Text as="b">{justifyContent}</Text>
           </ColumnBorder>
         );
       })}
@@ -112,7 +113,7 @@ Por meio da propriedade **container** é possível configurar se existe uma larg
 <Story name="Container">
   <Grid container={true} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
     <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }}>
-      <b>Exemplo da Grid com largura máxima.</b>
+      <Text as="b">Exemplo da Grid com largura máxima.</Text>
     </ColumnBorder>
   </Grid>
 </Story>

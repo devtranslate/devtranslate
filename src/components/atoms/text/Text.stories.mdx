@@ -1,0 +1,138 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Text } from './Text';
+import { View } from '../view/View';
+
+<Meta title="Design System/Atoms/Text" component={Text} />
+
+export const Template = (args) => <Text {...args} />;
+
+# Text
+
+O componente **Text** serve para criar parágrafos e textos no geral.
+
+export const TextExample =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
+<Canvas>
+  <Story name="Default" args={{ tag: 'p', children: TextExample }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tamanhos
+
+Com a propriedade **size**, é possível configurar o componente em três tamanhos diferentes:
+
+export const textSizes = ['l', 'm', 's'];
+
+<Story name="Size">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {textSizes.map((item, index) => {
+      return (
+        <Text size={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
+          Exemplo de Text {item}
+        </Text>
+      );
+    })}
+  </View>
+</Story>
+
+## Cores
+
+Alterando a propriedade **color** é possível definir as cores da marca no componente.
+
+export const textColors = ['', 'primary', 'secondary', 'tertiary'];
+
+<Story name="Color">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {textColors.map((item, index) => {
+      return (
+        <Text color={item} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
+          Exemplo de Text {item ? item : 'default'}
+        </Text>
+      );
+    })}
+  </View>
+</Story>
+
+## Capitalização
+
+Utilizando a propriedade **textTransform** é possível mudar a capitalização do componente.
+
+export const textCapitalizations = ['none', 'capitalize', 'uppercase', 'lowercase'];
+
+<Story name="TextTransform">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {textCapitalizations.map((item, index) => {
+      return (
+        <Text textTransform={item} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
+          Exemplo de Text {item !== 'none' ? item : 'default'}
+        </Text>
+      );
+    })}
+  </View>
+</Story>
+
+## Truncar
+
+Passe a propriedade **lineClamp** com a o número de linhas desejado para truncar o texto.
+
+<Story name="LineClamp">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <Text lineClamp={2}>{TextExample}</Text>
+  </View>
+</Story>
+
+## Alinhamento
+
+Utilize a propriedade **textAlign** para alterar o alinhamento do texto.
+
+export const textAlignment = ['left', 'center', 'right'];
+
+<Story name="TextAlign">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {textAlignment.map((item, index) => {
+      return (
+        <Text textAlign={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
+          Exemplo de Text {item}
+        </Text>
+      );
+    })}
+  </View>
+</Story>
+
+## Semântica
+
+Atualmente este componente oferece as tags `b`, `i`, `p`, `s`, `small`, `span`, `strong` e `u`. Por meio de sua utilização o componente será exibido de forma diferente em cada caso, como é possível observar abaixo:
+
+export const textTags = [
+  { tag: 'b', text: 'bold' },
+  { tag: 'i', text: 'italic' },
+  { tag: 'p', text: 'paragraph' },
+  { tag: 's', text: 'strikethrough' },
+  { tag: 'small', text: 'small' },
+  { tag: 'span', text: 'generic' },
+  { tag: 'strong', text: 'strong' },
+  { tag: 'u', text: 'underline' },
+];
+
+<Story name="Tag">
+  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+    {textTags.map((item, index) => {
+      return (
+        <Text tag={item.tag} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
+          Exemplo de Text ({item.text})
+        </Text>
+      );
+    })}
+  </View>
+</Story>
+
+> Lembre-se sempre de analizar o componente que pretende implementar e passar a prop `tag` condizente com o contexto onde ele será inserido. Esta prática é importante pois ajuda a prezar pela semântica da página.
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />

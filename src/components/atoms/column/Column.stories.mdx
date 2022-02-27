@@ -2,6 +2,7 @@ import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
 import styled from 'styled-components';
 import { Column } from './Column';
 import { Grid } from '../grid/Grid';
+import { Text } from '../text/Text';
 
 <Meta title="Design System/Atoms/Column" component={Column} />
 
@@ -41,7 +42,7 @@ export const paddingSizes = ['none', 'xs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xx
           key={`column-${index - 1}`}
           padding={{ xs: item }}
         >
-          <b>Padding ({`${item}`})</b>
+          <Text as="b">Padding ({`${item}`})</Text>
         </ColumnBorder>
       );
     })}
@@ -55,7 +56,7 @@ Ao utilizar a propriedade **alignItems** é possível configurar o alinhamento d
 export const renderColumnAlign = (alignItems) => {
   return (
     <ColumnBorder alignItems={{ xs: alignItems }} justifyContent={{ xs: 'center' }} padding={{ xs: 's' }} xs={4}>
-      <b>{alignItems}</b>
+      <Text as="b">{alignItems}</Text>
     </ColumnBorder>
   );
 };
@@ -73,7 +74,7 @@ Basta adicionar a propriedade **justifyContent** no caso de alinhamento dos iten
 export const renderColumnJustify = (justifyContent) => {
   return (
     <ColumnBorder alignItems={{ xs: 'center' }} justifyContent={{ xs: justifyContent }} padding={{ xs: 's' }} xs={4}>
-      <b>{justifyContent}</b>
+      <Text as="b">{justifyContent}</Text>
     </ColumnBorder>
   );
 };
@@ -102,7 +103,7 @@ Ao usar a propriedade **columnGap** é criado um espaço entre as colunas do Gri
           columnGap={true}
           key={`column-${index - 1}`}
         >
-          <b>Coluna</b>
+          <Text as="b">Coluna</Text>
         </ColumnBorder>
       );
     })}
