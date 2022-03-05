@@ -12,18 +12,24 @@ export const getTheme = (theme?: string): Theme => {
           colors: {
             default: colors.gray[700],
             primary: {
+              outline: colors.red[100],
+              lighter: colors.red[50],
               light: colors.red[300],
               medium: colors.red[400],
               dark: colors.red[500],
             },
             secondary: {
+              outline: colors.yellow[100],
+              lighter: colors.yellow[50],
               light: colors.yellow[300],
               medium: colors.yellow[400],
               dark: colors.yellow[500],
             },
             tertiary: {
-              light: colors.blueGray[700],
-              medium: colors.blueGray[800],
+              outline: colors.blueGray[100],
+              lighter: colors.blueGray[50],
+              light: colors.blueGray[500],
+              medium: colors.blueGray[700],
               dark: colors.blueGray[900],
             },
           },

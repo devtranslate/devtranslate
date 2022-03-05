@@ -1,6 +1,8 @@
 import { Tokens } from './tokens/Tokens.types';
 
 type BrandColors = {
+  outline: string;
+  lighter: string;
   light: string;
   medium: string;
   dark: string;

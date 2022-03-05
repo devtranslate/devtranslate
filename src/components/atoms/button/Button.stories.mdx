@@ -1,0 +1,132 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Button } from './Button';
+import { Grid } from '../grid/Grid';
+import { View } from '../view/View';
+
+<Meta title="Design System/Atoms/Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+O componente **Button** serve para representar um botão, ou seja, uma área clicável que executará alguma ação específica.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      color: 'primary',
+      type: 'button',
+      onClick: () => alert('Exemplo do onClick do Button!'),
+      children: 'Button',
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Variações
+
+A propriedade **variant** permite realizar a configuração das variações do componente Button, que podem mudar de acordo com o contexto onde está inserido. Atualmente o Button possui as seguintes variações disponíveis:
+
+<br />
+
+### Primary
+
+<Story name="Variant (Primary)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    <Button onClick={() => alert('Exemplo do onClick do Button!')}>Button primary</Button>
+  </Grid>
+</Story>
+
+### Secondary
+
+<Story name="Variant (Secondary)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    <Button variant="secondary" onClick={() => alert('Exemplo do onClick do Button!')}>
+      Button secondary
+    </Button>
+  </Grid>
+</Story>
+
+### Tertiary
+
+<Story name="Variant (Tertiary)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    <Button variant="tertiary" onClick={() => alert('Exemplo do onClick do Button!')}>
+      Button tertiary
+    </Button>
+  </Grid>
+</Story>
+
+### Ghost
+
+<Story name="Variant (Ghost)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <Button variant="ghost" onClick={() => alert('Exemplo do onClick do Button!')}>
+      Button ghost
+    </Button>
+  </Grid>
+</Story>
+
+## Tamanhos
+
+Com a propriedade **size**, é possível configurar o componente em três tamanhos diferentes:
+
+export const buttonSizes = [
+  { size: 'l', text: 'Large' },
+  { size: 'm', text: 'Medium' },
+  { size: 's', text: 'Small' },
+];
+
+export const renderButtonSizes = (variant) => {
+  return (
+    <Grid>
+      {buttonSizes.map((item, index) => {
+        return (
+          <View paddingRight={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }} key={`button-${index - 1}`}>
+            <Button variant={variant} size={item.size} onClick={() => alert('Exemplo do onClick do Button!')}>
+              Button {item.text}
+            </Button>
+          </View>
+        );
+      })}
+    </Grid>
+  );
+};
+
+<Story name="Size">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    {renderButtonSizes('primary')}
+    {renderButtonSizes('secondary')}
+    {renderButtonSizes('tertiary')}
+    {renderButtonSizes('ghost')}
+  </Grid>
+</Story>
+
+## Desabilitado
+
+Por meio da propriedade **disabled** é possível configurar se o botão será exibido desabilitado.
+
+export const buttonVariant = ['primary', 'secondary', 'tertiary', 'ghost'];
+
+<Story name="Disabled">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    {buttonVariant.map((item, index) => {
+      return (
+        <View paddingRight={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }} key={`button-${index - 1}`}>
+          <Button variant={item} disabled={true} onClick={() => alert('Exemplo do onClick do Button!')}>
+            Button Disabled
+          </Button>
+        </View>
+      );
+    })}
+  </Grid>
+</Story>
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />
