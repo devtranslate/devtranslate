@@ -1,0 +1,97 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Icon } from './Icon';
+import { Grid } from '../grid/Grid';
+import { Column } from '../column/Column';
+
+<Meta title="Design System/Atoms/Icon" component={Icon} />
+
+export const Template = (args) => <Icon {...args} />;
+
+# Icon
+
+O componente **Icon** serve para renderizar ícones, com diferentes tamanhos e preenchimentos.
+
+<!--- > Para conhecer a biblioteca de ícones, acesse o menu [Iconografia](/iconografia). -->
+
+<Canvas>
+  <Story name="Default" args={{ name: 'chevron', title: 'Seta para baixo', description: 'Ícone chevron' }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tamanhos
+
+Com as propriedades **width** e **height** é possível configurar a largura e altura do Icon.
+
+export const iconSizes = [40, 32, 24, 16];
+
+<Story name="Width & Height">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {iconSizes.map((item, index) => {
+      return (
+        <Column xs={2} s={1} alignItems={{ xs: 'center' }} key={`icon-${index - 1}`}>
+          <Icon name="search" title="Lupa" description="Ícone search" width={item} height={item} />
+        </Column>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Cores
+
+Alterando a propriedade **color** é possível definir as cores da marca no componente.
+
+export const iconColors = [
+  { color: 'default', icon: 'spinner', title: 'Girador' },
+  { color: 'primary', icon: 'home', title: 'Casa' },
+  { color: 'secondary', icon: 'catalog', title: 'Arquivo visto por Lupa' },
+  { color: 'tertiary', icon: 'rss', title: 'RSS' },
+];
+
+<Story name="Color">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {iconColors.map((item, index) => {
+      return (
+        <Column xs={2} s={1} alignItems={{ xs: 'center' }} key={`icon-${index - 1}`}>
+          <Icon
+            name={item.icon}
+            title={item.title}
+            description={`Ícone ${item.icon}`}
+            color={item.color}
+            width={24}
+            height={24}
+          />
+        </Column>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Rotação
+
+A propriedade **rotate** permite girar o componente entorno de um eixo fixo sem deformá-lo.
+
+export const iconRotate = [0, 90, 180, 270];
+
+<Story name="Rotate">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {iconRotate.map((item, index) => {
+      return (
+        <Column xs={2} s={1} alignItems={{ xs: 'center' }} key={`icon-${index - 1}`}>
+          <Icon name="chevron" title="Lupa" description="Ícone search" width={24} height={24} rotate={item} />
+        </Column>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Acessibilidade
+
+> SVGs servem para representar imagens, porém diferentemente da tag `img` eles não possuem o atributo alt. Desta forma, para garantir uma boa acessibilidade para os SVGs é importante sempre lembrar de setar a prop `title` e a prop `description` de acordo com a imagem do SVG.
+
+<br />
+
+## Propriedades
+
+<ArgsTable story="Default" />
