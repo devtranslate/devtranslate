@@ -1,8 +1,7 @@
 import { css } from 'styled-components';
 import { TextProps } from './Text.types';
-import { getTextSize } from './Text.helpers';
 import { getPadding } from '../../../helpers/Spacing';
-import { getTextAlign } from '../../../helpers/TextAlign';
+import { getTextAlign, getTextSize } from '../../../helpers/Text';
 
 export const TextStyles = css<{
   color?: TextProps['color'];

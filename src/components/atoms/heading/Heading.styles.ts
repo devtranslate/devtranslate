@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 import { HeadingProps } from './Heading.types';
 import { getHeadingSize } from './Heading.helpers';
 import { getPadding } from '../../../helpers/Spacing';
-import { getTextAlign } from '../../../helpers/TextAlign';
+import { getTextAlign } from '../../../helpers/Text';
 
 export const HeadingStyles = css<{
   color?: HeadingProps['color'];
