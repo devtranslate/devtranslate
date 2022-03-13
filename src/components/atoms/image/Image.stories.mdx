@@ -1,0 +1,107 @@
+import { ArgsTable, Meta, Canvas, Story } from '@storybook/addon-docs';
+import styled from 'styled-components';
+import { Image } from './Image';
+import { Grid } from '../grid/Grid';
+import { Column } from '../column/Column';
+
+<Meta title="Design System/Atoms/Image" component={Image} />
+
+export const Template = (args) => <Image {...args} />;
+
+# Image
+
+O componente **Image** serve para renderizar uma imagem que possui o mesmo tamanho em todos os breakpoints.
+
+<!-- > **Obs:** Caso queira diferenciar as imagens por breakpoint, utilize o [componente Picture](/picture). -->
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      src: 'https://images.unsplash.com/photo-1596854372407-baba7fef6e51',
+      alt: 'Um gato adulto branco e amarelo, bem peludo, tentando pegar algo acima dele. Ele esta apenas nas duas patas traseiras, como se tivesse em pé. O local que ele se encontra é um estúdio todo amarelo.',
+      width: 250,
+      height: 250,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Estados
+
+<br />
+
+### Loaded
+
+Quando a imagem é carregada é exibida uma animação onde é carregada uma imagem menor e ela irá aumentando até o tamanho definido.
+
+<Story name="Loaded">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    <Image
+      src="https://images.unsplash.com/photo-1596854307809-6e754c522f95"
+      alt="Um gato adulto branco e amarelo, bem peludo, olhando para o lado. Ele esta sentado e parece bem curioso com o que vê. O local que ele se encontra é um estúdio todo rosa."
+      width={250}
+      height={250}
+    />
+  </Grid>
+</Story>
+
+### Failed
+
+Caso a imagem falhe no carregamento, um fundo cinza com um ícone representando uma imagem cortada fica visível na área protegida.
+
+<Story name="Failed">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xl' }}>
+    <Image src="https://images.unsplash.com/photos-1596854307809-6e754c522f95" width={250} height={250} />
+  </Grid>
+</Story>
+
+## Tamanhos
+
+Com as propriedades **width** e **height** é possível configurar a largura e altura do Icon.
+
+export const imageSizes = [
+  { width: 100, height: 100 },
+  { width: 200, height: 200 },
+  { width: 100, height: 150 },
+  { width: 150, height: 100 },
+];
+
+<Story name="Width & Height">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    {imageSizes.map((item, index) => {
+      return (
+        <Column xs={6} s={3} alignItems={{ xs: 'center' }} paddingBottom={{ xs: 'm' }} key={`image-${index - 1}`}>
+          <Image
+            src="https://images.unsplash.com/photo-1574158622682-e40e69881006"
+            alt="Um gato filhote listrado em tons terrosos similar a um tigre. A foto foi tirada apenas de seu rosto e ele parece estar olhando para algo no horizonte. Ao fundo apenas o céu azul sem nuvens."
+            width={item.width}
+            height={item.height}
+          />
+          <Text>
+            {item.width} x {item.height}
+          </Text>
+        </Column>
+      );
+    })}
+    {imageSizes.map((item, index) => {
+      return (
+        <Column xs={6} s={3} alignItems={{ xs: 'center' }} paddingBottom={{ xs: 'm' }} key={`image-${index - 1}`}>
+          <Image
+            src="https://images.unsplash.com/photos-1574158622682-e40e69881006"
+            width={item.width}
+            height={item.height}
+          />
+          <Text>
+            {item.width} x {item.height}
+          </Text>
+        </Column>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Propriedades
+
+<ArgsTable story="Default" />
