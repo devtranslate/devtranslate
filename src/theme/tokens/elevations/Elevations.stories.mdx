@@ -1,0 +1,56 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { elevations as elevationsToken } from './Elevations';
+import { Column } from '../../../components/atoms/column/Column';
+import { Grid } from '../../../components/atoms/grid/Grid';
+import { Text } from '../../../components/atoms/text/Text';
+import { View } from '../../../components/atoms/view/View';
+
+<Meta title="Tokens/Elevations" component={elevationsToken} />
+
+export const GridBackground = styled(Grid)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.gray[100]};
+    border-radius: ${theme.borders.radius.xs};
+    margin-top: ${theme.spacing.m};
+  `}
+`;
+
+export const ViewBorder = styled(View)`
+  align-items: center;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.white};
+    border-radius: ${theme.borders.radius.xs};
+  `}
+`;
+
+# Elevations
+
+Elevations são sombras e desfoques que geram um efeito em camadas que dá aos usuários uma indicação visual de que um objeto ou experiência está "elevado" em prioridade ou hierarquia.
+
+export const elevationLevels = [
+  { level: 'none', text: 'Base' },
+  { level: 'inner', text: 'Input' },
+  { level: 'xxs', text: 'Cards' },
+  { level: 'xs', text: 'Button' },
+  { level: 's', text: 'Navigation Menu' },
+  { level: 'm', text: 'Card Raised' },
+  { level: 'l', text: 'Picker' },
+  { level: 'xl', text: 'Modals' },
+];
+
+<Story name="Elevations">
+  <GridBackground padding={{ xs: 's' }} justifyContent={{ xs: 'space-between' }}>
+    {elevationLevels.map((item, index) => {
+      const { level, text } = item;
+      return (
+        <Column xs={12} s={6} m={3} padding={{ xs: 's' }} key={`elevations-${index - 1}`}>
+          <ViewBorder padding={{ xs: 'l', m: 'xl' }} style={{ boxShadow: elevationsToken[level] }}>
+            <Text as="b">Elevation {level}</Text>
+            <Text>{text}</Text>
+          </ViewBorder>
+        </Column>
+      );
+    })}
+  </GridBackground>
+</Story>

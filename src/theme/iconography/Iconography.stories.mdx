@@ -1,0 +1,43 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { iconography as iconographyTheme } from './Iconography';
+import { Column } from '../../components/atoms/column/Column';
+import { Grid } from '../../components/atoms/grid/Grid';
+import { Icon } from '../../components/atoms/icon/Icon';
+import { Text } from '../../components/atoms/text/Text';
+import { Link } from '../../components/atoms/link/Link';
+
+<Meta title="Tokens/Iconography" component={iconographyTheme} />
+
+export const ColumnBorder = styled(Column)`
+  ${({ theme }) => css`
+    border: 1px solid ${theme.colors.gray[200]};
+    margin-bottom: ${theme.spacing.s};
+    border-radius: ${theme.borders.radius.xs};
+  `}
+`;
+
+# Iconography
+
+Abaixo está uma lista de todos os ícones da biblioteca, juntamente com os nomes correspondentes:
+
+export const iconographyNames = Object.keys(iconographyTheme);
+
+<Story name="Iconography">
+  <Grid paddingTop={{ xs: 'xs' }} justifyContent={{ xs: 'space-between' }}>
+    {iconographyNames.map((item, index) => {
+      return (
+        <ColumnBorder
+          xs={2}
+          alignItems={{ xs: 'center' }}
+          padding={{ xs: 's' }}
+          columnGap={true}
+          key={`iconography-${index - 1}`}
+        >
+          <Icon name={item} width={24} height={24} />
+          <Text paddingTop={{ xs: 'xs' }}>{item}</Text>
+        </ColumnBorder>
+      );
+    })}
+  </Grid>
+</Story>

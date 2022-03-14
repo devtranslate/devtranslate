@@ -1,0 +1,48 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { borders } from './Borders';
+import { Column } from '../../../components/atoms/column/Column';
+import { Grid } from '../../../components/atoms/grid/Grid';
+import { Text } from '../../../components/atoms/text/Text';
+import { View } from '../../../components/atoms/view/View';
+
+<Meta title="Tokens/Border Radius" component={borders} />
+
+export const GridBackground = styled(Grid)`
+  ${({ theme }) => css`
+    background-color: ${theme.colors.gray[100]};
+    border-radius: ${theme.borders.radius.xs};
+    margin-top: ${theme.spacing.m};
+  `}
+`;
+
+export const ViewBorder = styled(View)`
+  width: 130px;
+  height: 130px;
+  align-items: center;
+  justify-content: center;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.white};
+    box-shadow: ${theme.elevations.xs};
+  `}
+`;
+
+# Border Radius
+
+Os cantos arredondados são usados para diferenciar partes de dados de coleções maiores, como cartões ou tabelas.
+
+export const borderSizes = ['xs', 's', 'm', 'l', 'xl', 'full'];
+
+<Story name="Border Radius">
+  <GridBackground padding={{ xs: 's' }} justifyContent={{ xs: 'space-between' }}>
+    {borderSizes.map((item, index) => {
+      return (
+        <Column xs={6} s={4} m={2} padding={{ xs: 's' }} alignItems={{ xs: 'center' }} key={`radius-${index - 1}`}>
+          <ViewBorder style={{ borderRadius: borders.radius[item] }}>
+            <Text as="b">Radius {item}</Text>
+          </ViewBorder>
+        </Column>
+      );
+    })}
+  </GridBackground>
+</Story>

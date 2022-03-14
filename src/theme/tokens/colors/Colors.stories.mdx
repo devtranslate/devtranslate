@@ -1,0 +1,165 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { colors as colorsToken } from './Colors';
+import { Column } from '../../../components/atoms/column/Column';
+import { Grid } from '../../../components/atoms/grid/Grid';
+import { Text } from '../../../components/atoms/text/Text';
+import { View } from '../../../components/atoms/view/View';
+
+<Meta title="Tokens/Colors" component={colorsToken} />
+
+export const ColorItem = styled.div`
+  ${({ theme, color }) =>
+    css`
+      width: ${theme.spacing.xl};
+      height: ${theme.spacing.xl};
+      border-radius: ${theme.borders.radius.xs};
+      background-color: ${color};
+      box-shadow: ${theme.elevations.inner};
+    `};
+`;
+
+# Colors
+
+A paleta de cores base totaliza 92 cores, incluindo 9 cores primárias e suas cores derivadas.
+
+<br />
+
+### Acessibilidade
+
+Temos o compromisso de cumprir as **Diretrizes de Acessibilidade para Conteúdo Web (WCAG)** com taxas de contraste mínimo em nível AA. Desta forma use cores focadas e significativas para identificar exatamente o que as pessoas precisam ver, garantindo contraste suficiente entre os elementos para que pessoas com baixa visão possam ver e usar nossos produtos.
+
+<br />
+
+## Marca
+
+Nossa paleta é composta por rosa, amarelo e azul-acizentado para trazer ousadia à nossa marca e é usada de maneira lógica em todo o produto e marketing para guiar o olhar e destacar as partes importantes.
+
+export const renderColorItem = (color, colorName, colorShade) => {
+  return (
+    <Grid>
+      <ColorItem color={color} />
+      <View paddingLeft={{ xs: 'xs' }}>
+        <Text as="b" textTransform="capitalize">
+          {colorName} {colorShade ? colorShade : ''}
+        </Text>
+        <Text>{color}</Text>
+      </View>
+    </Grid>
+  );
+};
+
+<Story name="Brand">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <Column xs={4}>{renderColorItem(colorsToken.red[400], 'primary')}</Column>
+    <Column xs={4}>{renderColorItem(colorsToken.yellow[400], 'secondary')}</Column>
+    <Column xs={4}>{renderColorItem(colorsToken.blueGray[700], 'tertiary')}</Column>
+  </Grid>
+</Story>
+
+## Neutros
+
+Os neutros têm vários graus de saturação e normalmente eles são usados ​​para texto e planos de fundo sutis quando não queremos chamar muita atenção para um ponto de contato específico ou transmitir informações como "a fazer" ou "desativado".
+
+<Story name="White & Black">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    <Column xs={4}>{renderColorItem(colorsToken.white, 'white')}</Column>
+    <Column xs={4}>{renderColorItem(colorsToken.black, 'black')}</Column>
+  </Grid>
+</Story>
+
+### Azul-Acizentado
+
+export const colorShades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+export const renderColorPalette = (colorName) => {
+  return colorShades.map((item, index) => {
+    return (
+      <Column xs={4} paddingBottom={{ xs: 's' }} key={`colors-${index - 1}`}>
+        {renderColorItem(colorsToken[colorName][item], colorName)}
+      </Column>
+    );
+  });
+};
+
+<Story name="BlueGray">
+  <Grid paddingTop={{ xs: 'xs' }}>{renderColorPalette('blueGray')}</Grid>
+</Story>
+
+### Cinza
+
+<Story name="Gray">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('gray')}
+  </Grid>
+</Story>
+
+## Vermelho
+
+O vermelho é usado principalmente para planos de fundo em mensagens e em estados de erro para chamar a atenção para informações ou ações importantes que são destrutivas ou bloqueiam o fluxo de trabalho.
+
+<Story name="Red">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('red')}
+  </Grid>
+</Story>
+
+## Verde
+
+Usamos verde para indicar sucesso. É uma boa opção para chamadas de ação e botões de marketing.
+
+<Story name="Green">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('green')}
+  </Grid>
+</Story>
+
+## Azul
+
+Azul é usado para indicar autenticação, conectividade ou progresso.
+
+<Story name="Blue">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('blue')}
+  </Grid>
+</Story>
+
+## Laranja
+
+O laranja geralmente pode ser encontrado como uma cor de destaque para componentes como etiquetas. No entanto, é melhor usado em pequenas doses na ilustração, pois às vezes pode colidir com o amarelo.
+
+<Story name="Orange">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('orange')}
+  </Grid>
+</Story>
+
+## Amarelo
+
+Amarelo indica um aviso ou que o progresso está impedido. Tenha em mente que nosso amarelo é muito vibrante, o que pode causar cansaço visual em grandes doses. No entanto, por causa dessa vibração, ele também pode se destacar entre muitos outros elementos em uma página.
+
+<Story name="Yellow">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('yellow')}
+  </Grid>
+</Story>
+
+## Verde-Azulado
+
+O verde-azulado geralmente pode ser encontrado como uma cor de destaque para componentes como etiquetas.
+
+<Story name="Cyan">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('cyan')}
+  </Grid>
+</Story>
+
+## Roxo
+
+Roxo indica ajuda e suporte. No entanto, é melhor utiliza-lo em pequenas doses na ilustração.
+
+<Story name="Purple">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
+    {renderColorPalette('purple')}
+  </Grid>
+</Story>

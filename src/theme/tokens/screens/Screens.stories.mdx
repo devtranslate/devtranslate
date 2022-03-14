@@ -1,0 +1,84 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { screens } from './Screens';
+
+<Meta title="Tokens/Breakpoints" component={screens} />
+
+export const Table = styled.table`
+  width: 100%;
+  ${({ theme }) =>
+    css`
+      th {
+        padding: ${theme.spacing.s} ${theme.spacing.s};
+      }
+      border-radius: ${theme.borders.radius.xs};
+      border: 1px solid ${theme.colors.gray[200]};
+      margin-top: ${theme.spacing.m};
+    `};
+`;
+
+export const Column = styled.p`
+  margin: 0;
+  text-align: center;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.gray[100]};
+    border-radius: ${theme.borders.radius.xs};
+    padding: ${theme.spacing.m};
+  `};
+`;
+
+export const ColumnScreen = styled(Column)`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    background-color: ${theme.brand.colors.tertiary.medium};
+  `};
+`;
+
+# Breakpoints
+
+Breakpoints são pontos de quebra onde o layout será ajustado para atender diferentes resoluções. A partir destes pontos será possível estabelecer comandos CSS para que o site se comporte de forma adequada visualmente para cada dispositivo. Atualmente existem cinco tamanhos disponíveis:
+
+export const theadTexts = [
+  `Abaixo de ${screens.xs.max}`,
+  `Entre ${screens.s.min} e ${screens.s.max}`,
+  `Entre ${screens.m.min} e ${screens.s.max}`,
+  `Entre ${screens.l.min} e ${screens.l.max}`,
+  `Acima de ${screens.xl.min}`,
+];
+
+export const tbodyTexts = [
+  { screenSize: 'xl', colspanScreen: 1, colspan: 4 },
+  { screenSize: 'l', colspanScreen: 2, colspan: 3 },
+  { screenSize: 'm', colspanScreen: 3, colspan: 2 },
+  { screenSize: 's', colspanScreen: 4, colspan: 1 },
+  { screenSize: 'xs', colspanScreen: 5 },
+];
+
+<Story name="Breakpoints">
+  <Table>
+    <thead>
+      <tr>
+        {theadTexts.map((item, index) => {
+          return <th key={`breakpoints-${index - 1}`}>{item}</th>;
+        })}
+      </tr>
+    </thead>
+    <tbody>
+      {tbodyTexts.map((item, index) => {
+        const { screenSize, colspanScreen, colspan } = item;
+        return (
+          <tr key={`breakpoints-${index - 1}`}>
+            {colspan && (
+              <td colSpan={colspan}>
+                <Column> - </Column>
+              </td>
+            )}
+            <td colSpan={colspanScreen}>
+              <ColumnScreen>{screenSize}</ColumnScreen>
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </Table>
+</Story>

@@ -1,0 +1,66 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import styled, { css } from 'styled-components';
+import { spacing as spacingToken } from './Spacing';
+
+<Meta title="Tokens/Spacing" component={spacingToken} />
+
+export const Table = styled.table`
+  width: 100%;
+  ${({ theme }) =>
+    css`
+      th,
+      td {
+        text-align: left;
+      }
+      th {
+        padding: ${theme.spacing.s};
+      }
+      td {
+        padding: ${theme.spacing.xs} ${theme.spacing.s};
+      }
+      thead {
+        background-color: ${theme.colors.gray[100]};
+      }
+      border-radius: ${theme.borders.radius.xs};
+      border: 1px solid ${theme.colors.gray[200]};
+      margin-top: ${theme.spacing.m};
+    `};
+`;
+
+export const View = styled.div`
+  height: 24px;
+  ${({ theme }) => css`
+    background-color: ${theme.colors.gray[300]};
+  `};
+`;
+
+# Spacing
+
+O espaçamento é a distância entre os elementos em uma página. Pode ser usado para criar hierarquia visual para o conteúdo e orientar o foco para determinados elementos. Informações muito densas podem ser difíceis de digerir para um usuário, portanto, certifique-se de deixar espaço suficiente nas interfaces do usuário.
+
+export const spacingSizes = Object.keys(spacingToken);
+
+<Story name="Spacing">
+  <Table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Pixels</th>
+        <th>Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      {spacingSizes.map((item, index) => {
+        return (
+          <tr key={`spacing-${index - 1}`}>
+            <td>{item}</td>
+            <td>{spacingToken[item]}</td>
+            <td>
+              <View style={{ width: spacingToken[item] }} />
+            </td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </Table>
+</Story>
