@@ -1,3 +1,5 @@
+import { IconographyNames } from '../../../theme/iconography/Iconography.types';
+
 export type ButtonProps = {
   /** Define o conteúdo do Button. */
   children: React.ReactNode;
@@ -7,8 +9,17 @@ export type ButtonProps = {
   disabled?: boolean;
   /** Define um href para o Button. */
   href?: string;
+  /** Define o ícone que será exibido ao lado do conteúdo do Button. */
+  icon?: {
+    name: IconographyNames;
+    rotate?: number;
+  };
+  /** Define se o Button está carregando. */
+  loading?: boolean;
   /** Define o onClick do Button. */
   onClick?: () => void;
+  /** Define se o ícone do Button será exibido a esquerda. */
+  reverse?: boolean;
   /** Define o tamanho do Button. */
   size?: 's' | 'm' | 'l';
   /** Define se o conteúdo será aberto em uma nova aba, janela, etc. (Utilizar junto ao atributo href) */

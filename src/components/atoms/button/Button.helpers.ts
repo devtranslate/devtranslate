@@ -49,6 +49,10 @@ export const getButtonVariant = (props: {
         border: 1px solid ${theme.brand.colors[color].medium};
         border-radius: ${theme.spacing.xs};
         box-shadow: ${theme.elevations.s};
+
+        svg {
+          fill: ${theme.brand.colors.default};
+        }
       `;
     case 'tertiary':
       return css`
@@ -56,12 +60,20 @@ export const getButtonVariant = (props: {
         background-color: ${theme.colors.white};
         border-radius: ${theme.spacing.m};
         box-shadow: ${theme.elevations.s};
+
+        svg {
+          fill: ${theme.brand.colors.default};
+        }
       `;
     case 'ghost':
       return css`
         color: ${theme.brand.colors[color].medium};
         background-color: transparent;
         border-radius: ${theme.spacing.m};
+
+        svg {
+          fill: ${theme.brand.colors[color].medium};
+        }
       `;
     case 'primary':
     default:
@@ -70,6 +82,10 @@ export const getButtonVariant = (props: {
         background-color: ${theme.brand.colors[color].medium};
         border-radius: ${theme.spacing.xs};
         box-shadow: ${theme.elevations.s};
+
+        svg {
+          fill: ${theme.colors.white};
+        }
       `;
   }
 };
@@ -86,10 +102,18 @@ export const getButtonHover = (props: {
       return css`
         color: ${theme.colors.gray[600]};
         border: 1px solid ${theme.brand.colors[color].light};
+
+        svg {
+          fill: ${theme.colors.gray[600]};
+        }
       `;
     case 'tertiary':
       return css`
         color: ${theme.brand.colors[color].medium};
+
+        svg {
+          fill: ${theme.brand.colors[color].medium};
+        }
       `;
     case 'ghost':
       return css`
@@ -116,16 +140,28 @@ export const getButtonActive = (props: {
         color: ${theme.colors.gray[800]};
         border: 1px solid ${theme.brand.colors[color].dark};
         box-shadow: ${theme.elevations.xs};
+
+        svg {
+          fill: ${theme.colors.gray[800]};
+        }
       `;
     case 'tertiary':
       return css`
         color: ${theme.brand.colors[color].dark};
         box-shadow: ${theme.elevations.xs};
+
+        svg {
+          fill: ${theme.brand.colors[color].dark};
+        }
       `;
     case 'ghost':
       return css`
         color: ${theme.brand.colors[color].dark};
         background-color: ${theme.brand.colors[color].outline};
+
+        svg {
+          fill: ${theme.brand.colors[color].dark};
+        }
       `;
     case 'primary':
     default:
@@ -143,24 +179,30 @@ export const getButtonDisabled = (props: { variant?: ButtonProps['variant']; the
     case 'secondary':
       return css`
         color: ${theme.colors.gray[500]};
-        cursor: not-allowed;
-        box-shadow: none;
         border: 1px solid ${theme.colors.gray[300]};
+
+        svg {
+          fill: ${theme.colors.gray[500]};
+        }
       `;
     case 'ghost':
       return css`
         color: ${theme.colors.gray[500]};
-        cursor: not-allowed;
-        box-shadow: none;
+
+        svg {
+          fill: ${theme.colors.gray[500]};
+        }
       `;
     case 'primary':
     case 'tertiary':
     default:
       return css`
         color: ${theme.colors.gray[500]};
-        cursor: not-allowed;
-        box-shadow: none;
         background-color: ${theme.colors.gray[100]};
+
+        svg {
+          fill: ${theme.colors.gray[500]};
+        }
       `;
   }
 };

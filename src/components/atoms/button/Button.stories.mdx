@@ -105,11 +105,74 @@ export const renderButtonSizes = (variant) => {
   </Grid>
 </Story>
 
+## Ícones
+
+Você pode adicionar ícones utilizando a propriedade **icon** ao componente Button.
+
+export const buttonVariant = ['primary', 'secondary', 'tertiary', 'ghost'];
+
+<Story name="Icon (Right)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>
+    {buttonVariant.map((item, index) => {
+      return (
+        <View paddingRight={{ xs: 'xs' }} key={`button-${index - 1}`}>
+          <Button
+            variant={item}
+            size="m"
+            icon={{ name: 'search' }}
+            onClick={() => alert('Exemplo do onClick do Button!')}
+          >
+            Icon
+          </Button>
+        </View>
+      );
+    })}
+  </Grid>
+</Story>
+
+Caso queira que o ícone apareça do lado esquerdo do conteúdo utilize a propriedade **reverse**.
+
+<Story name="Icon (Left)">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {buttonVariant.map((item, index) => {
+      return (
+        <View paddingRight={{ xs: 'xs' }} key={`button-${index - 1}`}>
+          <Button
+            variant={item}
+            size="m"
+            icon={{ name: 'search' }}
+            reverse={true}
+            onClick={() => alert('Exemplo do onClick do Button!')}
+          >
+            Icon
+          </Button>
+        </View>
+      );
+    })}
+  </Grid>
+</Story>
+
+## Carregando
+
+Passe o prop **loading** para mostrar seu estado de carregamento. Por padrão, o botão mostrará um spinner e deixará a largura do botão inalterada.
+
+<Story name="Loading">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    {buttonVariant.map((item, index) => {
+      return (
+        <View paddingRight={{ xs: 'xs' }} key={`button-${index - 1}`}>
+          <Button variant={item} loading={true} onClick={() => alert('Exemplo do onClick do Button!')}>
+            Loading
+          </Button>
+        </View>
+      );
+    })}
+  </Grid>
+</Story>
+
 ## Desabilitado
 
 Por meio da propriedade **disabled** é possível configurar se o botão será exibido desabilitado.
-
-export const buttonVariant = ['primary', 'secondary', 'tertiary', 'ghost'];
 
 <Story name="Disabled">
   <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'xs' }}>

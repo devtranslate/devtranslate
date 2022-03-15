@@ -3,8 +3,11 @@ import { getButtonSize, getButtonVariant, getButtonHover, getButtonActive, getBu
 import { ButtonProps } from './Button.types';
 
 export const ButtonStyles = css<{
+  children: ButtonProps['children'];
   color: ButtonProps['color'];
   disabled?: ButtonProps['disabled'];
+  loading?: ButtonProps['loading'];
+  reverse?: ButtonProps['reverse'];
   size?: ButtonProps['size'];
   variant?: ButtonProps['variant'];
 }>`
@@ -23,7 +26,14 @@ export const ButtonStyles = css<{
     transition: all 0.3s;
   }
 
-  ${({ theme, color }) => css`
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  ${({ theme, color, loading }) => css`
+    ${loading && `cursor: default;`}
+
     &:focus-visible {
       box-shadow: none;
       outline: 3px solid ${theme.brand.colors[color].outline};
@@ -35,13 +45,16 @@ export const ButtonStyles = css<{
     ${getButtonVariant(props)};
 
     &:not(:disabled) {
-      &:hover {
-        ${getButtonHover(props)};
-      }
+      ${!props.loading &&
+      css`
+        &:hover {
+          ${getButtonHover(props)};
+        }
 
-      &:active {
-        ${getButtonActive(props)};
-      }
+        &:active {
+          ${getButtonActive(props)};
+        }
+      `}
     }
 
     &:disabled {
