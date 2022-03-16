@@ -1,7 +1,24 @@
+import { Catalog } from './pages/catalog/Catalog';
+import { Home } from './pages/home/Home';
+import { NotFound } from './pages/not-found/NotFound';
+
 export const routes = [
   {
     path: '/',
     type: 'home',
-    render: () => <h1>Em contrução</h1>,
+    exact: true,
+    render: () => <Home />,
+  },
+  {
+    path: '/catalogo',
+    type: 'catalog',
+    exact: true,
+    render: () => <Catalog />,
+  },
+  {
+    path: '/*',
+    type: 'not-found',
+    exact: true,
+    render: () => <NotFound />,
   },
 ];
