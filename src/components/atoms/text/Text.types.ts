@@ -22,7 +22,7 @@ export type TextProps = {
   /** Define o tamanho do Text. */
   size?: ScreenMap<TypographyBodySizes>;
   /** Define a tag do Text. */
-  tag: 'b' | 'i' | 'p' | 's' | 'small' | 'span' | 'strong' | 'u';
+  tag?: 'b' | 'i' | 'p' | 's' | 'small' | 'span' | 'strong' | 'u';
   /** Define o alinhamento do Text. */
   textAlign?: ScreenMap<React.CSSProperties['textAlign']>;
   /** Define o capitalização do Text. */

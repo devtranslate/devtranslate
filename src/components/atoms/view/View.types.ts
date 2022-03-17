@@ -17,5 +17,5 @@ export type ViewProps = {
   /** Define o espaçamento interno superior da View. */
   paddingTop?: ScreenMap<SpacingSizes>;
   /** Define a tag da View. */
-  tag: 'div' | 'section';
+  tag?: 'div' | 'section' | 'header' | 'footer' | 'main' | 'nav';
 };
