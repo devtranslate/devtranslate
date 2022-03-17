@@ -1,6 +1,7 @@
 import { HomeProps } from './Home.types';
 import { Footer } from '../../components/organisms/footer/Footer';
 import { Grid } from '../../components/atoms/grid/Grid';
+import { Header } from '../../components/organisms/header/Header';
 
 export const Home: React.FC<HomeProps> = () => {
   return (
@@ -12,6 +13,7 @@ export const Home: React.FC<HomeProps> = () => {
       paddingRight={{ xs: 's' }}
       container
     >
+      <Header />
       <Footer />
     </Grid>
   );

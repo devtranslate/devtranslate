@@ -17,7 +17,7 @@ export const ImageStyles = css<{
   width?: ImageProps['width'];
 }>`
   position: relative;
-  animation: ${scale} 120ms linear;
+  animation: ${scale} 240ms linear;
   opacity: 1;
 
   width: ${({ width }) => (width ? `${width}px` : '100%')};
