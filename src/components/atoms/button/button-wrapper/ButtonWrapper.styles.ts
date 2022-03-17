@@ -23,18 +23,21 @@ export const ButtonWrapperUIStyles = css<{
 `;
 
 export const ButtonSpanUIStyles = css<{
+  icon?: ButtonProps['icon'];
   size?: ButtonProps['size'];
   reverse?: ButtonProps['reverse'];
-  children?: ButtonProps['children'];
 }>`
-  ${({ theme, reverse }) =>
-    reverse
-      ? css`
-          margin-inline-start: ${theme.spacing.xxs};
-        `
-      : css`
-          margin-inline-end: ${theme.spacing.xxs};
-        `}
+  ${({ theme, icon, reverse }) =>
+    icon &&
+    css`
+      ${reverse
+        ? css`
+            margin-inline-start: ${theme.spacing.xxs};
+          `
+        : css`
+            margin-inline-end: ${theme.spacing.xxs};
+          `}
+    `}
 `;
 
 export const ButtonIconUIStyles = css<{

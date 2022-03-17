@@ -6,8 +6,12 @@ import { Icon } from '../../icon/Icon';
 export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({ children, loading, size, icon, reverse }) => {
   return (
     <ButtonWrapperUI loading={loading} reverse={reverse}>
-      {children && <ButtonSpanUI reverse={reverse}>{children}</ButtonSpanUI>}
-      {icon && <ButtonIconUI aria-hidden size={size} {...icon} />}
+      {children && (
+        <ButtonSpanUI icon={icon} reverse={reverse}>
+          {children}
+        </ButtonSpanUI>
+      )}
+      {icon && <ButtonIconUI aria-hidden="true" size={size} {...icon} />}
     </ButtonWrapperUI>
   );
 };
