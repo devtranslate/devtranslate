@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { CatalogProps } from './Catalog.types';
 import { Grid } from '../../components/atoms/grid/Grid';
 import { Footer } from '../../components/organisms/footer/Footer';
+import { Header } from '../../components/organisms/header/Header';
 
 export const Catalog: React.FC<CatalogProps> = () => {
   const [response, setResponse] = useState({ data: {}, loading: true, error: false });
@@ -35,6 +36,7 @@ export const Catalog: React.FC<CatalogProps> = () => {
       paddingRight={{ xs: 's' }}
       container
     >
+      <Header />
       <Footer />
     </Grid>
   );
