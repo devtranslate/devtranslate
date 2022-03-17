@@ -45,7 +45,11 @@ export const elevationLevels = [
       const { level, text } = item;
       return (
         <Column xs={12} s={6} m={3} padding={{ xs: 's' }} key={`elevations-${index - 1}`}>
-          <ViewBorder padding={{ xs: 'l', m: 'xl' }} style={{ boxShadow: elevationsToken[level] }}>
+          <ViewBorder
+            inline={{ xs: false }}
+            padding={{ xs: 'l', m: 'xl' }}
+            style={{ boxShadow: elevationsToken[level] }}
+          >
             <Text as="b">Elevation {level}</Text>
             <Text>{text}</Text>
           </ViewBorder>
