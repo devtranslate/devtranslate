@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
     }
 
     body {
+      margin: 0;
       color: ${theme.brand.colors.default};
       font-family: ${theme.brand.typography.fontFamily};
       font-size: ${theme.brand.typography.fontSize};

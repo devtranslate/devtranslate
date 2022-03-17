@@ -16,9 +16,13 @@ export const GridStyles = css<{
   display: flex;
   width: 100%;
   flex-direction: row;
-  box-sizing: border-box;
 
-  ${({ theme, container }) => container && `max-width: ${theme.screens.l.min}; margin: 0 auto;`};
+  ${({ theme, container }) =>
+    container &&
+    css`
+      max-width: ${theme.screens.l.min};
+      margin: 0 auto;
+    `};
 
   ${(props) => css`
     ${getJustifyContent(props)};

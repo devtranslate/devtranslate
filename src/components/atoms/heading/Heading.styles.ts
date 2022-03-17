@@ -30,7 +30,7 @@ export const HeadingStyles = css<{
       -webkit-box-orient: vertical;
     `}
 
-  ${({ theme, color, textTransform, variant }) => `
+  ${({ theme, color, textTransform, variant }) => css`
     color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
     font-weight: ${theme.typography.fontWeights.heading[variant]};
     font-size: ${theme.typography.fontSizes.heading[variant].m};

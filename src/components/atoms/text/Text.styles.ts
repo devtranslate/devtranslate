@@ -28,7 +28,7 @@ export const TextStyles = css<{
       -webkit-box-orient: vertical;
     `}
 
-  ${({ theme, color, textTransform }) => `
+  ${({ theme, color, textTransform }) => css`
     color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
     text-transform: ${textTransform ?? 'none'};
   `}
