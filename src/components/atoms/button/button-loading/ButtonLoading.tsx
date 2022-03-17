@@ -5,7 +5,7 @@ import { Icon } from '../../icon/Icon';
 
 export const ButtonLoading: React.FC<ButtonLoadingProps> = ({ loading, size }) => {
   if (loading) {
-    return <ButtonLoadingUI aria-hidden name="spinner" size={size} />;
+    return <ButtonLoadingUI aria-hidden="true" name="spinner" size={size} />;
   }
 
   return null;

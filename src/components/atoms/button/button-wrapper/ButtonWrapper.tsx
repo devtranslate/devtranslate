@@ -7,7 +7,7 @@ export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({ children, loading,
   return (
     <ButtonWrapperUI loading={loading} reverse={reverse}>
       {children && <ButtonSpanUI reverse={reverse}>{children}</ButtonSpanUI>}
-      {icon && <ButtonIconUI aria-hidden size={size} {...icon} />}
+      {icon && <ButtonIconUI aria-hidden="true" size={size} {...icon} />}
     </ButtonWrapperUI>
   );
 };
