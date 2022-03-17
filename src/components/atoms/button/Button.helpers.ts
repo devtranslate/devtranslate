@@ -36,17 +36,18 @@ export const getButtonSize = (props: { size?: ButtonProps['size']; theme: Theme 
 
 export const getButtonVariant = (props: {
   variant?: ButtonProps['variant'];
-  color: ButtonProps['color'];
+  color?: ButtonProps['color'];
   theme: Theme;
 }) => {
   const { theme, color, variant } = props;
+  const currentColor = color ?? 'primary';
 
   switch (variant) {
     case 'secondary':
       return css`
         color: ${theme.brand.colors.default};
         background-color: transparent;
-        border: 1px solid ${theme.brand.colors[color].medium};
+        border: 1px solid ${theme.brand.colors[currentColor].medium};
         border-radius: ${theme.spacing.xs};
         box-shadow: ${theme.elevations.s};
 
@@ -67,19 +68,19 @@ export const getButtonVariant = (props: {
       `;
     case 'ghost':
       return css`
-        color: ${theme.brand.colors[color].medium};
+        color: ${theme.brand.colors[currentColor].medium};
         background-color: transparent;
         border-radius: ${theme.spacing.m};
 
         svg {
-          fill: ${theme.brand.colors[color].medium};
+          fill: ${theme.brand.colors[currentColor].medium};
         }
       `;
     case 'primary':
     default:
       return css`
         color: ${theme.colors.white};
-        background-color: ${theme.brand.colors[color].medium};
+        background-color: ${theme.brand.colors[currentColor].medium};
         border-radius: ${theme.spacing.xs};
         box-shadow: ${theme.elevations.s};
 
@@ -92,16 +93,17 @@ export const getButtonVariant = (props: {
 
 export const getButtonHover = (props: {
   variant?: ButtonProps['variant'];
-  color: ButtonProps['color'];
+  color?: ButtonProps['color'];
   theme: Theme;
 }) => {
   const { theme, color, variant } = props;
+  const currentColor = color ?? 'primary';
 
   switch (variant) {
     case 'secondary':
       return css`
         color: ${theme.colors.gray[600]};
-        border: 1px solid ${theme.brand.colors[color].light};
+        border: 1px solid ${theme.brand.colors[currentColor].light};
 
         svg {
           fill: ${theme.colors.gray[600]};
@@ -109,36 +111,37 @@ export const getButtonHover = (props: {
       `;
     case 'tertiary':
       return css`
-        color: ${theme.brand.colors[color].medium};
+        color: ${theme.brand.colors[currentColor].medium};
 
         svg {
-          fill: ${theme.brand.colors[color].medium};
+          fill: ${theme.brand.colors[currentColor].medium};
         }
       `;
     case 'ghost':
       return css`
-        background-color: ${theme.brand.colors[color].lighter};
+        background-color: ${theme.brand.colors[currentColor].lighter};
       `;
     case 'primary':
     default:
       return css`
-        background-color: ${theme.brand.colors[color].light};
+        background-color: ${theme.brand.colors[currentColor].light};
       `;
   }
 };
 
 export const getButtonActive = (props: {
   variant?: ButtonProps['variant'];
-  color: ButtonProps['color'];
+  color?: ButtonProps['color'];
   theme: Theme;
 }) => {
   const { theme, color, variant } = props;
+  const currentColor = color ?? 'primary';
 
   switch (variant) {
     case 'secondary':
       return css`
         color: ${theme.colors.gray[800]};
-        border: 1px solid ${theme.brand.colors[color].dark};
+        border: 1px solid ${theme.brand.colors[currentColor].dark};
         box-shadow: ${theme.elevations.xs};
 
         svg {
@@ -147,26 +150,26 @@ export const getButtonActive = (props: {
       `;
     case 'tertiary':
       return css`
-        color: ${theme.brand.colors[color].dark};
+        color: ${theme.brand.colors[currentColor].dark};
         box-shadow: ${theme.elevations.xs};
 
         svg {
-          fill: ${theme.brand.colors[color].dark};
+          fill: ${theme.brand.colors[currentColor].dark};
         }
       `;
     case 'ghost':
       return css`
-        color: ${theme.brand.colors[color].dark};
-        background-color: ${theme.brand.colors[color].outline};
+        color: ${theme.brand.colors[currentColor].dark};
+        background-color: ${theme.brand.colors[currentColor].outline};
 
         svg {
-          fill: ${theme.brand.colors[color].dark};
+          fill: ${theme.brand.colors[currentColor].dark};
         }
       `;
     case 'primary':
     default:
       return css`
-        background-color: ${theme.brand.colors[color].dark};
+        background-color: ${theme.brand.colors[currentColor].dark};
         box-shadow: ${theme.elevations.xs};
       `;
   }

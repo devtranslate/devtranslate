@@ -9,7 +9,6 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   icon,
   loading,
-  color = 'primary',
   type = 'button',
   size,
   onClick,
@@ -33,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
     );
   };
 
-  const buttonProps = { color, loading, size, onClick: handleOnClick };
+  const buttonProps = { loading, size, onClick: handleOnClick };
 
   if (href) {
     return (

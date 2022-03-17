@@ -4,7 +4,7 @@ import { ButtonProps } from './Button.types';
 
 export const ButtonStyles = css<{
   children: ButtonProps['children'];
-  color: ButtonProps['color'];
+  color?: ButtonProps['color'];
   disabled?: ButtonProps['disabled'];
   loading?: ButtonProps['loading'];
   reverse?: ButtonProps['reverse'];
@@ -36,7 +36,7 @@ export const ButtonStyles = css<{
 
     &:focus-visible {
       box-shadow: none;
-      outline: 3px solid ${theme.brand.colors[color].outline};
+      outline: 3px solid ${theme.brand.colors[color ?? 'primary'].outline};
     }
   `}
 

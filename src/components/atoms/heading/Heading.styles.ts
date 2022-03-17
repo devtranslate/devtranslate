@@ -15,7 +15,7 @@ export const HeadingStyles = css<{
   size?: HeadingProps['size'];
   textAlign?: HeadingProps['textAlign'];
   textTransform?: HeadingProps['textTransform'];
-  variant: HeadingProps['variant'];
+  variant?: HeadingProps['variant'];
 }>`
   margin: 0;
   margin-block: 0;
@@ -30,11 +30,11 @@ export const HeadingStyles = css<{
       -webkit-box-orient: vertical;
     `}
 
-  ${({ theme, color, textTransform, variant }) => `
+  ${({ theme, color, textTransform, variant }) => css`
     color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
-    font-weight: ${theme.typography.fontWeights.heading[variant]};
-    font-size: ${theme.typography.fontSizes.heading[variant].m};
-    line-height: ${theme.typography.lineHeights.heading[variant].m};
+    font-weight: ${theme.typography.fontWeights.heading[variant ?? 'default']};
+    font-size: ${theme.typography.fontSizes.heading[variant ?? 'default'].m};
+    line-height: ${theme.typography.lineHeights.heading[variant ?? 'default'].m};
     text-transform: ${textTransform ?? 'none'};
   `}
 

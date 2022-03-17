@@ -23,7 +23,6 @@ export const ColumnStyles = css<{
   display: flex;
   flex-wrap: nowrap;
   flex: 0 auto 100%;
-  box-sizing: border-box;
   flex-direction: column;
 
   ${(props) => css`
