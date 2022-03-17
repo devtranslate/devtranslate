@@ -87,6 +87,25 @@ export const renderColumnJustify = (justifyContent) => {
   </Grid>
 </Story>
 
+## Ocultar
+
+A propriedade **hidden** permite configurar até qual breakpoint a coluna ficará escondida.
+
+<Story name="Hidden">
+  <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+    <ColumnBorder xxs={12} padding={{ xs: 's' }} hidden={{ xs: false, m: true }}>
+      <Text>
+        <Text as="b">MOBILE</Text>: Esta coluna fica hidden a partir 1024px ( {`hidden={{ xs: false, m: true }}`} )
+      </Text>
+    </ColumnBorder>
+    <ColumnBorder xxs={12} padding={{ xs: 's' }} hidden={{ xs: true, m: false }}>
+      <Text>
+        <Text as="b">DESKTOP</Text>: Esta coluna fica hidden até 1024px ( {`hidden={{ xs: true, m: false }}`} )
+      </Text>
+    </ColumnBorder>
+  </Grid>
+</Story>
+
 ## Lacunas entre as colunas
 
 Ao usar a propriedade **columnGap** é criado um espaço entre as colunas do Grid. Essa propriedade pertence ao componente `Column` e é necessário que o `Grid` possua a propriedade `justifyContent` como `space-between`, para funcionar corretamente.

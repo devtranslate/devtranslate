@@ -9,6 +9,8 @@ export type ColumnProps = {
   children: React.ReactNode;
   /** Define se existe espaçamento entre as Columns. */
   columnGap?: boolean;
+  /** Define se a Column não será exibida. */
+  hidden?: ScreenMap<boolean>;
   /** Define o alinhamento dos itens no eixo principal dentro da Column. */
   justifyContent?: ScreenMap<React.CSSProperties['justifyContent']>;
   /** Define o espaçamento interno total da Column. */
