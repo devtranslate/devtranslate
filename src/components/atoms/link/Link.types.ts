@@ -19,6 +19,8 @@ export type LinkProps = {
   paddingLeft?: ScreenMap<SpacingSizes>;
   /** Define o espaçamento interno superior do Link. */
   paddingTop?: ScreenMap<SpacingSizes>;
+  /** Define o relacionamento entre a página atual e a página da propriedade href (referente a SEO) */
+  rel?: string;
   /** Define o tamanho do Link. */
   size?: ScreenMap<TypographyBodySizes>;
   /** Define se o conteúdo será aberto em uma nova aba, janela, etc. */

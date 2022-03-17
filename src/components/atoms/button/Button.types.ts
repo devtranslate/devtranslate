@@ -18,6 +18,8 @@ export type ButtonProps = {
   loading?: boolean;
   /** Define o onClick do Button. */
   onClick?: () => void;
+  /** Define o relacionamento entre a página atual e a página da propriedade href (referente a SEO) */
+  rel?: string;
   /** Define se o ícone do Button será exibido a esquerda. */
   reverse?: boolean;
   /** Define o tamanho do Button. */
