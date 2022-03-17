@@ -16,7 +16,6 @@ export const GridStyles = css<{
   display: flex;
   width: 100%;
   flex-direction: row;
-  box-sizing: border-box;
 
   ${({ theme, container }) =>
     container &&

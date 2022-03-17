@@ -17,11 +17,16 @@ export const LinkStyles = css<{
   font-family: inherit;
   text-decoration: underline;
 
-  ${({ theme }) => `
+  ${({ theme }) => css`
     color: ${theme.brand.colors.default};
 
     &:hover {
       color: ${theme.brand.colors.primary.medium};
+
+      svg {
+        fill: ${theme.brand.colors.primary.medium};
+        transition: all 0.3s;
+      }
     }
   `}
 
