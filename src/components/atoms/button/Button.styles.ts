@@ -21,8 +21,7 @@ export const ButtonStyles = css<{
   text-decoration: none;
 
   &:hover,
-  &:active,
-  &:focus-visible {
+  &:active {
     transition: all 0.3s;
   }
 
@@ -36,6 +35,8 @@ export const ButtonStyles = css<{
 
     &:focus-visible {
       box-shadow: none;
+      transition: none;
+      outline-offset: 0;
       outline: 3px solid ${theme.brand.colors[color ?? 'primary'].outline};
     }
   `}

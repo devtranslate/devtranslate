@@ -5,6 +5,9 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   ${({ theme }) => css`
     * {
       box-sizing: border-box;
+      outline-width: 3px;
+      outline-offset: ${theme.spacing.xxs};
+      outline-color: ${theme.brand.colors.primary.outline};
     }
 
     body {
