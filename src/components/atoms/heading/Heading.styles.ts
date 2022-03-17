@@ -5,6 +5,7 @@ import { getPadding } from '../../../helpers/Spacing';
 import { getTextAlign } from '../../../helpers/Text';
 
 export const HeadingStyles = css<{
+  children: HeadingProps['children'];
   color?: HeadingProps['color'];
   lineClamp?: HeadingProps['lineClamp'];
   padding?: HeadingProps['padding'];
@@ -30,13 +31,15 @@ export const HeadingStyles = css<{
       -webkit-box-orient: vertical;
     `}
 
-  ${({ theme, color, textTransform, variant }) => css`
-    color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
-    font-weight: ${theme.typography.fontWeights.heading[variant ?? 'default']};
-    font-size: ${theme.typography.fontSizes.heading[variant ?? 'default'].m};
-    line-height: ${theme.typography.lineHeights.heading[variant ?? 'default'].m};
-    text-transform: ${textTransform ?? 'none'};
-  `}
+  ${({ theme, color, textTransform, variant, children }) =>
+    (typeof children === 'string' || Array.isArray(children)) &&
+    css`
+      color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
+      font-weight: ${theme.typography.fontWeights.heading[variant ?? 'default']};
+      font-size: ${theme.typography.fontSizes.heading[variant ?? 'default'].m};
+      line-height: ${theme.typography.lineHeights.heading[variant ?? 'default'].m};
+      text-transform: ${textTransform ?? 'none'};
+    `}
 
   ${(props) => css`
     ${getPadding(props)};
