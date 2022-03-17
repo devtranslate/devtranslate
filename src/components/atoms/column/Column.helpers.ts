@@ -72,3 +72,42 @@ export const getColumnSize = (props: ScreenMap<number> & { columnGap?: boolean }
     `}
   `;
 };
+
+export const getColumnInvisible = (props: { invisible?: ScreenMap<boolean> }) => {
+  const { invisible } = props;
+
+  return css`
+    ${invisible &&
+    css`
+      flex-wrap: nowrap;
+      ${typeof invisible.xs === 'boolean' &&
+      css`
+        display: ${invisible.xs ? 'none' : 'flex'};
+      `}
+      ${typeof invisible.s === 'boolean' &&
+      css`
+        @media (min-width: ${screens.s.min}) {
+          display: ${invisible.s ? 'none' : 'flex'};
+        }
+      `}
+      ${typeof invisible.m === 'boolean' &&
+      css`
+        @media (min-width: ${screens.m.min}) {
+          display: ${invisible.m ? 'none' : 'flex'};
+        }
+      `}
+      ${typeof invisible.l === 'boolean' &&
+      css`
+        @media (min-width: ${screens.l.min}) {
+          display: ${invisible.l ? 'none' : 'flex'};
+        }
+      `}
+      ${typeof invisible.xl === 'boolean' &&
+      css`
+        @media (min-width: ${screens.xl.min}) {
+          display: ${invisible.xl ? 'none' : 'flex'};
+        }
+      `}
+    `}
+  `;
+};
