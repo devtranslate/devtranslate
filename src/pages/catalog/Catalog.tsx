@@ -3,6 +3,8 @@ import queryString from 'query-string';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { CatalogProps } from './Catalog.types';
+import { Grid } from '../../components/atoms/grid/Grid';
+import { Footer } from '../../components/organisms/footer/Footer';
 
 export const Catalog: React.FC<CatalogProps> = () => {
   const [response, setResponse] = useState({ data: {}, loading: true, error: false });
@@ -24,5 +26,16 @@ export const Catalog: React.FC<CatalogProps> = () => {
       });
   }, [page, query]);
 
-  return <>Catalog </>;
+  return (
+    <Grid
+      tag="main"
+      paddingTop={{ xs: 'm', l: 'xl' }}
+      paddingBottom={{ xs: 'm', l: 'xl' }}
+      paddingLeft={{ xs: 's' }}
+      paddingRight={{ xs: 's' }}
+      container
+    >
+      <Footer />
+    </Grid>
+  );
 };
