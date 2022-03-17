@@ -6,5 +6,8 @@ export const IconStyles = css<{
   rotate?: IconProps['rotate'];
 }>`
   ${({ rotate }) => rotate && `transform: rotate(${rotate}deg);`}
-  ${({ theme, color }) => `fill: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};`}
+  ${({ theme, color }) =>
+    css`
+      fill: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
+    `}
 `;
