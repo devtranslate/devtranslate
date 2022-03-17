@@ -9,22 +9,22 @@ export type LinkProps = {
   href?: string;
   /** Define o onClick do Link. */
   onClick?: () => void;
-  /** Define o espaçamento interno total do Text. */
+  /** Define o espaçamento interno total do Link. */
   padding?: ScreenMap<SpacingSizes>;
-  /** Define o espaçamento interno inferior do Text. */
+  /** Define o espaçamento interno inferior do Link. */
   paddingBottom?: ScreenMap<SpacingSizes>;
-  /** Define o espaçamento interno direito do Text. */
+  /** Define o espaçamento interno direito do Link. */
   paddingRight?: ScreenMap<SpacingSizes>;
-  /** Define o espaçamento interno esquerdo do Text. */
+  /** Define o espaçamento interno esquerdo do Link. */
   paddingLeft?: ScreenMap<SpacingSizes>;
-  /** Define o espaçamento interno superior do Text. */
+  /** Define o espaçamento interno superior do Link. */
   paddingTop?: ScreenMap<SpacingSizes>;
-  /** Define o tamanho do Text. */
+  /** Define o tamanho do Link. */
   size?: ScreenMap<TypographyBodySizes>;
   /** Define se o conteúdo será aberto em uma nova aba, janela, etc. */
   target?: '_blank' | '_self' | '_parent' | '_top' | 'framename';
   /** Define o title do Link (referente a acessibilidade). */
   title?: string;
-  /** Define o alinhamento do Text. */
+  /** Define o alinhamento do Link. */
   textAlign?: ScreenMap<React.CSSProperties['textAlign']>;
 };

@@ -4,7 +4,7 @@ export type ButtonProps = {
   /** Define o conteúdo do Button. */
   children: React.ReactNode;
   /** Define a cor do Button. */
-  color: 'primary' | 'secondary' | 'tertiary';
+  color?: 'primary' | 'secondary' | 'tertiary';
   /** Define se o Button está desabilitado. */
   disabled?: boolean;
   /** Define um href para o Button. */
@@ -27,7 +27,7 @@ export type ButtonProps = {
   /** Define o title do Button (referente a acessibilidade). */
   title?: string;
   /** Define o tipo do Button. */
-  type: 'button' | 'submit' | 'reset';
+  type?: 'button' | 'submit' | 'reset';
   /** Define o estilo do Button. */
   variant?: 'primary' | 'secondary' | 'tertiary' | 'ghost';
 };

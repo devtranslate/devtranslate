@@ -22,11 +22,11 @@ export type HeadingProps = {
   /** Define o tamanho do Heading. */
   size?: ScreenMap<TypographyHeadingSizes>;
   /** Define a tag do Heading. */
-  tag: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   /** Define o alinhamento do Heading. */
   textAlign?: ScreenMap<React.CSSProperties['textAlign']>;
   /** Define o capitalização do Heading. */
   textTransform?: ScreenMap<React.CSSProperties['textTransform']>;
   /** Define o estilo do Heading. */
-  variant: 'default' | 'display';
+  variant?: 'default' | 'display';
 };

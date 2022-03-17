@@ -5,7 +5,7 @@ export type GridProps = {
   /** Define o conteúdo da Grid. */
   children: React.ReactNode;
   /** Define se a Grid largura máxima de 1280px. */
-  container: boolean;
+  container?: boolean;
   /** Define alinhamento de todo o conteúdo dentro da Grid. */
   justifyContent?: ScreenMap<React.CSSProperties['justifyContent']>;
   /** Define o espaçamento interno total da Grid. */
@@ -19,5 +19,5 @@ export type GridProps = {
   /** Define o espaçamento interno superior da Grid. */
   paddingTop?: ScreenMap<SpacingSizes>;
   /** Define a tag da Grid. */
-  tag: 'div' | 'section';
+  tag?: 'div' | 'section' | 'header' | 'footer' | 'main';
 };
