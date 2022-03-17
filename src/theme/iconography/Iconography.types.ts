@@ -6,6 +6,7 @@ export type IconographyNames =
   | 'home'
   | 'instagram'
   | 'linkedin'
+  | 'menu'
   | 'search'
   | 'spinner'
   | 'rss'
