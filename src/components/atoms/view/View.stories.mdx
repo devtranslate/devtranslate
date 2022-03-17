@@ -8,7 +8,7 @@ import { Text } from '../text/Text';
 export const Template = (args) => <View {...args} />;
 
 export const ViewBorder = styled(View)`
-  outline: 1px solid #d4d4d8;
+  border: 1px solid #d4d4d8;
 `;
 
 # View
@@ -38,7 +38,10 @@ export const renderViewPadding = () => {
   });
 };
 
-<Story name="Padding" args={{ paddingTop: { xs: 'xs' }, paddingBottom: { xs: 'l' }, children: renderViewPadding() }}>
+<Story
+  name="Padding"
+  args={{ inline: { xs: false }, paddingTop: { xs: 'xs' }, paddingBottom: { xs: 'l' }, children: renderViewPadding() }}
+>
   {Template.bind({})}
 </Story>
 
@@ -70,7 +73,7 @@ export const renderViewInline = () => {
 
 ## Semântica
 
-Atualmente este componente oferece as tags `section` e `div`.
+Atualmente este componente oferece as tags `section`, `header`, `footer`, `main`, `nav` e `div`.
 
 > Lembre-se sempre de analizar o componente que pretende implementar e passar a prop `tag` condizente com o contexto onde ele será inserido. Esta prática é importante pois ajuda a prezar pela semântica da página.
 

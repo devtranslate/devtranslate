@@ -27,7 +27,7 @@ Com a propriedade **size**, é possível configurar o componente em três tamanh
 export const textSizes = ['l', 'm', 's'];
 
 <Story name="Size">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {textSizes.map((item, index) => {
       return (
         <Text size={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
@@ -45,7 +45,7 @@ Alterando a propriedade **color** é possível definir as cores da marca no comp
 export const textColors = ['', 'primary', 'secondary', 'tertiary'];
 
 <Story name="Color">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {textColors.map((item, index) => {
       return (
         <Text color={item} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
@@ -63,7 +63,7 @@ Utilizando a propriedade **textTransform** é possível mudar a capitalização 
 export const textCapitalizations = ['none', 'capitalize', 'uppercase', 'lowercase'];
 
 <Story name="TextTransform">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {textCapitalizations.map((item, index) => {
       return (
         <Text textTransform={item} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
@@ -91,7 +91,7 @@ Utilize a propriedade **textAlign** para alterar o alinhamento do texto.
 export const textAlignment = ['left', 'center', 'right'];
 
 <Story name="TextAlign">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
     {textAlignment.map((item, index) => {
       return (
         <Text textAlign={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>
@@ -118,7 +118,7 @@ export const textTags = [
 ];
 
 <Story name="Tag">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {textTags.map((item, index) => {
       return (
         <Text tag={item.tag} paddingBottom={{ xs: 'xs' }} key={`text-${index - 1}`}>

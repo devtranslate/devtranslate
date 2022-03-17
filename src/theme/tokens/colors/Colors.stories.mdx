@@ -39,7 +39,7 @@ export const renderColorItem = (color, colorName, colorShade) => {
   return (
     <Grid>
       <ColorItem color={color} />
-      <View paddingLeft={{ xs: 'xs' }}>
+      <View inline={{ xs: false }} paddingLeft={{ xs: 'xs' }}>
         <Text as="b" textTransform="capitalize">
           {colorName} {colorShade ? colorShade : ''}
         </Text>

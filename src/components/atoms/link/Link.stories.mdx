@@ -24,7 +24,7 @@ Com a propriedade **size**, é possível configurar o componente em três tamanh
 export const linkSizes = ['l', 'm', 's'];
 
 <Story name="Size">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {linkSizes.map((item, index) => {
       return (
         <Link
@@ -47,7 +47,7 @@ Utilize a propriedade **textAlign** para alterar o alinhamento do texto.
 export const textAlignment = ['left', 'center', 'right'];
 
 <Story name="TextAlign">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {textAlignment.map((item, index) => {
       return (
         <Link
