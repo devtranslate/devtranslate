@@ -38,7 +38,10 @@ export const renderViewPadding = () => {
   });
 };
 
-<Story name="Padding" args={{ paddingTop: { xs: 'xs' }, paddingBottom: { xs: 'l' }, children: renderViewPadding() }}>
+<Story
+  name="Padding"
+  args={{ inline: { xs: false }, paddingTop: { xs: 'xs' }, paddingBottom: { xs: 'l' }, children: renderViewPadding() }}
+>
   {Template.bind({})}
 </Story>
 

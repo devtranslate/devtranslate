@@ -46,7 +46,7 @@ Com a propriedade **size**, é possível configurar o componente em seis tamanho
 export const headingSizes = ['xl', 'l', 'm', 's', 'xs', 'xxs'];
 
 <Story name="Size">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {headingSizes.map((item, index) => {
       return (
         <Heading size={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
@@ -64,7 +64,7 @@ Alterando a propriedade **color** é possível definir as cores da marca no comp
 export const headingColors = ['default', 'primary', 'secondary', 'tertiary'];
 
 <Story name="Color">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {headingColors.map((item, index) => {
       return (
         <Heading color={item} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
@@ -97,7 +97,7 @@ Utilize a propriedade **textAlign** para alterar o alinhamento do texto.
 export const headingAlign = ['left', 'center', 'right'];
 
 <Story name="TextAlign">
-  <View paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
+  <View inline={{ xs: false }} paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'm' }}>
     {headingAlign.map((item, index) => {
       return (
         <Heading textAlign={{ xs: item }} paddingBottom={{ xs: 'xs' }} key={`heading-${index - 1}`}>
