@@ -1,12 +1,13 @@
 import { css } from 'styled-components';
 import { ColumnProps } from './Column.types';
-import { getColumnSize } from './Column.helpers';
+import { getColumnInvisible, getColumnSize } from './Column.helpers';
 import { getAlignItems, getJustifyContent } from '../../../helpers/Alignment';
 import { getPadding } from '../../../helpers/Spacing';
 
 export const ColumnStyles = css<{
   alignItems?: ColumnProps['alignItems'];
   columnGap?: ColumnProps['columnGap'];
+  invisible?: ColumnProps['invisible'];
   padding?: ColumnProps['padding'];
   paddingBottom?: ColumnProps['paddingBottom'];
   paddingLeft?: ColumnProps['paddingLeft'];
@@ -28,7 +29,8 @@ export const ColumnStyles = css<{
   ${(props) => css`
     ${getAlignItems(props)};
     ${getJustifyContent(props)};
-    ${getColumnSize(props)};
     ${getPadding(props)};
+    ${getColumnSize(props)};
+    ${getColumnInvisible(props)}
   `};
 `;
