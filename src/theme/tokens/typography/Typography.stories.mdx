@@ -49,14 +49,27 @@ A tipografia pode ajudar a criar hierarquias claras, organizar informações e o
 
 ### Body
 
+export const renderTHead = () => {
+  return (
+    <tr>
+      <th>Nome</th>
+      <th>Font Size</th>
+      <th>Line Height</th>
+      <th>Exemplo</th>
+    </tr>
+  );
+};
+
 export const renderTBodyText = () => {
-  const body = typographyToken.fontSizes.body;
-  const typographyFontSizes = Object.keys(body);
+  const bodyFontSize = typographyToken.fontSizes.body;
+  const bodyLineHeight = typographyToken.lineHeights.body;
+  const typographyFontSizes = Object.keys(bodyFontSize);
   return typographyFontSizes.map((item, index) => {
     return (
       <tr key={`body-${index - 1}`}>
         <td>{item}</td>
-        <td>{body[item]}</td>
+        <td>{bodyFontSize[item]}</td>
+        <td>{bodyLineHeight[item]}</td>
         <td>
           <Text size={{ xs: item }}>Text</Text>
         </td>
@@ -67,13 +80,7 @@ export const renderTBodyText = () => {
 
 <Story name="Body">
   <Table>
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Pixels</th>
-        <th>Exemplo</th>
-      </tr>
-    </thead>
+    <thead>{renderTHead()}</thead>
     <tbody>{renderTBodyText()}</tbody>
   </Table>
 </Story>
@@ -81,13 +88,15 @@ export const renderTBodyText = () => {
 ### Heading Default
 
 export const renderTBodyHeading = (variant) => {
-  const heading = typographyToken.fontSizes.heading[variant];
-  const typographyFontSizes = Object.keys(heading);
+  const headingFontSize = typographyToken.fontSizes.heading[variant];
+  const headingLineHeight = typographyToken.lineHeights.heading[variant];
+  const typographyFontSizes = Object.keys(headingFontSize);
   return typographyFontSizes.map((item, index) => {
     return (
       <tr key={`heading-${index - 1}`}>
         <td>{item}</td>
-        <td>{heading[item]}</td>
+        <td>{headingFontSize[item]}</td>
+        <td>{headingLineHeight[item]}</td>
         <td>
           <Heading variant={variant} size={{ xs: item }} textTransform="capitalize">
             {variant === 'default' ? 'Heading' : variant}
@@ -100,13 +109,7 @@ export const renderTBodyHeading = (variant) => {
 
 <Story name="Heading (Default)">
   <Table>
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Pixels</th>
-        <th>Exemplo</th>
-      </tr>
-    </thead>
+    <thead>{renderTHead()}</thead>
     <tbody>{renderTBodyHeading('default')}</tbody>
   </Table>
 </Story>
@@ -115,13 +118,7 @@ export const renderTBodyHeading = (variant) => {
 
 <Story name="Heading (Display)">
   <Table>
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Pixels</th>
-        <th>Exemplo</th>
-      </tr>
-    </thead>
+    <thead>{renderTHead()}</thead>
     <tbody>{renderTBodyHeading('display')}</tbody>
   </Table>
 </Story>
