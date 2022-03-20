@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const DEVELOPMENT_MODE = 'development';
 const PRODUCTION_MODE = 'production';
@@ -69,6 +70,16 @@ module.exports = (_, { mode }) => {
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
         }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: '**/*',
+            context: path.resolve(__dirname, 'public'),
+            filter: (file) => file !== path.resolve(__dirname, 'public/index.html').replace(/\\/g, '/'),
+            noErrorOnMissing: true,
+          },
+        ],
+      })
     ].filter(Boolean),
   };
 };
