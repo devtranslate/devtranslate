@@ -23,8 +23,7 @@ type Pagination = {
   totalRecords: number;
 };
 
-export type CatalogProps = {
-  data: { translations: Translation[]; pagination: Pagination };
-  loading: boolean;
-  error: boolean;
+export type CatalogDataProps = {
+  translations: Translation[];
+  pagination: Pagination;
 };
