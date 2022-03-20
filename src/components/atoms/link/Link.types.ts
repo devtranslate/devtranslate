@@ -4,7 +4,7 @@ import { TypographyBodySizes } from '../../../theme/tokens/typography/Typography
 
 export type LinkProps = {
   /** Define o conteúdo do Link. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define um href para o Link. */
   href?: string;
   /** Define o onClick do Link. */

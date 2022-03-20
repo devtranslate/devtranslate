@@ -3,7 +3,7 @@ import { SpacingSizes } from '../../../theme/tokens/spacing/Spacing.types';
 
 export type GridProps = {
   /** Define o conteúdo da Grid. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define se a Grid largura máxima de 1280px. */
   container?: boolean;
   /** Define alinhamento de todo o conteúdo dentro da Grid. */

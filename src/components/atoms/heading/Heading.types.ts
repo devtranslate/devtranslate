@@ -4,7 +4,7 @@ import { TypographyHeadingSizes } from '../../../theme/tokens/typography/Typogra
 
 export type HeadingProps = {
   /** Define o conteúdo do Heading. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define a cor do Heading. */
   color?: 'primary' | 'secondary' | 'tertiary';
   /** Define o limite de linhas para truncar o texto do Heading. */

@@ -2,7 +2,7 @@ import { IconographyNames } from '../../../theme/iconography/Iconography.types';
 
 export type ButtonProps = {
   /** Define o conteúdo do Button. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define a cor do Button. */
   color?: 'primary' | 'secondary' | 'tertiary';
   /** Define se o Button está desabilitado. */

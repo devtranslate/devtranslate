@@ -6,7 +6,7 @@ export type ColumnProps = {
   /** Define o alinhamento dos itens no eixo transversal dentro da Column. */
   alignItems?: ScreenMap<React.CSSProperties['alignItems']>;
   /** Define o conteúdo da Column. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define se existe espaçamento entre as Columns. */
   columnGap?: boolean;
   /** Define se a Column não será exibida. */

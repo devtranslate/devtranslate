@@ -3,7 +3,7 @@ import { SpacingSizes } from '../../../theme/tokens/spacing/Spacing.types';
 
 export type ViewProps = {
   /** Define o conteúdo da View. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define se a View será inline. */
   inline?: ScreenMap<boolean>;
   /** Define o espaçamento interno total da View. */
