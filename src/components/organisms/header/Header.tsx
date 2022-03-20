@@ -55,23 +55,23 @@ export const Header: React.FC = () => {
             </NavigationLink>
           </Navigation>
         </Column>
+        <SideMenu>
+          <Overlay visible={openSideMenu} onClick={() => setOpenSideMenu(false)} />
+          <SideMenuWrapper visible={openSideMenu}>
+            <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(false)} />
+            <View inline={{ xs: false }} paddingTop={{ xs: 'm' }}>
+              <SideMenuLink href="/" active={pathname === '/'}>
+                <Icon name="home" color="primary" width={16} height={16} />
+                <Text paddingLeft={{ xs: 'xs' }}>Inicío</Text>
+              </SideMenuLink>
+              <SideMenuLink href="/catalogo" active={pathname === '/catalogo'}>
+                <Icon name="catalog" color="primary" width={16} height={16} />
+                <Text paddingLeft={{ xs: 'xs' }}>Catálogo</Text>
+              </SideMenuLink>
+            </View>
+          </SideMenuWrapper>
+        </SideMenu>
       </Grid>
-      <SideMenu>
-        <Overlay visible={openSideMenu} onClick={() => setOpenSideMenu(false)} />
-        <SideMenuWrapper visible={openSideMenu}>
-          <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(false)} />
-          <View inline={{ xs: false }} paddingTop={{ xs: 'm' }}>
-            <SideMenuLink href="/" active={pathname === '/'}>
-              <Icon name="home" color="primary" width={16} height={16} />
-              <Text paddingLeft={{ xs: 'xs' }}>Inicío</Text>
-            </SideMenuLink>
-            <SideMenuLink href="/catalogo" active={pathname === '/catalogo'}>
-              <Icon name="catalog" color="primary" width={16} height={16} />
-              <Text paddingLeft={{ xs: 'xs' }}>Catálogo</Text>
-            </SideMenuLink>
-          </View>
-        </SideMenuWrapper>
-      </SideMenu>
     </>
   );
 };
@@ -137,6 +137,12 @@ const ButtonUI = styled(Button)`
 
 const SideMenu = styled(View)`
   width: 100%;
+
+  ${({ theme }) => css`
+    @media (min-width: ${theme.screens.s.min}) {
+      display: none;
+    }
+  `}
 `;
 
 const SideMenuWrapper = styled(View)<{ visible: boolean }>`
