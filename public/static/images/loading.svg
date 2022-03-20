@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+  <rect fill="#334155" x="8" y="8" width="40" height="40" rx="4" ry="4">
+  <animate attributeName="x" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="-1.8333333333333333s"></animate>
+  <animate attributeName="y" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="-1.3333333333333333s"></animate>
+  </rect><rect fill="#f87171" x="8" y="8" width="40" height="40" rx="4" ry="4">
+  <animate attributeName="x" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="-1.1666666666666667s"></animate>
+  <animate attributeName="y" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="-0.6666666666666666s"></animate>
+  </rect><rect fill="#fbbf24" x="8" y="8" width="40" height="40" rx="4" ry="4">
+  <animate attributeName="x" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="-0.5s"></animate>
+  <animate attributeName="y" dur="2s" repeatCount="indefinite" keyTimes="0;0.083;0.25;0.333;0.5;0.583;0.75;0.833;1" values="8;52;52;52;52;8;8;8;8" begin="0s"></animate>
+  </rect>
+</svg>

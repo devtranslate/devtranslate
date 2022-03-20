@@ -26,5 +26,5 @@ export type TextProps = {
   /** Define o alinhamento do Text. */
   textAlign?: ScreenMap<React.CSSProperties['textAlign']>;
   /** Define o capitalização do Text. */
-  textTransform?: ScreenMap<React.CSSProperties['textTransform']>;
+  textTransform?: React.CSSProperties['textTransform'];
 };

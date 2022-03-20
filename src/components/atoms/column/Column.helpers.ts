@@ -3,7 +3,7 @@ import { screens } from '../../../theme/tokens/screens/Screens';
 import { ScreenMap } from '../../../theme/tokens/screens/Screens.types';
 
 const calcColumnGap = (cols: number) => {
-  const GAP_VALUE = 16;
+  const GAP_VALUE = 32;
   const columns = 12 / cols;
   const spaceBetweenColumns = columns - 1;
 
