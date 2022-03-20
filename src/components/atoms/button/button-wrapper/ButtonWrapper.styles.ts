@@ -24,7 +24,6 @@ export const ButtonWrapperUIStyles = css<{
 
 export const ButtonSpanUIStyles = css<{
   icon?: ButtonProps['icon'];
-  size?: ButtonProps['size'];
   reverse?: ButtonProps['reverse'];
 }>`
   ${({ theme, icon, reverse }) =>

@@ -10,26 +10,23 @@ export const getButtonSize = (props: { size?: ButtonProps['size']; theme: Theme 
       return css`
         height: ${theme.spacing.m};
         max-height: ${theme.spacing.m};
-        padding: 0 ${theme.spacing.s} 2px;
+        padding: 0 ${theme.spacing.s};
         font-size: ${theme.typography.fontSizes.body.s};
-        line-height: ${theme.typography.lineHeights.body.s};
       `;
     case 'l':
       return css`
         height: ${theme.spacing.xl};
         max-height: ${theme.spacing.xl};
-        padding: 0 ${theme.spacing.l} 2px;
+        padding: 0 ${theme.spacing.l};
         font-size: ${theme.typography.fontSizes.body.l};
-        line-height: ${theme.typography.lineHeights.body.l};
       `;
     case 'm':
     default:
       return css`
         height: ${theme.spacing.l};
         max-height: ${theme.spacing.l};
-        padding: 0 ${theme.spacing.m} 2px;
+        padding: 0 ${theme.spacing.m};
         font-size: ${theme.typography.fontSizes.body.m};
-        line-height: ${theme.typography.lineHeights.body.m};
       `;
   }
 };
