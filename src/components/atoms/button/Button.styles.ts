@@ -3,7 +3,6 @@ import { getButtonSize, getButtonVariant, getButtonHover, getButtonActive, getBu
 import { ButtonProps } from './Button.types';
 
 export const ButtonStyles = css<{
-  children: ButtonProps['children'];
   color?: ButtonProps['color'];
   disabled?: ButtonProps['disabled'];
   loading?: ButtonProps['loading'];

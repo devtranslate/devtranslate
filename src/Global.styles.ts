@@ -8,6 +8,8 @@ export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
       outline-width: 3px;
       outline-offset: ${theme.spacing.xxs};
       outline-color: ${theme.brand.colors.primary.outline};
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {

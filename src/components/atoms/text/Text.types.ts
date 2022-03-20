@@ -4,7 +4,7 @@ import { TypographyBodySizes } from '../../../theme/tokens/typography/Typography
 
 export type TextProps = {
   /** Define o conteúdo do Text. */
-  children: React.ReactNode;
+  children?: React.ReactNode;
   /** Define a cor do Text. */
   color?: 'primary' | 'secondary' | 'tertiary';
   /** Define o limite de linhas para o texto do Text truncar. */
