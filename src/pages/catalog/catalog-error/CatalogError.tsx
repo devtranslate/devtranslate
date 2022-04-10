@@ -8,10 +8,10 @@ export const CatalogError: React.FC = () => {
   return (
     <Column alignItems={{ xs: 'center' }} justifyContent={{ xs: 'center' }} paddingTop={{ xs: 'xxxl' }}>
       <ImageUI src="/static/images/illustrations/catalog-error.svg" />
-      <Heading size={{ xs: 'xs' }} textAlign={{ xs: 'center' }} paddingTop={{ xs: 'xl' }} paddingBottom={{ xs: 'xs' }}>
+      <Heading size={{ xs: 'xxs' }} textAlign={{ xs: 'center' }} paddingTop={{ xs: 'xl' }} paddingBottom={{ xs: 'xs' }}>
         Oops! Nenhum resultado encontrado
       </Heading>
-      <TextUI textAlign={{ xs: 'center' }} size={{ xs: 'l' }}>
+      <TextUI textAlign={{ xs: 'center' }} size={{ xs: 'm' }}>
         Parece que não temos uma tradução que corresponda à sua busca. Experimente ajustar sua pesquisa ou filtro para
         encontrar o que procura.
       </TextUI>

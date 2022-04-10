@@ -35,8 +35,8 @@ export const getTheme = (theme?: string): Theme => {
           },
           typography: {
             fontFamily: typography.fontFamily.sans,
-            fontSize: typography.fontSizes.body.m,
-            lineHeight: typography.lineHeights.body.m,
+            fontSize: typography.fontSizes.body.s,
+            lineHeight: typography.lineHeights.body.s,
           },
         },
       };

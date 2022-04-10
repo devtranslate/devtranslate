@@ -37,7 +37,12 @@ export const NotFound: React.FC = () => {
             <Image src="/static/images/illustrations/not-found.svg" />
           </Column>
           <Column xs={12} s={7} m={6} justifyContent={{ xs: 'center' }} paddingLeft={{ l: 'xxxl' }}>
-            <Heading variant="display" color="primary" textAlign={{ xs: 'center', m: 'left' }} size={{ xs: 'xl' }}>
+            <Heading
+              variant="display"
+              color="primary"
+              textAlign={{ xs: 'center', m: 'left' }}
+              size={{ xs: 'xl', s: 'xxl', m: 'xxxl' }}
+            >
               404
             </Heading>
             <Heading
@@ -48,7 +53,7 @@ export const NotFound: React.FC = () => {
             >
               Oops! Página não encontrada
             </Heading>
-            <Text paddingBottom={{ xs: 'm' }} textAlign={{ xs: 'center', m: 'left' }} size={{ xs: 'l' }}>
+            <Text paddingBottom={{ xs: 'm' }} textAlign={{ xs: 'center', m: 'left' }} size={{ xs: 'm' }}>
               A página que você tentou acessar está indisponível ou não existe.
             </Text>
             <ButtonWrapper inline={{ xs: false, m: true }}>

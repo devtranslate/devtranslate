@@ -1,8 +1,8 @@
-export type TypographyBodySizes = 's' | 'm' | 'l';
+export type TypographyBodySizes = 'xs' | 's' | 'm' | 'l' | 'xl';
 
 export type TypographyBodyMap<T> = { [size in TypographyBodySizes]: T };
 
-export type TypographyHeadingSizes = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl';
+export type TypographyHeadingSizes = 'xxs' | 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
 export type TypographyHeadingMap<T> = { [size in TypographyHeadingSizes]: T };
 
@@ -11,24 +11,12 @@ export type Typography = {
     sans: string;
     mono: string;
   };
-  fontWeights: {
-    heading: {
-      default: string;
-      display: string;
-    };
-  };
   fontSizes: {
-    heading: {
-      default: TypographyHeadingMap<string>;
-      display: TypographyHeadingMap<string>;
-    };
+    heading: TypographyHeadingMap<string>;
     body: TypographyBodyMap<string>;
   };
   lineHeights: {
-    heading: {
-      default: TypographyHeadingMap<string>;
-      display: TypographyHeadingMap<string>;
-    };
+    heading: TypographyHeadingMap<string>;
     body: TypographyBodyMap<string>;
   };
 };

@@ -35,9 +35,9 @@ export const HeadingStyles = css<{
     (typeof children === 'string' || Array.isArray(children)) &&
     css`
       color: ${color ? theme.brand.colors[color].medium : theme.brand.colors.default};
-      font-weight: ${theme.typography.fontWeights.heading[variant ?? 'default']};
-      font-size: ${theme.typography.fontSizes.heading[variant ?? 'default'].m};
-      line-height: ${theme.typography.lineHeights.heading[variant ?? 'default'].m};
+      font-weight: ${variant === 'display' ? 'normal' : 'default'};
+      font-size: ${theme.typography.fontSizes.heading.m};
+      line-height: ${theme.typography.lineHeights.heading.m};
       text-transform: ${textTransform ?? 'none'};
     `}
 

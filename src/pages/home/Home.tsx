@@ -46,13 +46,13 @@ export const Home: React.FC = () => {
               variant="display"
               paddingBottom={{ xs: 'xs' }}
               textAlign={{ xs: 'center', m: 'left' }}
-              size={{ xs: 'xxs', s: 's', m: 'm', l: 'l' }}
+              size={{ xs: 'xs', s: 'm', m: 'l', l: 'xl' }}
             >
               Buscou tradução,
               <br />
               achou <b>Devtranslate</b>
             </HeadingTypewriter>
-            <Text paddingBottom={{ xs: 'm' }} textAlign={{ xs: 'center', m: 'left' }} size={{ xs: 'l' }}>
+            <Text paddingBottom={{ xs: 'm' }} textAlign={{ xs: 'center', m: 'left' }} size={{ xs: 'm' }}>
               Este é um projeto de código aberto feito para a comunidade com o objetivo de facilitar o acesso ao
               conteúdo de tecnologia. Promovemos uma melhor localização por meio do nosso catálogo de traduções, além de
               possibilitar e facilitar o processo de tradução de conteúdo para outros idiomas.

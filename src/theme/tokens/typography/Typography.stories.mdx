@@ -85,11 +85,11 @@ export const renderTBodyText = () => {
   </Table>
 </Story>
 
-### Heading Default
+### Heading
 
-export const renderTBodyHeading = (variant) => {
-  const headingFontSize = typographyToken.fontSizes.heading[variant];
-  const headingLineHeight = typographyToken.lineHeights.heading[variant];
+export const renderTBodyHeading = () => {
+  const headingFontSize = typographyToken.fontSizes.heading;
+  const headingLineHeight = typographyToken.lineHeights.heading;
   const typographyFontSizes = Object.keys(headingFontSize);
   return typographyFontSizes.map((item, index) => {
     return (
@@ -98,8 +98,8 @@ export const renderTBodyHeading = (variant) => {
         <td>{headingFontSize[item]}</td>
         <td>{headingLineHeight[item]}</td>
         <td>
-          <Heading variant={variant} size={{ xs: item }} textTransform="capitalize">
-            {variant === 'default' ? 'Heading' : variant}
+          <Heading size={{ xs: item }} textTransform="capitalize">
+            Heading
           </Heading>
         </td>
       </tr>
@@ -107,18 +107,9 @@ export const renderTBodyHeading = (variant) => {
   });
 };
 
-<Story name="Heading (Default)">
+<Story name="Heading">
   <Table>
     <thead>{renderTHead()}</thead>
-    <tbody>{renderTBodyHeading('default')}</tbody>
-  </Table>
-</Story>
-
-### Heading Display
-
-<Story name="Heading (Display)">
-  <Table>
-    <thead>{renderTHead()}</thead>
-    <tbody>{renderTBodyHeading('display')}</tbody>
+    <tbody>{renderTBodyHeading()}</tbody>
   </Table>
 </Story>

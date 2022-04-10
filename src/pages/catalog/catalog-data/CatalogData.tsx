@@ -23,7 +23,7 @@ export const CatalogData: React.FC<CatalogDataProps> = ({ translations, paginati
 
   return (
     <>
-      <Text size={{ xs: 'l' }} paddingBottom={{ xs: 's', m: 'l' }}>
+      <Text size={{ xs: 'm' }} paddingBottom={{ xs: 's', m: 'l' }}>
         Encontrado{' '}
         <Text tag="b">
           {startRecords}-{endRecords}
@@ -41,22 +41,24 @@ export const CatalogData: React.FC<CatalogDataProps> = ({ translations, paginati
                 paddingLeft={{ xs: 's' }}
                 paddingRight={{ xs: 's' }}
               >
-                <HeadingCard lineClamp={2}>{translation.title}</HeadingCard>
+                <HeadingWrapper>
+                  <HeadingCard lineClamp={2}>{translation.title}</HeadingCard>
+                </HeadingWrapper>
                 <Divisor />
                 <Grid>
                   <ColumnWithDivisor xs={6} alignItems={{ xs: 'center' }} paddingRight={{ xs: 's' }}>
-                    <CardSubtitle tag="b" textTransform="uppercase" size={{ xs: 's' }}>
+                    <CardSubtitle tag="b" textTransform="uppercase" size={{ xs: 'xs' }}>
                       Autor
                     </CardSubtitle>
-                    <Text lineClamp={1} size={{ xs: 's' }}>
+                    <Text lineClamp={1} size={{ xs: 'xs' }}>
                       {translation.author}
                     </Text>
                   </ColumnWithDivisor>
                   <Column xs={6} alignItems={{ xs: 'center' }} paddingLeft={{ xs: 's' }}>
-                    <CardSubtitle tag="b" textTransform="uppercase" size={{ xs: 's' }}>
+                    <CardSubtitle tag="b" textTransform="uppercase" size={{ xs: 'xs' }}>
                       Tradutor
                     </CardSubtitle>
-                    <Text lineClamp={1} size={{ xs: 's' }}>
+                    <Text lineClamp={1} size={{ xs: 'xs' }}>
                       {translation.translator}
                     </Text>
                   </Column>
@@ -101,12 +103,15 @@ const CardImage = styled(Image)`
   `};
 `;
 
-const HeadingCard = styled(Heading)`
+const HeadingWrapper = styled(View)`
   display: flex;
   align-items: center;
+  height: 40px;
+`;
+
+const HeadingCard = styled(Heading)`
   font-size: 16px;
   line-height: 20px;
-  height: 40px;
 `;
 
 const Divisor = styled.hr`

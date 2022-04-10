@@ -90,7 +90,7 @@ export const Catalog: React.FC = () => {
       >
         <Header />
         <Grid paddingTop={{ xs: 'm', l: 'xxxl' }} paddingBottom={{ xs: 's', m: 'm' }}>
-          <Heading size={{ xs: 'xs', m: 's' }}>Catálogo de traduções</Heading>
+          <Heading size={{ xs: 'xxs', m: 'xs' }}>Catálogo de traduções</Heading>
           <Triangle aria-hidden="true" />
         </Grid>
         <View tag="main">
@@ -167,14 +167,14 @@ const Input = styled.input`
 
   ${({ theme }) => css`
     background: ${theme.colors.white};
-    font-size: ${theme.typography.fontSizes.body.l};
+    font-size: ${theme.typography.fontSizes.body.m};
     border-radius: ${theme.borders.radius.xs};
 
     @media (max-width: ${theme.screens.s.max}) {
       border-radius: ${theme.borders.radius.xs};
       box-shadow: ${theme.elevations.xs};
       padding: ${theme.spacing.s} ${theme.spacing.s};
-      font-size: ${theme.typography.fontSizes.body.l};
+      font-size: ${theme.typography.fontSizes.body.m};
     }
   `};
 `;
@@ -185,13 +185,13 @@ const Triangle = styled.div`
   transform: rotate(10deg);
   border-left: 8px solid transparent;
   border-right: 13px solid transparent;
-  margin: 6px 16px;
+  margin: 8px 16px;
 
   ${({ theme }) => css`
     border-bottom: 17px solid ${theme.brand.colors.primary.medium};
 
     @media (max-width: ${theme.screens.s.max}) {
-      margin: 0 16px;
+      margin: 6px 16px;
     }
   `};
 `;
