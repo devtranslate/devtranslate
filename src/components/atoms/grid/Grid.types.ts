@@ -2,6 +2,8 @@ import { ScreenMap } from '../../../theme/tokens/screens/Screens.types';
 import { SpacingSizes } from '../../../theme/tokens/spacing/Spacing.types';
 
 export type GridProps = {
+  /** Define o alinhamento dos itens no eixo transversal dentro da Grid. */
+  alignItems?: ScreenMap<React.CSSProperties['alignItems']>;
   /** Define o conteúdo da Grid. */
   children?: React.ReactNode;
   /** Define se a Grid largura máxima de 1280px. */

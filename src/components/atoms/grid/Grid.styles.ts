@@ -1,9 +1,10 @@
 import { css } from 'styled-components';
 import { GridProps } from './Grid.types';
-import { getJustifyContent } from '../../../helpers/Alignment';
+import { getAlignItems, getJustifyContent } from '../../../helpers/Alignment';
 import { getPadding } from '../../../helpers/Spacing';
 
 export const GridStyles = css<{
+  alignItems?: GridProps['alignItems'];
   container?: GridProps['container'];
   padding?: GridProps['padding'];
   paddingBottom?: GridProps['paddingBottom'];
@@ -25,6 +26,7 @@ export const GridStyles = css<{
     `};
 
   ${(props) => css`
+    ${getAlignItems(props)};
     ${getJustifyContent(props)};
     ${getPadding(props)};
   `};

@@ -60,7 +60,7 @@ export const Pagination: React.FC<PaginationProps> = ({ current, total }) => {
   const isLastPage = total === currentPage;
 
   return (
-    <GridUI justifyContent={{ xs: 'center' }} paddingTop={{ xs: 'l' }}>
+    <Grid justifyContent={{ xs: 'center' }} paddingTop={{ xs: 'l' }} alignItems={{ xs: 'center' }}>
       {!isFirstPage && (
         <LinkUI href={handlePageChange(currentPage - 1)}>
           <Icon name="chevron" rotate={90} color="primary" width={32} height={32} />
@@ -81,13 +81,9 @@ export const Pagination: React.FC<PaginationProps> = ({ current, total }) => {
           <Icon name="chevron" rotate={270} color="primary" width={32} height={32} />
         </LinkUI>
       )}
-    </GridUI>
+    </Grid>
   );
 };
-
-const GridUI = styled(Grid)`
-  align-items: center;
-`;
 
 const LinkUI = styled(Link)<{ active?: boolean }>`
   width: 32px;
