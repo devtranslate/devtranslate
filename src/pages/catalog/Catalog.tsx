@@ -112,7 +112,7 @@ export const Catalog: React.FC = () => {
                 />
               </Column>
               <Column xs={12} m={3} l={2} justifyContent={{ xs: 'center' }}>
-                <Button type="submit" color="tertiary" size="l" icon={{ name: 'search' }} reverse>
+                <Button type="submit" color="secondary" size="l" icon={{ name: 'search' }} reverse>
                   Buscar tradução
                 </Button>
               </Column>

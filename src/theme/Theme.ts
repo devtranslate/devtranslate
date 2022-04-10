@@ -19,18 +19,18 @@ export const getTheme = (theme?: string): Theme => {
               dark: colors.red[500],
             },
             secondary: {
-              outline: colors.yellow[200],
-              lighter: colors.yellow[50],
-              light: colors.yellow[300],
-              medium: colors.yellow[400],
-              dark: colors.yellow[500],
-            },
-            tertiary: {
               outline: colors.blueGray[200],
               lighter: colors.blueGray[50],
               light: colors.blueGray[500],
               medium: colors.blueGray[700],
               dark: colors.blueGray[900],
+            },
+            tertiary: {
+              outline: colors.yellow[200],
+              lighter: colors.yellow[50],
+              light: colors.yellow[300],
+              medium: colors.yellow[400],
+              dark: colors.yellow[500],
             },
           },
           typography: {

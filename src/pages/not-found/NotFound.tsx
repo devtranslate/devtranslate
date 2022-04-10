@@ -57,7 +57,7 @@ export const NotFound: React.FC = () => {
               A página que você tentou acessar está indisponível ou não existe.
             </Text>
             <ButtonWrapper inline={{ xs: false, m: true }}>
-              <Button color="tertiary" onClick={() => history.goBack()} size="l">
+              <Button color="secondary" onClick={() => history.goBack()} size="l">
                 Retornar à página anterior
               </Button>
               <Button variant="secondary" href="/" size="l">

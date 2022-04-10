@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
               possibilitar e facilitar o processo de tradução de conteúdo para outros idiomas.
             </Text>
             <View inline={{ xs: false, m: true }}>
-              <Button color="tertiary" href="/catalogo" icon={{ name: 'chevron', rotate: 270 }} size="l">
+              <Button color="secondary" href="/catalogo" icon={{ name: 'chevron', rotate: 270 }} size="l">
                 Acesse o catálogo
               </Button>
             </View>

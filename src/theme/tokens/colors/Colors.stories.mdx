@@ -51,9 +51,9 @@ export const renderColorItem = (color, colorName, colorShade) => {
 
 <Story name="Brand">
   <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 'l' }}>
-    <Column xs={4}>{renderColorItem(colorsToken.red[400], 'primary')}</Column>
-    <Column xs={4}>{renderColorItem(colorsToken.yellow[400], 'secondary')}</Column>
-    <Column xs={4}>{renderColorItem(colorsToken.blueGray[700], 'tertiary')}</Column>
+    <Column xs={3}>{renderColorItem(colorsToken.red[400], 'primary')}</Column>
+    <Column xs={3}>{renderColorItem(colorsToken.blueGray[700], 'secondary')}</Column>
+    <Column xs={3}>{renderColorItem(colorsToken.yellow[400], 'tertiary')}</Column>
   </Grid>
 </Story>
 
@@ -63,8 +63,8 @@ Os neutros têm vários graus de saturação e normalmente eles são usados ​�
 
 <Story name="White & Black">
   <Grid paddingTop={{ xs: 'xs' }} paddingBottom={{ xs: 's' }}>
-    <Column xs={4}>{renderColorItem(colorsToken.white, 'white')}</Column>
-    <Column xs={4}>{renderColorItem(colorsToken.black, 'black')}</Column>
+    <Column xs={3}>{renderColorItem(colorsToken.white, 'white')}</Column>
+    <Column xs={3}>{renderColorItem(colorsToken.black, 'black')}</Column>
   </Grid>
 </Story>
 
@@ -75,7 +75,7 @@ export const colorShades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 export const renderColorPalette = (colorName) => {
   return colorShades.map((item, index) => {
     return (
-      <Column xs={4} paddingBottom={{ xs: 's' }} key={`colors-${index - 1}`}>
+      <Column xs={3} paddingBottom={{ xs: 's' }} key={`colors-${index - 1}`}>
         {renderColorItem(colorsToken[colorName][item], colorName)}
       </Column>
     );
