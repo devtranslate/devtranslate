@@ -2,8 +2,8 @@ import { Typography } from './Typography.types';
 
 export const typography: Typography = {
   fontFamily: {
-    sans: 'Cera Round Pro, Nunito, Quicksand, sans-serif',
-    mono: 'Roboto Mono, Ubuntu Mono, Consolas, monospace',
+    sans: '"Cera Round Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+    mono: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace',
   },
   fontSizes: {
     heading: {
