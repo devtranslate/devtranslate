@@ -3,11 +3,11 @@ import { Borders } from './Borders.types';
 export const borders: Borders = {
   radius: {
     none: '0',
-    xs: '8px',
-    s: '16px',
-    m: '24px',
-    l: '32px',
-    xl: '40px',
+    xs: '0.5rem',
+    s: '1rem',
+    m: '1.5rem',
+    l: '2rem',
+    xl: '2.5rem',
     full: '50%',
   },
 };

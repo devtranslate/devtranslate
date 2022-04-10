@@ -2,12 +2,12 @@ import { Spacing } from './Spacing.types';
 
 export const spacing: Spacing = {
   none: '0',
-  xxs: '4px',
-  xs: '8px',
-  s: '16px',
-  m: '24px',
-  l: '32px',
-  xl: '40px',
-  xxl: '56px',
-  xxxl: '64px',
+  xxs: '0.25rem',
+  xs: '0.5rem',
+  s: '1rem',
+  m: '1.5rem',
+  l: '2rem',
+  xl: '2.5rem',
+  xxl: '3.5rem',
+  xxxl: '4rem',
 };

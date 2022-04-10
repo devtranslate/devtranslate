@@ -28,7 +28,7 @@ As propriedades **padding**, **paddingBottom**, **paddingLeft**, **paddingRight*
 > **Obs:** Caso queira remover o espaçamento ou preenchimento em telas maiores, utilize `none`, desta forma ele irar zerar o valor. Por exemplo: `{ xs: "s", s: "none" }`.
 
 export const renderViewPadding = () => {
-  const paddingSizes = ['none', 'xs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'];
+  const paddingSizes = ['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'];
   return paddingSizes.map((item, index) => {
     return (
       <ViewBorder key={`view-${index - 1}`} padding={{ xs: item }}>
