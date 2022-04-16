@@ -73,10 +73,15 @@ export const NotFound: React.FC = () => {
 };
 
 const Background = styled(View)`
-  background-image: url('/static/images/background.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
+  background-color: hsla(18, 0%, 98%, 1);
+  background-image: url('/static/images/noise.svg'),
+    linear-gradient(to right, hsla(0, 100%, 100%, 0.3), hsla(0, 100%, 100%, 0.3)),
+    radial-gradient(at 42% 100%, hsla(0, 100%, 88%, 0.7) 0px, transparent 60%),
+    radial-gradient(at 70% 99%, hsl(48, 100%, 96%, 1) 0px, transparent 60%),
+    radial-gradient(at 87% 100%, hsl(42, 97%, 87%, 1) 0px, transparent 60%),
+    radial-gradient(at 14% 100%, hsla(192, 67%, 90%, 1) 0px, transparent 60%),
+    radial-gradient(at 97% 59%, hsla(0, 84%, 97%, 1) 0px, transparent 60%);
 `;
 
 const GridUI = styled(Grid)`
