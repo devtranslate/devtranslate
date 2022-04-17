@@ -1,4 +1,6 @@
 export type ImageProps = {
+  /** Define se haverá animaçção de carregamento da Image. */
+  animation?: boolean;
   /** Define o alt da Image (referente a acessibilidade). */
   alt?: string;
   /** Define a altura da Image. */

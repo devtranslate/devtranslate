@@ -34,7 +34,7 @@ export const CatalogData: React.FC<CatalogDataProps> = ({ translations, paginati
         {translations.map((translation) => (
           <Column xs={12} m={4} columnGap key={`columns-${translation.id}`} paddingBottom={{ xs: 'l' }}>
             <Card href={translation.url}>
-              <CardImage src={translation.imageUrl} />
+              <CardImage src={translation.imageUrl} animation />
               <View
                 paddingTop={{ xs: 'xxs' }}
                 paddingBottom={{ xs: 'xs' }}

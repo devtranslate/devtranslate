@@ -15,13 +15,19 @@ export const ImageStyles = css<{
   height?: ImageProps['height'];
   status?: 'failed' | 'loaded';
   width?: ImageProps['width'];
+  animation?: ImageProps['animation'];
 }>`
   position: relative;
-  animation: ${scale} 240ms linear;
   opacity: 1;
 
   width: ${({ width }) => (width ? `${width}px` : '100%')};
   height: ${({ height }) => (height ? `${height}px` : '100%')};
+
+  ${({ animation }) =>
+    animation &&
+    css`
+      animation: ${scale} 240ms linear;
+    `}
 
   ${(props) => css`
     ${getImageUnavailable(props)};
