@@ -1,7 +1,7 @@
 import axios from 'axios';
 import queryString from 'query-string';
 import { useEffect, useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { CatalogLoading } from './catalog-loading/CatalogLoading';
 import { CatalogError } from './catalog-error/CatalogError';
@@ -17,7 +17,7 @@ import { Button } from '../../components/atoms/button/Button';
 
 export const Catalog: React.FC = () => {
   const location = useLocation();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const parseQs = queryString.parse(location.search);
   const { page, query } = parseQs;
@@ -62,7 +62,7 @@ export const Catalog: React.FC = () => {
     e.preventDefault();
 
     const params = { query: search, page: 1 };
-    return history.push(`?${queryString.stringify(params)}`);
+    return navigate(`?${queryString.stringify(params)}`);
   };
 
   const renderCatalogData = () => {

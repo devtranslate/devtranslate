@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Grid } from '../../components/atoms/grid/Grid';
 import { Footer } from '../../components/organisms/footer/Footer';
 import { Header } from '../../components/organisms/header/Header';
@@ -11,7 +11,7 @@ import { Text } from '../../components/atoms/text/Text';
 import { Button } from '../../components/atoms/button/Button';
 
 export const NotFound: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   return (
     <Background>
@@ -57,7 +57,7 @@ export const NotFound: React.FC = () => {
               A página que você tentou acessar está indisponível ou não existe.
             </Text>
             <ButtonWrapper inline={{ xs: false, m: true }}>
-              <Button color="secondary" onClick={() => history.goBack()} size="l">
+              <Button color="secondary" onClick={() => navigate(-1)} size="l">
                 Retornar à página anterior
               </Button>
               <Button variant="secondary" href="/" size="l">

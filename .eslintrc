@@ -32,7 +32,14 @@
         "devDependencies": [".storybook/**", "src/**/*.stories.@(js|jsx|ts|tsx)"]
       }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ]
   },
   "settings": {
     "react": {

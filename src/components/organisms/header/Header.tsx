@@ -26,53 +26,51 @@ export const Header: React.FC = () => {
   }, [openSideMenu]);
 
   return (
-    <>
-      <Grid tag="header" paddingBottom={{ xs: 'xxxl' }}>
-        <Column xs={2} invisible={{ xs: false, s: true }}>
-          <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(true)} />
-        </Column>
-        <Column xs={8} s={6} alignItems={{ xs: 'center', s: 'flex-start' }}>
-          <View>
-            <Link href="/" title="Ir para a página inicial do Devtranslate">
-              <Heading tag="h1">
-                <Image
-                  src="/static/images/logo.svg"
-                  alt="Duas caixas de texto, uma delas em rosa com um caracter oriental dentro e outra na cor amarela com um caracter ocidental dentro representando a tradução para ambos os idiomas. Ao lado dessas caixas de texto há o texto 'Devtranslate'."
-                  width={150}
-                  height={24}
-                />
-              </Heading>
-            </Link>
+    <Grid tag="header" paddingBottom={{ xs: 'xxxl' }}>
+      <Column xs={2} invisible={{ xs: false, s: true }}>
+        <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(true)} />
+      </Column>
+      <Column xs={8} s={6} alignItems={{ xs: 'center', s: 'flex-start' }}>
+        <View>
+          <Link href="/" title="Ir para a página inicial do Devtranslate">
+            <Heading tag="h1">
+              <Image
+                src="/static/images/logo.svg"
+                alt="Duas caixas de texto, uma delas em rosa com um caracter oriental dentro e outra na cor amarela com um caracter ocidental dentro representando a tradução para ambos os idiomas. Ao lado dessas caixas de texto há o texto 'Devtranslate'."
+                width={150}
+                height={24}
+              />
+            </Heading>
+          </Link>
+        </View>
+      </Column>
+      <Column xs={6} alignItems={{ xs: 'flex-end' }} invisible={{ xs: true, s: false }}>
+        <Navigation tag="nav">
+          <NavigationLink href="/" active={pathname === '/'}>
+            Inicío
+          </NavigationLink>
+          <NavigationLink href="/catalogo" active={pathname === '/catalogo'}>
+            Catálogo
+          </NavigationLink>
+        </Navigation>
+      </Column>
+      <SideMenu>
+        <Overlay visible={openSideMenu} onClick={() => setOpenSideMenu(false)} />
+        <SideMenuWrapper visible={openSideMenu}>
+          <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(false)} />
+          <View inline={{ xs: false }} paddingTop={{ xs: 'm' }}>
+            <SideMenuLink href="/" active={pathname === '/'}>
+              <Icon name="home" color="primary" width={16} height={16} />
+              <Text paddingLeft={{ xs: 'xs' }}>Inicío</Text>
+            </SideMenuLink>
+            <SideMenuLink href="/catalogo" active={pathname === '/catalogo'}>
+              <Icon name="catalog" color="primary" width={16} height={16} />
+              <Text paddingLeft={{ xs: 'xs' }}>Catálogo</Text>
+            </SideMenuLink>
           </View>
-        </Column>
-        <Column xs={6} alignItems={{ xs: 'flex-end' }} invisible={{ xs: true, s: false }}>
-          <Navigation tag="nav">
-            <NavigationLink href="/" active={pathname === '/'}>
-              Inicío
-            </NavigationLink>
-            <NavigationLink href="/catalogo" active={pathname === '/catalogo'}>
-              Catálogo
-            </NavigationLink>
-          </Navigation>
-        </Column>
-        <SideMenu>
-          <Overlay visible={openSideMenu} onClick={() => setOpenSideMenu(false)} />
-          <SideMenuWrapper visible={openSideMenu}>
-            <ButtonUI variant="secondary" icon={{ name: 'menu' }} size="l" onClick={() => setOpenSideMenu(false)} />
-            <View inline={{ xs: false }} paddingTop={{ xs: 'm' }}>
-              <SideMenuLink href="/" active={pathname === '/'}>
-                <Icon name="home" color="primary" width={16} height={16} />
-                <Text paddingLeft={{ xs: 'xs' }}>Inicío</Text>
-              </SideMenuLink>
-              <SideMenuLink href="/catalogo" active={pathname === '/catalogo'}>
-                <Icon name="catalog" color="primary" width={16} height={16} />
-                <Text paddingLeft={{ xs: 'xs' }}>Catálogo</Text>
-              </SideMenuLink>
-            </View>
-          </SideMenuWrapper>
-        </SideMenu>
-      </Grid>
-    </>
+        </SideMenuWrapper>
+      </SideMenu>
+    </Grid>
   );
 };
 

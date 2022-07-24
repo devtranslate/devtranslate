@@ -79,7 +79,7 @@ module.exports = (_, { mode }) => {
             noErrorOnMissing: true,
           },
         ],
-      })
+      }),
     ].filter(Boolean),
   };
 };

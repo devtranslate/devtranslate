@@ -66,12 +66,16 @@ export const Pagination: React.FC<PaginationProps> = ({ current, total }) => {
           <Icon name="chevron" rotate={90} color="primary" width={32} height={32} />
         </LinkUI>
       )}
-      {getPages().map((page) => {
+      {getPages().map((page, index) => {
         if (page === '...') {
-          return <Text tag="span">{page}</Text>;
+          return (
+            <Text tag="span" key={`page-${index - 1}`}>
+              {page}
+            </Text>
+          );
         }
         return (
-          <LinkUI active={page === currentPage} href={handlePageChange(page)}>
+          <LinkUI active={page === currentPage} href={handlePageChange(page)} key={`page-${index - 1}`}>
             <Text tag="span">{page}</Text>
           </LinkUI>
         );
