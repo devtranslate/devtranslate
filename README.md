@@ -15,8 +15,8 @@
   <a href="https://www.instagram.com/devtranslate/">
     <img src="https://img.shields.io/badge/instagram-@devtranslate-c13584.svg?style=flat-square" alt="Instagram"/>
   </a>
-  <a href="https://www.facebook.com/devtranslate">
-    <img src="https://img.shields.io/badge/facebook-oficial_page-3b5998.svg?style=flat-square" alt="Facebook"/>
+  <a href="https://www.twitter.com/devtranslate_">
+    <img src="https://img.shields.io/badge/twitter-oficial_page-1DA1F2.svg?style=flat-square" alt="Twitter"/>
   </a>
 </p>
 
