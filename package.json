@@ -62,7 +62,7 @@
     "react-refresh": "^0.14.0",
     "storybook": "^6.5.9",
     "style-loader": "^3.3.1",
-    "stylelint": "^14.9.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recommended": "^8.0.0",
     "stylelint-config-styled-components": "^0.1.1",
